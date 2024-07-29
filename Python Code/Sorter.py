@@ -40,8 +40,17 @@ def extract_phone_numbers(text):
     
     return phone_numbers
 
+def extract_address(text):
+    # Regular expression pattern for address
+    address_pattern = re.compile(r'\d{1,5}\s[A-Za-z0-9\s]+(?:\sSuite\s#\d+)?\s*,\s*[A-Za-z\s]+,\s*[A-Z]{2}\s+\d{5}(?:-\d{4})?')
+    
+    # Find all matches in the text
+    addresses = address_pattern.findall(text)
+    
+    return addresses
+
 # Path to your image file
-image_path = r'C:\Users\vkaru\Downloads\Receipt.jpg'
+image_path = r'C:\Users\vkaru\Downloads\Hyderabad_House_Arizona_Receipt.jpg'
 
 # Detect text from the image
 detected_text = detect_text_from_image(image_path)
@@ -49,9 +58,18 @@ detected_text = detect_text_from_image(image_path)
 # Extract phone numbers
 phone_numbers = extract_phone_numbers(detected_text)
 
-# Print the extracted phone numbers
+# Extract email address\
+addresses = extract_address(detected_text)
 
+
+
+# Print the extracted phone numbers
 print("Extracted phone numbers:")
 
 
 print(phone_numbers[0])
+
+#Print the extracted address
+print("Extracted addresses:")
+for address in addresses:
+    print(address)
