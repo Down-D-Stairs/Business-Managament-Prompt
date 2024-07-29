@@ -101,7 +101,7 @@ addresses = extract_addresses(detected_text)
 first_line = get_first_line_from_image(image_path)
 print("Establishment Name:", first_line)
 
-# Print the extracted dates
+# Print the extracted date
 print("Date of Purchase:")
 print(dates)
 
