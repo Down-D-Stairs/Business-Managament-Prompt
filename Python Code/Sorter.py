@@ -4,7 +4,7 @@ from google.cloud import vision
 
 def detect_text_from_image(image_path):
     # Set up the client using the service account key
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r'C:\Users\kaush\OneDrive\Desktop\Python\textanalysis2.json'
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r'C:\Users\vkaru\OneDrive\Desktop\Python\textanalysis3.json'
     
     # Create a client
     client = vision.ImageAnnotatorClient()
@@ -28,7 +28,7 @@ def detect_text_from_image(image_path):
     if texts:
         for text in texts:
             full_text += text.description + '\n'
-
+            
     return full_text
 
 
@@ -44,7 +44,7 @@ def get_first_line_from_image(image_path):
 
 def extract_dates(text):
     # Regular expression pattern for various date formats
-    date_pattern = re.compile(r'\b(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{2,4}[/-]\d{1,2}[/-]\d{1,2}|\d{1,2} (?:st|nd|rd|th)? [a-zA-Z]+ \d{4}|[a-zA-Z]+ \d{1,2}, \d{4}|[a-zA-Z]+ \d{1,2})\b', re.IGNORECASE)
+    date_pattern = re.compile(r'(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{2,4}[/-]\d{1,2}[/-]\d{1,2}|\d{1,2} (?:st|nd|rd|th)? [a-zA-Z]+ \d{4}|[a-zA-Z]+ \d{1,2}, \d{4})', re.IGNORECASE)
 
     # Find all matches in the text
     dates = date_pattern.findall(text)
@@ -60,9 +60,9 @@ def extract_price(text):
     prices = price_pattern.findall(text)
     
     # Convert prices to float after removing commas
-    numeric_prices = [float(price.replace('$','').replace('\n ', '')) for price in prices]
+    numeric_prices = [float(price.replace('$','').replace('\n ', '').replace(',','')) for price in prices]
     
-    #print(numeric_prices) #(testing case)
+    #print(numeric_prices) #(testing case ONLY)
 
     # Find and return the highest price
     if numeric_prices:
@@ -71,18 +71,9 @@ def extract_price(text):
     else:
         return "No prices found"
 
-def extract_addresses(text):
-    # Regular expression pattern for various address formats (horizontal format)
-    address_pattern = re.compile(r'\b\d{1,5} [A-Z][A-Za-z]*(?: [A-Z][A-Za-z]*)*(?: [A-Za-z]+)+\b|\b\d{1,5} (?:[A-Za-z]+(?: [A-Za-z]+)*|[A-Za-z]+(?: [A-Za-z]+)*,?) (?:[A-Za-z]+(?: [A-Za-z]+)*),? (?:[A-Za-z]+(?: [A-Za-z]+)*)? (?:[A-Z]{2})? \d{5}(?:-\d{4})?\b', re.IGNORECASE)
-
-    # Find all matches in the text
-    addresses = address_pattern.findall(text)
-
-    # Return all found addresses
-    return addresses
 
 # Path to your image file
-image_path = r'C:\Users\kaush\Downloads\Bosa_Receipt.jpg'
+image_path = r'C:\Users\vkaru\Downloads\BoSa_Donuts_Receipt.jpg'
 
 # Detect text from the image
 detected_text = detect_text_from_image(image_path)
@@ -93,8 +84,6 @@ prices = extract_price(detected_text)
 #Extract dates
 dates = extract_dates(detected_text)
 
-#Extract adresses
-addresses = extract_addresses(detected_text)
 
 
 # Get and print the first line of text
@@ -103,12 +92,10 @@ print("Establishment Name:", first_line)
 
 # Print the extracted date
 print("Date of Purchase:")
-print(dates)
+print(dates[0])
 
 #Print the extracted price
 print("Amount of Purchase:")
 print(prices)
 
-#Print the extracted address
-print("Address:")
-print(addresses)
+
