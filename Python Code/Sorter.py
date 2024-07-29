@@ -4,7 +4,7 @@ from google.cloud import vision
 
 def detect_text_from_image(image_path):
     # Set up the client using the service account key
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r'C:\Users\vkaru\OneDrive\Desktop\Python\textanalysis3.json'
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r'C:\Users\kaush\OneDrive\Desktop\Python\textanalysis2.json'
     
     # Create a client
     client = vision.ImageAnnotatorClient()
@@ -31,45 +31,84 @@ def detect_text_from_image(image_path):
 
     return full_text
 
-def extract_phone_numbers(text):
-    # Regular expression pattern for US phone numbers
-    phone_pattern = re.compile(r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}')
+
+def get_first_line_from_image(image_path):
+    # Call the original function to get the full text
+    full_text = detect_text_from_image(image_path)
+
+    # Split the full text into lines and get the first line
+    first_line = full_text.split('\n')[0] if full_text else 'No text detected.'
+    return first_line
+
+
+
+def extract_dates(text):
+    # Regular expression pattern for various date formats
+    date_pattern = re.compile(r'\b(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{2,4}[/-]\d{1,2}[/-]\d{1,2}|\d{1,2} (?:st|nd|rd|th)? [a-zA-Z]+ \d{4}|[a-zA-Z]+ \d{1,2}, \d{4}|[a-zA-Z]+ \d{1,2})\b', re.IGNORECASE)
+
+    # Find all matches in the text
+    dates = date_pattern.findall(text)
+
+    # Return all found dates
+    return dates
+
+def extract_price(text):
+    # Regular expression pattern for price
+    price_pattern = re.compile(r'\$\s*\d+(?:,\d+)*(?:\.\d+)?')
     
     # Find all matches in the text
-    phone_numbers = phone_pattern.findall(text)
+    prices = price_pattern.findall(text)
     
-    return phone_numbers
+    # Convert prices to float after removing commas
+    numeric_prices = [float(price.replace('$','').replace('\n ', '')) for price in prices]
+    
+    #print(numeric_prices) #(testing case)
 
-def extract_address(text):
-    # Regular expression pattern for address
-    address_pattern = re.compile(r'\d{1,5}\s[A-Za-z0-9\s]+(?:\sSuite\s#\d+)?\s*,\s*[A-Za-z\s]+,\s*[A-Z]{2}\s+\d{5}(?:-\d{4})?')
-    
+    # Find and return the highest price
+    if numeric_prices:
+        highest_price = max(numeric_prices)
+        return f"${highest_price:,.2f}"  # Format with a dollar sign and two decimal places
+    else:
+        return "No prices found"
+
+def extract_addresses(text):
+    # Regular expression pattern for various address formats (horizontal format)
+    address_pattern = re.compile(r'\b\d{1,5} [A-Z][A-Za-z]*(?: [A-Z][A-Za-z]*)*(?: [A-Za-z]+)+\b|\b\d{1,5} (?:[A-Za-z]+(?: [A-Za-z]+)*|[A-Za-z]+(?: [A-Za-z]+)*,?) (?:[A-Za-z]+(?: [A-Za-z]+)*),? (?:[A-Za-z]+(?: [A-Za-z]+)*)? (?:[A-Z]{2})? \d{5}(?:-\d{4})?\b', re.IGNORECASE)
+
     # Find all matches in the text
     addresses = address_pattern.findall(text)
-    
+
+    # Return all found addresses
     return addresses
 
 # Path to your image file
-image_path = r'C:\Users\vkaru\Downloads\Hyderabad_House_Arizona_Receipt.jpg'
+image_path = r'C:\Users\kaush\Downloads\Bosa_Receipt.jpg'
 
 # Detect text from the image
 detected_text = detect_text_from_image(image_path)
 
-# Extract phone numbers
-phone_numbers = extract_phone_numbers(detected_text)
+# Extract price
+prices = extract_price(detected_text)
 
-# Extract email address\
-addresses = extract_address(detected_text)
+#Extract dates
+dates = extract_dates(detected_text)
 
-
-
-# Print the extracted phone numbers
-print("Extracted phone numbers:")
+#Extract adresses
+addresses = extract_addresses(detected_text)
 
 
-print(phone_numbers[0])
+# Get and print the first line of text
+first_line = get_first_line_from_image(image_path)
+print("Establishment Name:", first_line)
+
+# Print the extracted dates
+print("Date of Purchase:")
+print(dates)
+
+#Print the extracted price
+print("Amount of Purchase:")
+print(prices)
 
 #Print the extracted address
-print("Extracted addresses:")
-for address in addresses:
-    print(address)
+print("Address:")
+print(addresses)
