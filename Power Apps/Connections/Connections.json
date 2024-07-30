@@ -1,4 +1,27 @@
 {
+  "63335a81-6589-470f-a9f1-c1cca859f292": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
+        "dataSources": {
+          "Admin_List": {
+            "tableName": "0e9fb0cf-b253-4620-aa66-02ab46da1980"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Admin_List",
+      "Expense Data"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "63335a81-6589-470f-a9f1-c1cca859f292"
+  },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
       "displayName": "Excel",
@@ -22,6 +45,28 @@
     },
     "dependents": [],
     "id": "af9be01c-69bb-4d01-aa5b-c419b6575a51"
+  },
+  "c4d5d2d0-1f55-4bd5-97ec-902e57b52742": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
+        "dataSources": {
+          "Expense Data": {
+            "tableName": "efdd80ac-5178-4fe9-8e6c-b2aa87669e16"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Expense Data"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
   },
   "e69fed1f-1485-4840-b234-f1bf51af3194": {
     "connectionRef": {

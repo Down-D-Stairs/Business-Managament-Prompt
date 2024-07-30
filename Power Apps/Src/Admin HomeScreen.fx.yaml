@@ -22,20 +22,6 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
-            FillPortions: =0
-            Height: =75
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            ZIndex: =2
-
     Gallery2 As gallery.galleryHorizontal:
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
