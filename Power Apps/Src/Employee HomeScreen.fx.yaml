@@ -589,14 +589,15 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =If(
-                IsBlank('Payment Type_DataCard1') || IsBlank(Date_DataCard1) ||
-                IsBlank('Expense Type_DataCard1') ||
-                IsBlank('Vendor Name_DataCard1') ||
-                IsBlank(Amount_DataCard1), 
+                IsBlank(DataCardValue1) || IsBlank(DataCardValue2) ||
+                IsBlank(DataCardValue3) ||
+                IsBlank(DataCardValue4) ||
+                IsBlank(DataCardValue5), 
                 Notify("Please fill in all required fields.", NotificationType.Error),
                 true,
                 SubmitForm(Form1);
-                ResetForm(Form1);
+                ResetForm(Form1)
+            
             )
         Text: ="Submit"
         Width: =96
