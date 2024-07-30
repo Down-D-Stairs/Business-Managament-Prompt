@@ -3,7 +3,7 @@
         =
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =If(UserRole = "Admin", true, false)
+        =If(UserRole = "Admin", true)
 
     ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
