@@ -1,1 +1,62 @@
-{}
+{
+  "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
+    "connectionRef": {
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel"
+    },
+    "datasets": {
+      "b!s3aC32zLqkimE9elEnt_A3BBeOoEMXtHurqLN-z3v2p12f5asJ8yQqahIkEDPZRB.01WXUHHMCTIHFQHR56KFFLASIJRYZOQR5C": {
+        "dataSources": {
+          "CoffeeMachines": {
+            "tableName": "CoffeeMachines"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CoffeeMachines"
+    ],
+    "dependencies": {
+      "fileSource": "e69fed1f-1485-4840-b234-f1bf51af3194"
+    },
+    "dependents": [],
+    "id": "af9be01c-69bb-4d01-aa5b-c419b6575a51"
+  },
+  "e69fed1f-1485-4840-b234-f1bf51af3194": {
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "af9be01c-69bb-4d01-aa5b-c419b6575a51"
+    ],
+    "id": "e69fed1f-1485-4840-b234-f1bf51af3194"
+  },
+  "f4edf0df-d31a-4b13-8237-27ea9f4f71cd": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com": {
+        "dataSources": {
+          "List": {
+            "tableName": "bbf3a975-a001-4afc-8e54-41b0d84b1e8f"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "List"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f4edf0df-d31a-4b13-8237-27ea9f4f71cd"
+  }
+}
