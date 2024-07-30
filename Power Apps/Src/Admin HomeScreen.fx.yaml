@@ -264,7 +264,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Text: ="Approval"
-        Visible: =admin
+        Visible: =is_admin
         Width: =96
         X: =1143
         Y: =37

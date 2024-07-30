@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |
-        =If(!IsBlank(LookUp(Admin_List, Title = User().Email)), Set(admin, true), Set(admin, false))
+        =If(!IsBlank(LookUp(Admin_List, Title = User().Email)), Set(is_admin, true), Set(is_admin, false))
     StartScreen: =
     Theme: =PowerAppsTheme
 
