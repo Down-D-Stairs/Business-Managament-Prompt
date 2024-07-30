@@ -34,11 +34,11 @@
       "OData__ColorTag": "Color Tag",
       "Title": "Title"
     },
-    "DatasetName": "https://recurringdecimalllc.sharepoint.com",
+    "DatasetName": "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "List",
+    "Name": "Admin_List",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

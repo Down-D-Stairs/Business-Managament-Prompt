@@ -14,6 +14,446 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataCardKey11"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardKey11"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": ".Y"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 18,
+                  "snippet": {
+                    "text": "DataCardKey11"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardKey11"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 31,
+                  "snippet": {
+                    "text": ".Height"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataCardValue11"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue11"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".SelectedDate"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 6,
+                  "snippet": {
+                    "text": "DataCardValue12"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue12"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Amount_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataCardValue13"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue13"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.AccessibleLabel"
                 }
               ],
@@ -37,7 +477,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -67,7 +507,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -97,7 +537,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -127,7 +567,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -157,7 +597,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -187,7 +627,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -217,7 +657,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -247,7 +687,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -277,26 +717,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2"
               }
             }
           ],
@@ -307,7 +747,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -337,37 +777,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.User"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.User",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "User",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
+          "ruleIndex": 3
         }
       ],
       "tool": {
@@ -375,6 +785,51 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "The '.' operator cannot be used on {0} values."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
@@ -407,23 +862,6 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "People who use the keyboard with your app will not be able to access this element without a tab stop."
-              }
-            },
-            {
-              "id": "app-UnusedVariables",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unused variable"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove the unused variable."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],
