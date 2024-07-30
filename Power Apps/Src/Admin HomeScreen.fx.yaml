@@ -153,7 +153,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =614
-        Items: =List
+        Items: ='Expense Data'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -169,6 +169,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =72
+            Image: =ThisItem.'Receipt Upload'
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
@@ -209,7 +210,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Modified
+            Text: =ThisItem.Date
             VerticalAlign: =VerticalAlign.Top
             Width: =Title3.Width
             X: =Title3.X
