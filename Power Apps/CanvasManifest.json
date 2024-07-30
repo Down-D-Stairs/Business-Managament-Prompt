@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 10,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -118,7 +118,7 @@
     "Id": "a61a42b1-8d3b-4bb7-b095-a4366c560225",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Test App - copy",
+    "Name": "Test App",
     "OriginatingVersion": "1.342",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
