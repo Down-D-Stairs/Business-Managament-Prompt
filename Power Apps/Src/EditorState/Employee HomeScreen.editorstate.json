@@ -46,7 +46,7 @@
       "MetaDataIDKey": "%AddPicture.ID%",
       "Name": "AddPicture1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -279,7 +279,7 @@
       "MetaDataIDKey": "",
       "Name": "Amount_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -435,7 +435,7 @@
       "MetaDataIDKey": "",
       "Name": "Comments_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -555,7 +555,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -638,7 +638,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -728,7 +728,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -818,7 +818,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -908,7 +908,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -998,7 +998,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1088,7 +1088,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1178,7 +1178,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1284,7 +1284,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1399,7 +1399,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1517,7 +1517,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1632,7 +1632,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1743,7 +1743,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1850,7 +1850,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1956,7 +1956,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2089,7 +2089,7 @@
       "MetaDataIDKey": "",
       "Name": "Date_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2169,14 +2169,29 @@
     "Employee HomeScreen": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Color.White",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "Height",
         "Width",
         "Size",
         "Orientation",
         "LoadingSpinner",
-        "LoadingSpinnerColor"
+        "LoadingSpinnerColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "OnVisible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "IsAutoGenerated": false,
       "IsComponentDefinition": false,
@@ -2209,7 +2224,7 @@
         {
           "Category": "Design",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -2230,6 +2245,11 @@
           "Category": "Design",
           "PropertyName": "Size",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnVisible",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultScreenStyle",
@@ -2273,7 +2293,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2363,7 +2383,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2453,7 +2473,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2543,7 +2563,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2633,7 +2653,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2723,7 +2743,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2813,7 +2833,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2903,7 +2923,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3026,7 +3046,7 @@
       "MetaDataIDKey": "",
       "Name": "Expense Type_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3717,7 +3737,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "Image4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4143,7 +4163,7 @@
       "MetaDataIDKey": "",
       "Name": "Payment Type_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4291,7 +4311,7 @@
       "MetaDataIDKey": "",
       "Name": "Receipt Upload_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4590,7 +4610,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4681,7 +4701,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4776,7 +4796,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4866,7 +4886,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4956,7 +4976,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5046,7 +5066,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5136,7 +5156,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5226,7 +5246,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5357,7 +5377,7 @@
       "MetaDataIDKey": "",
       "Name": "SubExpense_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5518,7 +5538,7 @@
       "MetaDataIDKey": "",
       "Name": "Vendor Name_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

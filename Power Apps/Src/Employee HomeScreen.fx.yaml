@@ -1,6 +1,10 @@
 "'Employee HomeScreen' As screen.'autoLayout_HeaderFooter_ver1.0'":
-    Fill: =Color.White
+    Fill: |
+        =
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |
+        =// Visible property for ManagerScreen
+        CurrentUserRole = "Manager"
 
     ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light

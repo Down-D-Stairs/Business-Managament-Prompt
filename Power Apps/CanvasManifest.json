@@ -118,13 +118,13 @@
     "Id": "a61a42b1-8d3b-4bb7-b095-a4366c560225",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Test App",
+    "Name": "Test App - copy",
     "OriginatingVersion": "1.342",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "Test App",
+    "AppName": "Test App - copy",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
