@@ -454,66 +454,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.AccessibleLabel"
                 }
               ],
@@ -664,19 +604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas3.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin HomeScreen'.Upload.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas3.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin HomeScreen'.Upload.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.ButtonCanvas3"
+                "type": "'Admin HomeScreen'.Upload"
               }
             }
           ],
@@ -688,6 +628,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin HomeScreen'.Upload.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin HomeScreen'.Upload.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Admin HomeScreen",
+                "type": "'Admin HomeScreen'.Upload"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -748,6 +718,66 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ButtonCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
