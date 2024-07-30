@@ -14,30 +14,16 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/30/2024 16:30:11",
+  "HeaderLastSavedDateTimeUTC": "07/30/2024 16:53:10",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
-  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalDatabaseReferencesAsEmpty": true,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "Activities": 14,
-    "Activities\\activitypointer_activitytypecode": 8,
-    "Activities\\activitypointer_deliveryprioritycode": 10,
-    "Activities\\activitypointer_instancetypecode": 11,
-    "Activities\\activitypointer_isbilled": 3,
-    "Activities\\activitypointer_ismapiprivate": 4,
-    "Activities\\activitypointer_isregularactivity": 5,
-    "Activities\\activitypointer_isworkflowcreated": 6,
-    "Activities\\activitypointer_leftvoicemail": 7,
-    "Activities\\activitypointer_prioritycode": 2,
-    "Activities\\activitypointer_statecode": 1,
-    "Activities\\activitypointer_statuscode": 0,
-    "Activities\\default.cds_activitypointer_views": 12,
-    "Activities\\socialprofile_community": 9,
-    "CustomGallerySample": 13
+    "CustomGallerySample": 0
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {
@@ -81,12 +67,14 @@
     "BottomContainer1": 3,
     "HeaderContainer3": 1,
     "Host": 0,
-    "MainContainer3": 5,
+    "MainContainer3": 10,
     "ScreenContainer3": 0,
     "SidebarContainer2": 4,
     "TextCanvas3": 2
   },
-  "ResourcesJsonIndices": {},
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
@@ -98,5 +86,5 @@
     },
     "DeserializationLoadTime": 1.0069451
   },
-  "WasLocalDatabaseReferencesEmpty": false
+  "WasLocalDatabaseReferencesEmpty": true
 }

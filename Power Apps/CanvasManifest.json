@@ -117,6 +117,7 @@
     "FileID": "a61a42b1-8d3b-4bb7-b095-a4366c560225",
     "Id": "a61a42b1-8d3b-4bb7-b095-a4366c560225",
     "InstrumentationKey": "",
+    "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
     "Name": "Test App",
     "OriginatingVersion": "1.342",
