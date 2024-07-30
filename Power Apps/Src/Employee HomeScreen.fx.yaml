@@ -70,7 +70,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =Value(DataCardValue1.Value)
                     Width: =1334
                     X: =0
@@ -90,8 +90,10 @@
 
                     "DataCardValue1 As 'Text input'":
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BasePaletteColor: =
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
+                        Placeholder: ="$0.00"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
@@ -203,7 +205,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaymentType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue2.Selected
                     Width: =1334
                     X: =0
@@ -223,6 +225,7 @@
 
                     DataCardValue2 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BasePaletteColor: =
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -264,7 +267,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ExpenseType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue3.Selected
                     Width: =1334
                     X: =0
@@ -326,7 +329,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, VendorName)
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue4.Value
                     Width: =1334
                     X: =0
@@ -349,6 +352,7 @@
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Placeholder: ="Enter Name..."
                         Required: =Parent.Required
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Value: =Parent.Default
@@ -388,7 +392,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue5.SelectedDate
                     Width: =1334
                     X: =0
@@ -588,17 +592,9 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
-            =If(
-                IsBlank(DataCardValue1) || IsBlank(DataCardValue2) ||
-                IsBlank(DataCardValue3) ||
-                IsBlank(DataCardValue4) ||
-                IsBlank(DataCardValue5), 
-                Notify("Please fill in all required fields.", NotificationType.Error),
-                true,
-                SubmitForm(Form1);
-                ResetForm(Form1)
-            
-            )
+            =
+            SubmitForm(Form1);
+            ResetForm(Form1);
         Text: ="Submit"
         Width: =96
         X: =1206
