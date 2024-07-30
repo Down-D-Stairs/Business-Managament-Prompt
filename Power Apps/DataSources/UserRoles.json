@@ -23,12 +23,14 @@
       "{TriggerWindowEndToken}": "Trigger Window End Token",
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
       "{VersionNumber}": "Version number",
+      "AccessLevel": "AccessLevel",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "Email": "Role",
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
@@ -38,7 +40,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Admin_List",
+    "Name": "UserRoles",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

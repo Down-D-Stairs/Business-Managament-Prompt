@@ -1,5 +1,14 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: |-
+        =// OnStart property to load roles
+        ClearCollect(
+            UserRolesCollection,
+            Filter(UserRoles, Email = User().Email)
+        );
+        
+        // Set the user role variable
+        Set(CurrentUserRole, First(UserRolesCollection).Role);
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

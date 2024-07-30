@@ -1,6 +1,9 @@
 "'Admin HomeScreen' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |
+        =// Visible property for AdminScreen
+        CurrentUserRole = "Admin"
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light

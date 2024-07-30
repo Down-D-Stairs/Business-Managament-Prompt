@@ -68,6 +68,28 @@
     "dependents": [],
     "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
   },
+  "e1ca99f5-5849-415d-a670-a26d99f16f71": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
+        "dataSources": {
+          "UserRoles": {
+            "tableName": "fd68e9bc-26fb-4677-9e92-46bc46cdb803"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "UserRoles"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e1ca99f5-5849-415d-a670-a26d99f16f71"
+  },
   "e69fed1f-1485-4840-b234-f1bf51af3194": {
     "connectionRef": {
       "displayName": "OneDrive for Business",
