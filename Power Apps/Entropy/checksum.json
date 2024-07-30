@@ -4,7 +4,7 @@
     "AppCheckerResult.sarif": "C8_it9jKdwyKNEdSftqszc4rRTMYNmfLAEQbTZkbxRsORA=",
     "Controls\\1.json": "C8_+9bWWWaDtzI/rA9xGR0GFD302+//iUIr6k2V6TsJM50=",
     "Controls\\4.json": "C8_fHvnzt2O7ahYKEGw0IlndYxH7Lo6rFiDXMt0NM4meeI=",
-    "Header.json": "C8_RUJMllin+Fn0N0gQeT7ISj2FVliwTbs/3FvROpmv9/k=",
+    "Header.json": "C8_rzDkmd9CkSy8Q5t+dXxTpJrqa+mtuq36jLTPksxzVHU=",
     "Properties.json": "C8_ubVS04GgiqmaAsLPUTfuWZ6uKFT0zzoXTqxXEmiaK6I=",
     "References\\DataSources.json": "C8_rld6MAsamR/bAnKXhOUl15gYTIIfvJJ8fkraRNZib/c=",
     "References\\ModernThemes.json": "C8_KDQJ/3t27vgKx25iCQB/PGqxkWE34ZB7Eyb+RxNxY0k=",
@@ -14,13 +14,13 @@
     "References\\Themes.json": "C8_fekM606A917ll7hte3n6YkYOx7to0umlSjqcOex1id4=",
     "Resources\\PublishInfo.json": "C8_cqpFdi9U/EPEuxjweB6zbe5j1gMlkb5UHpGtoqtIh40="
   },
-  "ClientStampedChecksum": "C8_yhd+EWcNJ+vzjeQ4Yhw6dWfSagfU2WpngS+vvawtjpw=",
+  "ClientStampedChecksum": "C8_z3SNVcipSyBuxsIquIhm+VZQCB+y9SLPIVRcsooFSnQ=",
   "ServerPerFileChecksums": {
     ".gitignore": "C8_VaC8EcEG56Ufcy1DFyC8Ky19iV9xSsXMDIAcmF2GTj8=",
     "AppCheckerResult.sarif": "C8_it9jKdwyKNEdSftqszc4rRTMYNmfLAEQbTZkbxRsORA=",
     "Controls\\1.json": "C8_+9bWWWaDtzI/rA9xGR0GFD302+//iUIr6k2V6TsJM50=",
     "Controls\\4.json": "C8_fHvnzt2O7ahYKEGw0IlndYxH7Lo6rFiDXMt0NM4meeI=",
-    "Header.json": "C8_RUJMllin+Fn0N0gQeT7ISj2FVliwTbs/3FvROpmv9/k=",
+    "Header.json": "C8_rzDkmd9CkSy8Q5t+dXxTpJrqa+mtuq36jLTPksxzVHU=",
     "Properties.json": "C8_ubVS04GgiqmaAsLPUTfuWZ6uKFT0zzoXTqxXEmiaK6I=",
     "References\\DataSources.json": "C8_rld6MAsamR/bAnKXhOUl15gYTIIfvJJ8fkraRNZib/c=",
     "References\\ModernThemes.json": "C8_KDQJ/3t27vgKx25iCQB/PGqxkWE34ZB7Eyb+RxNxY0k=",
@@ -30,5 +30,5 @@
     "References\\Themes.json": "C8_fekM606A917ll7hte3n6YkYOx7to0umlSjqcOex1id4=",
     "Resources\\PublishInfo.json": "C8_cqpFdi9U/EPEuxjweB6zbe5j1gMlkb5UHpGtoqtIh40="
   },
-  "ServerStampedChecksum": "C8_yhd+EWcNJ+vzjeQ4Yhw6dWfSagfU2WpngS+vvawtjpw="
+  "ServerStampedChecksum": "C8_z3SNVcipSyBuxsIquIhm+VZQCB+y9SLPIVRcsooFSnQ="
 }
