@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: =If(!IsBlank(LookUp(List,Title=User().Email)),Set(is_admin, true ),Set(is_admin, false ))
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
