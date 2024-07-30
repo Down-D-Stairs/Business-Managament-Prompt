@@ -18,6 +18,11 @@
     "TableName": "exportedexcel",
     "Views": "{\"@odata.context\":\"https://orgb4ca1be1.crm.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2567369\\\"\",\"savedqueryid\":\"74c07641-6f59-4ac7-bf7c-6caece14d283\",\"name\":\"Exported Excel Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2567345\\\"\",\"savedqueryid\":\"8e04d4c9-792b-4ff3-922a-d79a5ae63a24\",\"name\":\"Exported Excel Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"2567333\\\"\",\"savedqueryid\":\"9c2194ad-daa3-44a8-8272-de2d15afe7f6\",\"name\":\"Inactive Exported Excels\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2567321\\\"\",\"savedqueryid\":\"62499c9d-f8ce-4a40-bc81-e27a4f37996b\",\"name\":\"Active Exported Excels\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2567357\\\"\",\"savedqueryid\":\"82cd2972-fbd5-4b90-917c-f69b3c842ef4\",\"name\":\"Exported Excel Lookup View\",\"querytype\":64}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Accounts": {
+      "entitySetName": "accounts",
+      "logicalName": "account"
+    }
+  },
   "webApiVersion": "v9.0"
 }

@@ -135,6 +135,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Admin HomeScreen"
+    "Admin HomeScreen",
+    "Employee HomeScreen"
   ]
 }

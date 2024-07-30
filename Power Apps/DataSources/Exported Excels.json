@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "exportedexcel",
-    "MaxGetRowsCount": 500,
     "Name": "Exported Excels",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
