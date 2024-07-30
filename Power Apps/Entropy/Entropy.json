@@ -77,15 +77,15 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/30/2024 19:09:08",
+  "HeaderLastSavedDateTimeUTC": "07/30/2024 19:17:42",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
+    "5e2ac83f-f521-4bb1-93e8-a70bc730a894": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/d483e146aa344f698d29d8cfa163c6d1\"",
     "63335a81-6589-470f-a9f1-c1cca859f292": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/27fabfbd11a04fdf8f66a03aaa2b25bd\"",
     "af9be01c-69bb-4d01-aa5b-c419b6575a51": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/b64ac64674da403c9068cc9b8ca73012\"",
     "c4d5d2d0-1f55-4bd5-97ec-902e57b52742": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/27fabfbd11a04fdf8f66a03aaa2b25bd\"",
     "e1ca99f5-5849-415d-a670-a26d99f16f71": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/27fabfbd11a04fdf8f66a03aaa2b25bd\"",
-    "e69fed1f-1485-4840-b234-f1bf51af3194": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/54126e8665494d3b88d6fe4bedac2edf\"",
-    "f4edf0df-d31a-4b13-8237-27ea9f4f71cd": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/27fabfbd11a04fdf8f66a03aaa2b25bd\""
+    "e69fed1f-1485-4840-b234-f1bf51af3194": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/54126e8665494d3b88d6fe4bedac2edf\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -93,6 +93,7 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
+    "Admin_List": 18,
     "CoffeeMachines": 15,
     "CustomGallerySample": 16,
     "Expense Data": 17,
@@ -102,7 +103,6 @@
     "Exported Excels\\exportedexcel_statecode": 2,
     "Exported Excels\\exportedexcel_statuscode": 3,
     "Exported Excels\\ismanaged": 0,
-    "List": 18,
     "SharePoint Sites": 21,
     "SharePoint Sites\\default.cds_sharepointsite_views": 14,
     "SharePoint Sites\\sharepoint_validationstatus": 9,
