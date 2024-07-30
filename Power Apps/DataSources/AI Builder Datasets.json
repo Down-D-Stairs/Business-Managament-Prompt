@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msdyn_aibdatasets",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msdyn_aibdataset",
+    "Name": "AI Builder Datasets",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msdyn_aibdataset_AsyncOperations": "System Jobs",
+      "msdyn_aibdataset_BulkDeleteFailures": "Bulk Delete Failures",
+      "msdyn_aibdataset_DuplicateBaseRecord": "Duplicate Records (msdyn_aibdataset_DuplicateBaseRecord)",
+      "msdyn_aibdataset_DuplicateMatchingRecord": "Duplicate Records (msdyn_aibdataset_DuplicateMatchingRecord)",
+      "msdyn_aibdataset_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msdyn_aibdataset_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msdyn_aibdataset_ProcessSession": "Process Sessions",
+      "msdyn_aibdataset_SyncErrors": "Sync Errors",
+      "msdyn_AIBDatasetFile_msdyn_AIBDatas": "AI Builder Dataset Files",
+      "msdyn_aibdatasetid": "AI Builder Dataset",
+      "msdyn_AIBDatasetRecord_msdyn_AIBDataset": "AI Builder Dataset Records",
+      "msdyn_AIBDatasetsContainerId": "AI Builder Datasets Container",
+      "msdyn_metadata": "Metadata",
+      "msdyn_name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AI Builder Datasets",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AI Builder Datasets (Views)",
+    "Name": "_msdyn_aibdataset_views",
+    "RelatedEntityName": "AI Builder Datasets",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "233785ba-4d76-434e-86c4-660fcb8c30bc": "Inactive AI Builder Datasets",
+      "779ffbc8-65e3-4c80-989b-ee6e0e488c74": "AI Builder Dataset Associated View",
+      "b76b7a93-c890-470a-850d-8fa906641bac": "AI Builder Dataset Advanced Find View",
+      "b8673ca0-7b83-4817-8c69-b9dc6807239d": "Active AI Builder Datasets",
+      "dd9f21ca-bb3a-49d0-8c45-cff2d5b6814f": "AI Builder Dataset Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (AI Builder Datasets)",
+    "Name": "msdyn_aibdataset_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AI Builder Datasets"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AI Builder Datasets",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AI Builder Datasets)",
+    "Name": "msdyn_aibdataset_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AI Builder Datasets"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AI Builder Datasets",
+    "Type": "OptionSetInfo"
+  }
+]
