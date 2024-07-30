@@ -2,8 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =// Visible property for AdminScreen
-        CurrentUserRole = "Admin"
+        =If(UserRole = "Admin", true, false)
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
