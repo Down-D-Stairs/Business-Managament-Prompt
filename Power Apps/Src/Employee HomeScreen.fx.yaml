@@ -62,7 +62,67 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
-                "'Receipt Upload_DataCard1' As typedDataCard.fluentV9AddLargePictureCard":
+                Amount_DataCard3 As typedDataCard.fluentV9NumberEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Amount"
+                    Default: =ThisItem.Amount
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =Value(DataCardValue15.Value)
+                    Width: =1334
+                    X: =0
+                    Y: =8
+                    ZIndex: =1
+
+                    DataCardKey17 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue15 As 'Text input'":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage17 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue15.Y + DataCardValue15.Height
+                        ZIndex: =3
+
+                    StarVisible17 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey17.Y
+                        ZIndex: =4
+
+                "'Receipt Upload_DataCard2' As typedDataCard.fluentV9AddLargePictureCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReceiptUpload"
@@ -72,13 +132,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Image4.Image
+                    Update: =Image5.Image
                     Width: =1334
                     X: =0
                     Y: =0
                     ZIndex: =1
 
-                    DataCardKey5 As Text:
+                    DataCardKey9 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =34
                         Text: =Parent.DisplayName
@@ -89,30 +149,30 @@
                         Y: =10
                         ZIndex: =1
 
-                    Image4 As image:
+                    Image5 As image:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                        Height: =AddPicture2.Height
+                        Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
                         Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1.Width
-                        X: =AddPicture1.X
-                        Y: =AddPicture1.Y
+                        Width: =AddPicture2.Width
+                        X: =AddPicture2.X
+                        Y: =AddPicture2.Y
                         ZIndex: =2
 
-                    AddPicture1 As addMedia:
+                    AddPicture2 As addMedia:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                        Y: =DataCardKey9.Y + DataCardKey9.Height + 5
                         ZIndex: =3
 
-                    ErrorMessage4 As Text:
+                    ErrorMessage9 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =10
                         Size: =12
@@ -120,22 +180,22 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =Image4.Y + Image4.Height
+                        Y: =Image5.Y + Image5.Height
                         ZIndex: =4
 
-                    StarVisible4 As Text:
+                    StarVisible9 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
-                        Height: =DataCardKey5.Height
+                        Height: =DataCardKey9.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
                         X: =0
-                        Y: =DataCardKey5.Y
+                        Y: =DataCardKey9.Y
                         ZIndex: =5
 
-                "'Payment Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
+                "'Payment Type_DataCard2' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="PaymentType"
@@ -144,15 +204,59 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaymentType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =true
-                    Update: =DataCardValue17.Selected
-                    Width: =800
-                    WidthFit: =true
+                    Required: =false
+                    Update: =DataCardValue8.Selected
+                    Width: =1334
                     X: =0
                     Y: =1
                     ZIndex: =1
 
-                "'Expense Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
+                    DataCardKey10 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue8 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@'Expense Data'].PaymentType)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey10.Y + DataCardKey10.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage10 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue8.Y + DataCardValue8.Height
+                        ZIndex: =3
+
+                    StarVisible10 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey10.Y
+                        ZIndex: =4
+
+                "'Expense Type_DataCard2' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ExpenseType"
@@ -161,15 +265,26 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ExpenseType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =true
-                    Update: =DataCardValue18.Selected
-                    Width: =800
-                    WidthFit: =true
+                    Required: =false
+                    Update: =DataCardValue9.Selected
+                    Width: =1334
                     X: =0
                     Y: =2
                     ZIndex: =1
 
-                "'Vendor Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                    DataCardValue9 As Combobox.pcfdataset:
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@'Expense Data'].ExpenseType)
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey11.Y + DataCardKey11.Height + 4
+                        ZIndex: =2
+
+                "'Vendor Name_DataCard2' As typedDataCard.fluentV9TextualEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
@@ -179,15 +294,14 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, VendorName)
-                    Required: =true
-                    Update: =DataCardValue2.Value
-                    Width: =800
-                    WidthFit: =true
+                    Required: =false
+                    Update: =DataCardValue10.Value
+                    Width: =1334
                     X: =0
                     Y: =3
                     ZIndex: =1
 
-                    DataCardKey2 As Text:
+                    DataCardKey12 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -198,7 +312,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue2 As 'Text input'":
+                    "DataCardValue10 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -208,10 +322,10 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                        Y: =DataCardKey12.Y + DataCardKey12.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage1 As Text:
+                    ErrorMessage12 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -219,10 +333,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue2.Y + DataCardValue2.Height
+                        Y: =DataCardValue10.Y + DataCardValue10.Height
                         ZIndex: =3
 
-                    StarVisible1 As Text:
+                    StarVisible12 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -230,10 +344,10 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey2.Y
+                        Y: =DataCardKey12.Y
                         ZIndex: =4
 
-                Date_DataCard1 As typedDataCard.fluentV9DateEditCard:
+                Date_DataCard2 As typedDataCard.fluentV9DateEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Date"
@@ -242,15 +356,14 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =true
+                    Required: =false
                     Update: =DataCardValue11.SelectedDate
                     Width: =1334
-                    WidthFit: =true
                     X: =0
                     Y: =4
                     ZIndex: =1
 
-                Amount_DataCard1 As typedDataCard.fluentV9NumberEditCard:
+                Amount_DataCard2 As typedDataCard.fluentV9NumberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Amount"
@@ -259,15 +372,14 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =true
-                    Update: =Value(DataCardValue3.Value)
+                    Required: =false
+                    Update: =Value(DataCardValue12.Value)
                     Width: =1334
-                    WidthFit: =true
                     X: =0
                     Y: =5
                     ZIndex: =1
 
-                    DataCardKey3 As Text:
+                    DataCardKey14 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -278,58 +390,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue3 As 'Text input'":
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey3.Y + DataCardKey3.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage2 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue3.Y + DataCardValue3.Height
-                        ZIndex: =3
-
-                    StarVisible2 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey3.Y
-                        ZIndex: =4
-
-                Comments_DataCard1 As typedDataCard.fluentV9TextualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Comments"
-                    Default: =ThisItem.Comments
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =70
-                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, Comments)
-                    Required: =false
-                    Update: =DataCardValue13.Value
-                    Width: =1334
-                    WidthFit: =true
-                    X: =0
-                    Y: =6
-                    ZIndex: =1
-
-                SubExpense_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                SubExpense_DataCard2 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="SubExpense"
@@ -340,14 +401,30 @@
                     Height: =70
                     MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, SubExpense)
                     Required: =false
-                    Update: =DataCardValue4.Value
+                    Update: =DataCardValue13.Value
                     Width: =1334
-                    WidthFit: =true
+                    X: =0
+                    Y: =6
+                    ZIndex: =1
+
+                Comments_DataCard2 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Comments"
+                    Default: =ThisItem.Comments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, Comments)
+                    Required: =false
+                    Update: =DataCardValue14.Value
+                    Width: =1334
                     X: =0
                     Y: =7
                     ZIndex: =1
 
-                    DataCardKey4 As Text:
+                    DataCardKey16 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -358,7 +435,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue4 As 'Text input'":
+                    "DataCardValue14 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -368,30 +445,8 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                        Y: =DataCardKey16.Y + DataCardKey16.Height + 4
                         ZIndex: =2
-
-                    ErrorMessage3 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue4.Y + DataCardValue4.Height
-                        ZIndex: =3
-
-                    StarVisible3 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey4.Y
-                        ZIndex: =4
 
         FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -415,12 +470,12 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =If(
-                IsBlank('Payment Type_DataCard1') || IsBlank(Date_DataCard1) ||
-                IsBlank('Expense Type_DataCard1') ||
-                IsBlank('Vendor Name_DataCard1') ||
-                IsBlank(Amount_DataCard1), 
+                IsBlank('Payment Type_DataCard2') || IsBlank(Date_DataCard2) ||
+                IsBlank('Expense Type_DataCard2') ||
+                IsBlank('Vendor Name_DataCard2') ||
+                IsBlank(Amount_DataCard2), 
                 Notify("Please fill in all required fields.", NotificationType.Error),
-                false,
+                true,
                 SubmitForm(Form1);
                 ResetForm(Form1);
             )
