@@ -135,7 +135,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Admin HomeScreen",
-    "Employee HomeScreen"
+    "HomeScreen",
+    "Expense Upload Screen"
   ]
 }

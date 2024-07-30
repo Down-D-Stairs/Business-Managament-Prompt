@@ -1,4 +1,4 @@
-"'Admin HomeScreen' As screen.'autoLayout_Sidebar_ver1.0'":
+"HomeScreen As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: =
@@ -253,7 +253,7 @@
     ButtonCanvas3 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Navigate('Employee HomeScreen')
+        OnSelect: =Navigate('Expense Upload Screen')
         Text: ="Upload"
         Width: =96
         X: =492
@@ -263,7 +263,7 @@
     ButtonCanvas4 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Text: ="Approval"
+        Text: ="Approval (Admin)"
         Visible: =is_admin
         Width: =96
         X: =1143

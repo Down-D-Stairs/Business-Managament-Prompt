@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.ButtonCanvas4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.ButtonCanvas4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.ButtonCanvas3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.ButtonCanvas4"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.ButtonCanvas3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.ButtonCanvas3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.Gallery2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.ButtonCanvas3"
               }
             }
           ],
@@ -74,19 +74,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.Gallery2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.Gallery2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2"
               }
             }
           ],
@@ -104,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.ButtonCanvas2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery2.ButtonCanvas2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Gallery2.ButtonCanvas2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery2.ButtonCanvas2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.Gallery2.ButtonCanvas2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2.ButtonCanvas2"
               }
             }
           ],
@@ -134,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.History.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.History.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.History.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.History.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.History"
+                "module": "HomeScreen",
+                "type": "HomeScreen.History"
               }
             }
           ],
@@ -164,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.History.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.History.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.History.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.History.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.History"
+                "module": "HomeScreen",
+                "type": "HomeScreen.History"
               }
             }
           ],
@@ -194,19 +224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Approval.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Approval.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Approval.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Approval.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.Approval"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Approval"
               }
             }
           ],
@@ -224,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Approval.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Approval.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.Approval.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Approval.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.Approval"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Approval"
               }
             }
           ],
@@ -254,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel"
+                  "fullyQualifiedName": "'Expense Upload Screen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel",
+                  "fullyQualifiedName": "'Expense Upload Screen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1"
+                "module": "Expense Upload Screen",
+                "type": "'Expense Upload Screen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard1'.AddPicture1"
               }
             }
           ],
@@ -284,49 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel"
+                  "fullyQualifiedName": "'Expense Upload Screen'.ButtonCanvas1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.AccessibleLabel",
+                  "fullyQualifiedName": "'Expense Upload Screen'.ButtonCanvas1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Admin HomeScreen'.ButtonCanvas4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Admin HomeScreen",
-                "type": "'Admin HomeScreen'.ButtonCanvas4"
+                "module": "Expense Upload Screen",
+                "type": "'Expense Upload Screen'.ButtonCanvas1"
               }
             }
           ],
