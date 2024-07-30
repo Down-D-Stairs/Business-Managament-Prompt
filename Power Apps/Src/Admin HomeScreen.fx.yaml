@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =If(UserRole = "kkarumudi@recurringdecimal.com", true, false)
+        =If(UserRole = "kkarumudi@recurringdecimal.com", false, true)
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light

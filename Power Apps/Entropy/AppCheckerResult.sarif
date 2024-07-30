@@ -14,112 +14,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.Update"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.Update",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 6,
+                  "charLength": 13,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Image4"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Update",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Image4"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.Update"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.Update",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 6,
-                  "snippet": {
-                    "text": ".Image"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Update",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Image4"
+                    "text": "DataCardKey11"
                   }
                 }
               },
               "properties": {
                 "member": "Y",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Image4"
+              "DataCardKey11"
             ],
             "id": "issue"
           },
@@ -134,17 +54,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 6,
+                  "charOffset": 13,
                   "snippet": {
                     "text": ".Y"
                   }
@@ -153,7 +73,7 @@
               "properties": {
                 "member": "Y",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
               }
             }
           ],
@@ -174,32 +94,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 6,
-                  "charOffset": 11,
+                  "charLength": 13,
+                  "charOffset": 18,
                   "snippet": {
-                    "text": "Image4"
+                    "text": "DataCardKey11"
                   }
                 }
               },
               "properties": {
                 "member": "Y",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Image4"
+              "DataCardKey11"
             ],
             "id": "issue"
           },
@@ -214,17 +134,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14.Y",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9.Y",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 7,
-                  "charOffset": 17,
+                  "charOffset": 31,
                   "snippet": {
                     "text": ".Height"
                   }
@@ -233,7 +153,87 @@
               "properties": {
                 "member": "Y",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.ErrorMessage14"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Expense Type_DataCard2'.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataCardValue11"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue11"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2.Update",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".SelectedDate"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Update",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Date_DataCard2"
               }
             }
           ],
@@ -266,7 +266,7 @@
                   "charLength": 15,
                   "charOffset": 6,
                   "snippet": {
-                    "text": "DataCardValue10"
+                    "text": "DataCardValue12"
                   }
                 }
               },
@@ -279,7 +279,7 @@
           ],
           "message": {
             "arguments": [
-              "DataCardValue10"
+              "DataCardValue12"
             ],
             "id": "issue"
           },
@@ -374,32 +374,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1.Update"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1.Update",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 14,
+                  "charLength": 15,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "DataCardValue7"
+                    "text": "DataCardValue13"
                   }
                 }
               },
               "properties": {
                 "member": "Update",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2"
               }
             }
           ],
           "message": {
             "arguments": [
-              "DataCardValue7"
+              "DataCardValue13"
             ],
             "id": "issue"
           },
@@ -414,17 +414,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1.Update"
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1.Update",
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.Update",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 14,
+                  "charOffset": 15,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -433,7 +433,7 @@
               "properties": {
                 "member": "Update",
                 "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.Vendor_Name_DataCard1"
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2"
               }
             }
           ],
@@ -448,486 +448,6 @@
           },
           "ruleId": "app-ErrInvalidDot",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataCardKey12"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Y",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataCardKey12"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 13,
-                  "snippet": {
-                    "text": ".Y"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Y",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "DataCardKey12"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Y",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataCardKey12"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 31,
-                  "snippet": {
-                    "text": ".Height"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Y",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.SubExpense_DataCard2.DataCardValue12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "Payment_Type_DataCard1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Payment_Type_DataCard1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "IsBlank"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 53,
-                  "snippet": {
-                    "text": "Date_DataCard1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Date_DataCard1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 45,
-                  "snippet": {
-                    "text": "IsBlank"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 85,
-                  "snippet": {
-                    "text": "Expense_Type_DataCard1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Expense_Type_DataCard1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 77,
-                  "snippet": {
-                    "text": "IsBlank"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 164,
-                  "snippet": {
-                    "text": "Amount_DataCard1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Amount_DataCard1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Employee HomeScreen'.ButtonCanvas1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 156,
-                  "snippet": {
-                    "text": "IsBlank"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Employee HomeScreen",
-                "type": "'Employee HomeScreen'.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1198,6 +718,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Employee HomeScreen",
+                "type": "'Employee HomeScreen'.ScreenContainer2.MainContainer1.Form1.'Receipt Upload_DataCard2'.AddPicture2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
