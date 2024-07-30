@@ -1,6 +1,18 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_exportedexcel_forms",
+      "Namespace": "Exported Excels (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sharepointsite_forms",
+      "Namespace": "SharePoint Sites (Forms)",
+      "Values": {
+        "Information": "ba6522af-e71b-df11-aa01-00155d2a9006"
+      }
+    },
+    {
       "Kind": "default.cds_account_forms",
       "Namespace": "Accounts (Forms)",
       "Values": {

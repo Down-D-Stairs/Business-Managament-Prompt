@@ -1,10 +1,5 @@
 {
-  "dataSources": {
-    "AI Builder Datasets": {
-      "entitySetName": "msdyn_aibdatasets",
-      "logicalName": "msdyn_aibdataset"
-    }
-  },
+  "dataSources": {},
   "environmentVariableName": "",
   "instanceUrl": "https://orgb4ca1be1.crm.dynamics.com/",
   "state": "Configured",
