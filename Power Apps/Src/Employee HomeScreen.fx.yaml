@@ -90,29 +90,6 @@
                         Y: =10
                         ZIndex: =1
 
-                    Image4 As image:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
-                        Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1.Width
-                        X: =AddPicture1.X
-                        Y: =AddPicture1.Y
-                        ZIndex: =2
-
-                    AddPicture1 As addMedia:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =200
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey15.Y + DataCardKey15.Height + 5
-                        ZIndex: =3
-
                     ErrorMessage14 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =10
@@ -274,50 +251,6 @@
                     Y: =4
                     ZIndex: =1
 
-                    DataCardKey10 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
-                    "DataCardValue10 As 'Text input'":
-                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =32
-                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
-                        Width: =Parent.Width - 48
-                        X: =24
-                        Y: =DataCardKey10.Y + DataCardKey10.Height + 4
-                        ZIndex: =2
-
-                    ErrorMessage10 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue10.Y + DataCardValue10.Height
-                        ZIndex: =3
-
-                    StarVisible10 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey10.Y
-                        ZIndex: =4
-
                 Date_DataCard2 As typedDataCard.fluentV9DateEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -460,17 +393,6 @@
                     Y: =7
                     ZIndex: =1
 
-                    DataCardKey12 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =22
-                        Text: =Parent.DisplayName
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width - 48
-                        Wrap: =false
-                        X: =24
-                        Y: =10
-                        ZIndex: =1
-
                     "DataCardValue12 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
@@ -483,28 +405,6 @@
                         X: =24
                         Y: =DataCardKey12.Y + DataCardKey12.Height + 4
                         ZIndex: =2
-
-                    ErrorMessage12 As Text:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: =Parent.Error
-                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =Parent.Width - 48
-                        Wrap: =true
-                        X: =24
-                        Y: =DataCardValue12.Y + DataCardValue12.Height
-                        ZIndex: =3
-
-                    StarVisible12 As Text:
-                        Align: ='TextCanvas.Align'.Center
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =30
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        X: =0
-                        Y: =DataCardKey12.Y
-                        ZIndex: =4
 
                 Vendor_Name_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
