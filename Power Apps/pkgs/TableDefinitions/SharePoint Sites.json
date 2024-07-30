@@ -18,11 +18,6 @@
     "TableName": "sharepointsite",
     "Views": "{\"@odata.context\":\"https://orgb4ca1be1.crm.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"894580\\\"\",\"savedqueryid\":\"ef773df3-5557-df11-a5a2-00155d2a9005\",\"name\":\"Active SharePoint Sites\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"894581\\\"\",\"savedqueryid\":\"9d844e0d-5657-df11-a5a2-00155d2a9005\",\"name\":\"Inactive SharePoint Sites\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"894582\\\"\",\"savedqueryid\":\"8735625e-5657-df11-a5a2-00155d2a9005\",\"name\":\"My Active SharePoint Sites\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"894888\\\"\",\"savedqueryid\":\"519a30fa-6d4a-4a9d-befe-2b08c9429e87\",\"name\":\"SharePoint Site Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"894982\\\"\",\"savedqueryid\":\"76251bbd-bc73-41d1-ae97-37c361b542f9\",\"name\":\"All SharePoint Sites\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"895191\\\"\",\"savedqueryid\":\"a529f7aa-f755-41bf-92ec-5a89174bec15\",\"name\":\"SharePoint Site Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"895523\\\"\",\"savedqueryid\":\"df2fe6da-f97f-4878-80b6-8deb7d9d6a09\",\"name\":\"SharePoint Site Associated View\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {
-    "Activities": {
-      "entitySetName": "activitypointers",
-      "logicalName": "activitypointer"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

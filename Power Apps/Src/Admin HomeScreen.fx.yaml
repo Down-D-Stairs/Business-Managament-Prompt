@@ -1,4 +1,4 @@
-"'Admin/Employee HomeScreen' As screen.'autoLayout_Sidebar_ver1.0'":
+"'Admin HomeScreen' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 

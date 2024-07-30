@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "sharepointsite",
+    "MaxGetRowsCount": 500,
     "Name": "SharePoint Sites",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
