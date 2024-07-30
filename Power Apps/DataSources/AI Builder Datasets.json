@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "msdyn_aibdataset",
+    "MaxGetRowsCount": 500,
     "Name": "AI Builder Datasets",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
