@@ -1,0 +1,6 @@
+"'Expense Upload Screen' As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: |
+        =
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =
+

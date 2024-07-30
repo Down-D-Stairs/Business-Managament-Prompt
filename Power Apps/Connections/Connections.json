@@ -15,8 +15,7 @@
       }
     },
     "dataSources": [
-      "Admin_List",
-      "Expense Data"
+      "Admin_List"
     ],
     "dependencies": {},
     "dependents": [],
