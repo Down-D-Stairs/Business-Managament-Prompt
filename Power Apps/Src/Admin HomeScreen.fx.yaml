@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =admin
+        =admin = true
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
