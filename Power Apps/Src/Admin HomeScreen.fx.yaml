@@ -43,8 +43,8 @@
             =Table({ID:1,Label:"Upload"},{ID:2,Label:"History"},{ID:3,Label:"Approval"})
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
-        Width: =896
-        X: =444
+        Width: =981
+        X: =360
         Y: =24
         ZIndex: =2
 
@@ -54,8 +54,8 @@
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             Text: =ThisItem.Label
             Width: =96
-            X: =48
-            Y: =12
+            X: =128
+            Y: =8
             ZIndex: =1
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
