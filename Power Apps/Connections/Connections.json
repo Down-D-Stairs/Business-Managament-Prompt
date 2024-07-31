@@ -8,6 +8,9 @@
     "datasets": {
       "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
         "dataSources": {
+          "Add New Expense Temp": {
+            "tableName": "d15c49f9-5e2a-4ddd-aa21-efc0007742f8"
+          },
           "Admin_List": {
             "tableName": "0e9fb0cf-b253-4620-aa66-02ab46da1980"
           }
@@ -16,7 +19,8 @@
     },
     "dataSources": [
       "Admin_List",
-      "Expense Data"
+      "Expense Data",
+      "Add New Expense Temp"
     ],
     "dependencies": {},
     "dependents": [],
