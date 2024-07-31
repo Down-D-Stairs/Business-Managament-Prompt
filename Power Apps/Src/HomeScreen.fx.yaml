@@ -142,7 +142,7 @@
     ButtonCanvas1 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Navigate('Expense Upload Screen')
+        OnSelect: =Navigate('Expense upload screen')
         Text: ="Upload"
         Visible: =true
         Width: =96
