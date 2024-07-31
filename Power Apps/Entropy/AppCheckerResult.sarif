@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "HomeScreen",
-                "type": "HomeScreen.Gallery1"
+                "type": "HomeScreen.'History Of Charges'"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "HomeScreen",
-                "type": "HomeScreen.Gallery1"
+                "type": "HomeScreen.'History Of Charges'"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.ButtonCanvas2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.ButtonCanvas2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.Gallery1.ButtonCanvas2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.'History Of Charges'.ButtonCanvas2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "HomeScreen",
-                "type": "HomeScreen.Gallery1.ButtonCanvas2"
+                "type": "HomeScreen.'History Of Charges'.ButtonCanvas2"
               }
             }
           ],
@@ -194,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.ButtonCanvas3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.ButtonCanvas3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "HomeScreen",
-                "type": "HomeScreen.ButtonCanvas3"
+                "type": "HomeScreen.Gallery3"
               }
             }
           ],
@@ -218,6 +218,126 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.Gallery3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.Gallery3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.Gallery3.ButtonCanvas4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.Gallery3.ButtonCanvas4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery3.ButtonCanvas4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.'Approve/Deny Requests'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.'Approve/Deny Requests'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomeScreen",
+                "type": "HomeScreen.'Approve/Deny Requests'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.'Approve/Deny Requests'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.'Approve/Deny Requests'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "HomeScreen",
+                "type": "HomeScreen.'Approve/Deny Requests'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [
