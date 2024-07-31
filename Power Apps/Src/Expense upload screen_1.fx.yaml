@@ -588,7 +588,7 @@
         Items: =ExpensesCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |
+        OnSelect: |-
             =EditForm(Form1_1); 
             Form1_1.Item = ThisItem
         TemplatePadding: =0
