@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 2,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -136,6 +136,7 @@
   },
   "ScreenOrder": [
     "HomeScreen",
-    "Expense upload screen"
+    "Expense upload screen",
+    "Expense upload screen_1"
   ]
 }
