@@ -692,23 +692,10 @@
         OnSelect: |+
             =If(
                 Form1_1.Valid,
-                Patch(
-                'Add New Expense Temp',
-                Defaults('Add New Expense Temp'),
-                {
-                    'Receipt Upload': Image4_1,
-                    'Payment Type': DataCardValue2_1,
-                    'Expense Type':DataCardValue4_1,
-                    'Vendor Name': DataCardValue5_1,
-                    Date : DataCardValue3_1,
-                    Amount: DataCardValue6_1,
-                    Comments : DataCardValue7_1,
-                    SubExpense: DataCardValue8_1
-                }
-            );
-            
+                
+                'templist'.Run();
                 ResetForm(Form1_1);
-                NewForm(Form1_1);
+                NewForm(Form1_1),
             
                 Notify("Please fill in all required fields.", NotificationType.Error)
             );
