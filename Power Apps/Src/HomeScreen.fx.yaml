@@ -81,6 +81,7 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
+        Visible: =varTabSelected = 1
         X: =607
         Y: =116
         ZIndex: =12
@@ -172,7 +173,7 @@
             Width: =4
             ZIndex: =6
 
-    Gallery3 As gallery.galleryHorizontal:
+    "'Admin Accessible Button' As gallery.galleryHorizontal":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =47
@@ -188,7 +189,7 @@
         ButtonCanvas4 As Button:
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            OnSelect: =Set(varTabSelected0, ThisItem.ID)
+            OnSelect: =Set(varTabSelected, ThisItem.ID)
             Text: =ThisItem.Label
             Visible: =is_admin
             Width: =96
@@ -205,7 +206,7 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
-        Visible: =varTabSelected0=2
+        Visible: =varTabSelected=2
         Width: =803
         X: =444
         Y: =82
