@@ -434,19 +434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Expense upload screen'.ScreenContainer1.MainContainer1.ButtonCanvas5.AccessibleLabel"
+                  "fullyQualifiedName": "'Expense upload screen'.ButtonCanvas7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Expense upload screen'.ScreenContainer1.MainContainer1.ButtonCanvas5.AccessibleLabel",
+                  "fullyQualifiedName": "'Expense upload screen'.ButtonCanvas7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expense upload screen",
-                "type": "'Expense upload screen'.ScreenContainer1.MainContainer1.ButtonCanvas5"
+                "type": "'Expense upload screen'.ButtonCanvas7"
               }
             }
           ],

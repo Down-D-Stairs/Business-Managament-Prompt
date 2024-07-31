@@ -51,6 +51,7 @@
             Form1 As form.PowerApps_CoreControls_Form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='Expense Data'
+                DefaultMode: =FormMode.New
                 FillPortions: =0.8
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
@@ -140,7 +141,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaymentType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue2.Selected
                     Width: =1334
                     X: =0
@@ -160,6 +161,7 @@
 
                     DataCardValue2 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        BasePaletteColor: =
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -201,7 +203,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ExpenseType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue4.Selected
                     Width: =1334
                     X: =0
@@ -263,7 +265,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, VendorName)
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue5.Value
                     Width: =1334
                     X: =0
@@ -325,7 +327,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue3.SelectedDate
                     Width: =1334
                     X: =0
@@ -387,7 +389,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =false
+                    Required: =true
                     Update: =Value(DataCardValue6.Value)
                     Width: =1334
                     X: =0
@@ -564,21 +566,6 @@
                         Y: =DataCardKey8.Y
                         ZIndex: =4
 
-            ButtonCanvas5 As Button:
-                Align: =Align.Center
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Icon: ="Checkmark"
-                Layout: ='ButtonCanvas.Layout'.IconAfter
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                Text: ="Submit Expense(s)"
-                VerticalAlign: =VerticalAlign.Middle
-                Width: =96
-                X: =0
-                Y: =0
-                ZIndex: =2
-
         FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -592,4 +579,23 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             ZIndex: =4
+
+    ButtonCanvas7 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =44
+        Icon: ="Checkmark"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |
+            =If(
+                Form1.Valid, 
+                SubmitForm(Form1);
+                ResetForm(Form1),
+                Notify("Please fill in all required fields.", NotificationType.Error)
+            )
+        Text: ="Submit Expense(s)"
+        Width: =132
+        X: =1182
+        Y: =579
+        ZIndex: =2
 
