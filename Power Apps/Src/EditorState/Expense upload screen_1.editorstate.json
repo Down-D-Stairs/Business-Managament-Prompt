@@ -6678,7 +6678,7 @@
         {
           "Category": "Data",
           "PropertyName": "Live",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",

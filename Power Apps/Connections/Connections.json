@@ -47,6 +47,28 @@
     "dependents": [],
     "id": "63335a81-6589-470f-a9f1-c1cca859f292"
   },
+  "8ab04f69-9e29-40ec-b065-a66f1a7a80b3": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
+        "dataSources": {
+          "Add New Expense Temp": {
+            "tableName": "d15c49f9-5e2a-4ddd-aa21-efc0007742f8"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Add New Expense Temp"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
+  },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
       "displayName": "Excel",
@@ -99,6 +121,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
+          "value": "shared_sharepointonline"
+        },
         "workflowDisplayName": {
           "value": "temp list"
         },
@@ -108,6 +133,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
+        },
         "workflowDisplayName": {
           "value": "temp list"
         },
