@@ -70,6 +70,7 @@
 
                 Form9 As form:
                     BorderColor: =App.Theme.Colors.Darker40
+                    BorderThickness: =1
                     DataSource: ='Expense Data'
                     DefaultMode: =If(EditMode, FormMode.Edit, FormMode.View)
                     FillPortions: =0.8
@@ -825,6 +826,7 @@
                     BorderThickness: =1
                     DataSource: ='Expense Data'
                     FillPortions: =0.5
+                    Item: ='Admin Expense View'.Selected
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =1
@@ -983,10 +985,23 @@
         Height: =48
         Icon: ="Save"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: =Set(EditMode,false)
+        OnSelect: |-
+            =SubmitForm(Form9);
+            Notify("Record updated successfully", NotificationType.Success);
+            Set(EditMode,false)
         Text: ="Save"
         Width: =170
         X: =598
         Y: =658
         ZIndex: =4
+
+    ButtonCanvas9 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate('HomeScreen', ScreenTransition.Fade)
+        Text: ="Back"
+        Width: =96
+        X: =40
+        Y: =40
+        ZIndex: =5
 
