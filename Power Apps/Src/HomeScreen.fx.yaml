@@ -10,7 +10,7 @@
         Items: ='Expense Data'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
+        OnSelect: =Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
         TemplatePadding: =0
         TemplateSize: =108
         Width: =922

@@ -1,4 +1,4 @@
-"'Admin Expense Item View' As screen.'autoLayout_Sidebar_ver1.0'":
+"'Admin Expense Item Detailed View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: =Set(EditMode, false)

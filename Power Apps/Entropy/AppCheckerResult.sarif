@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Payment Type_DataCard12'.DataCardValue139"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas9.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas9.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ButtonCanvas9"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ButtonCanvas9"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Comments_DataCard13.DataCardValue144"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.SubExpense_DataCard10.DataCardValue145"
               }
             }
           ],
@@ -134,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Amount_DataCard13.DataCardValue143"
               }
             }
           ],
@@ -284,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas6.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas6.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ButtonCanvas6"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ButtonCanvas6"
               }
             }
           ],
@@ -314,19 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas4.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas4.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ButtonCanvas4"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ButtonCanvas4"
               }
             }
           ],
@@ -344,19 +344,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Expense Type_DataCard13'.DataCardValue141"
               }
             }
           ],
@@ -374,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Vendor Name_DataCard13'.DataCardValue142"
               }
             }
           ],
@@ -404,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas7.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ButtonCanvas7.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ButtonCanvas7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ButtonCanvas7"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ButtonCanvas7"
               }
             }
           ],
@@ -434,19 +434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.'Receipt Upload_DataCard7'.AddPicture3"
               }
             }
           ],
@@ -614,19 +614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140"
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Date_DataCard13.DataCardValue140"
               }
             }
           ],
@@ -674,6 +674,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Admin Home Screen",
+                "type": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Admin Home Screen",
+                "type": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.is_admin"
                 }
               ],
@@ -698,6 +758,66 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.MainContainer2.Form5.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.MainContainer2.Form5.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.MainContainer2.Form5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Admin Expense Item Detailed View",
+                "type": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
         }
       ],
       "tool": {
@@ -754,6 +874,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],
