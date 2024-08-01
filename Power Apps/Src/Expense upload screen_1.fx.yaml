@@ -66,7 +66,7 @@
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ReceiptUpload)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -139,7 +139,7 @@
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaymentType)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =74
                     Required: =true
@@ -166,7 +166,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].PaymentType)
+                        Items: =Choices([@'Expense Data'].'Payment Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -201,7 +201,7 @@
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ExpenseType)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Expense Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =74
                     Required: =true
@@ -227,7 +227,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].ExpenseType)
+                        Items: =Choices([@'Expense Data'].'Expense Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -262,10 +262,10 @@
                     DataField: ="VendorName"
                     Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,VendorName)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, VendorName)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =true
                     Update: =DataCardValue5_1.Value
                     Width: =800
@@ -622,7 +622,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Expense Type'.Value
+            Text: =ThisItem.'Vendor Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image5.Width - 137
             X: =91
@@ -689,19 +689,26 @@
         Height: =44
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |+
+        OnSelect: |
             =If(
                 Form1_1.Valid,
+                // Run Power Automate flow with the form's data
+                'templist'.Run(
+                    DataCardValue2_1.Selected.Value,                // Dropdown or ComboBox selection
+                    DataCardValue4_1.Selected.Value,                // Dropdown or ComboBox selection
+                    DataCardValue5_1.Value,                   // Convert text to number
+                    Text(DataCardValue3_1.SelectedDate, "yyyymmdd"), // Convert date to ISO format
+                    Value(DataCardValue6_1.Value),                          // Text value
+                    DataCardValue7_1.Value,                          // Text value
+                    DataCardValue8_1.Value                           // Text value
+                );
                 
-                'templist'.Run();
+                // Reset the form after running the flow
                 ResetForm(Form1_1);
                 NewForm(Form1_1),
-            
+                
                 Notify("Please fill in all required fields.", NotificationType.Error)
             );
-            
-            
-            
         Text: ="Add New Expense"
         Width: =142
         X: =54
