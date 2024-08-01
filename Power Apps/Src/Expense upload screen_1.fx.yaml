@@ -718,7 +718,7 @@
     ButtonCanvas10 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Navigate('HomeScreen', ScreenTransition.Fade)
+        OnSelect: =Navigate(HomeScreen, ScreenTransition.Fade)
         Text: ="Back"
         Width: =96
         X: =40
