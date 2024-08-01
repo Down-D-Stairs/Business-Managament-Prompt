@@ -1,8 +1,8 @@
-"'Admin Home Screen' As screen.'autoLayout_Sidebar_ver1.0'":
+"'Admin Expense Item View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ScreenContainer4 As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -21,7 +21,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
+        HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -35,7 +35,7 @@
             RadiusTopRight: =8
             ZIndex: =2
 
-        BottomContainer2 As groupContainer.horizontalAutoLayoutContainer:
+        BottomContainer3 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(245, 245, 245, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =16
@@ -53,7 +53,7 @@
             RadiusTopRight: =4
             ZIndex: =3
 
-            SidebarContainer2 As groupContainer.verticalAutoLayoutContainer:
+            SidebarContainer3 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =3
@@ -67,26 +67,18 @@
                 RadiusTopRight: =8
                 ZIndex: =4
 
-                TextCanvas2 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    Text: ="Power BI TBD"
-                    Width: =96
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
-            MainContainer3 As groupContainer.verticalAutoLayoutContainer:
+            MainContainer4 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.End
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
-                FillPortions: =7
+                FillPortions: =6
+                Height: =450
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
@@ -94,10 +86,10 @@
                 ZIndex: =5
 
                 "'Admin Expense View_1' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =1
                     DelayItemLoading: =true
-                    FillPortions: =0.7
                     Height: =564
                     Items: ='Expense Data'
                     Layout: =Layout.Vertical
@@ -221,4 +213,17 @@
                         Visible: =ThisItem.IsSelected
                         Width: =4
                         ZIndex: =7
+
+    Container6 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =166
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =872
+        X: =473
+        Y: =114
+        ZIndex: =2
 

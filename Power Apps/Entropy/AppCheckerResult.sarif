@@ -674,19 +674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Admin Home Screen",
-                "type": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'"
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'"
               }
             }
           ],
@@ -704,19 +704,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.TabIndex"
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'.TabIndex",
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Admin Home Screen",
-                "type": "'Admin Home Screen'.ScreenContainer4.BottomContainer2.MainContainer3.'Admin Expense View_1'"
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View_1'"
               }
             }
           ],
