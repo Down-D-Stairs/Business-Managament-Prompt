@@ -23,6 +23,7 @@
       "{TriggerWindowEndToken}": "Trigger Window End Token",
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
       "{VersionNumber}": "Version number",
+      "AdministrativeComments": "Administrative Comments",
       "Amount": "Amount",
       "ApprovalStatus": "ApprovalStatus",
       "ApprovalStatus#Id": "ApprovalStatus Id",
