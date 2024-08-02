@@ -86,8 +86,8 @@
       "TestingStupidStuff"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed",
-      "shared_sharepointonline": "22719de0-8490-44a8-9077-47db056fcafb"
+      "shared_commondataserviceforapps": "d6077dac-d6c6-4dff-8f89-dbf5157ccf41",
+      "shared_sharepointonline": "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0"
     },
     "dependents": [],
     "id": "61b30ab8-5818-4212-8f49-866434a06cbf"

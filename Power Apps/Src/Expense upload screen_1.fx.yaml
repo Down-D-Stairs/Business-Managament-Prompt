@@ -51,7 +51,7 @@
             Form1_1 As form.PowerApps_CoreControls_Form:
                 AlignInContainer: =AlignInContainer.Start
                 BorderColor: =App.Theme.Colors.Darker40
-                DataSource: ='Expense Data'
+                DataSource: ='Add New Expense Temp'
                 DefaultMode: =FormMode.New
                 FillPortions: =0.8
                 LayoutMinHeight: =250
@@ -60,23 +60,23 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
-                "'Receipt Upload_DataCard1_1' As typedDataCard.fluentV9AddLargePictureCard":
+                "'Receipt Upload_DataCard1' As typedDataCard.fluentV9AddLargePictureCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ReceiptUpload)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Image4_1.Image
+                    Update: =Image1.Image
                     Width: =800
                     X: =0
                     Y: =0
                     ZIndex: =1
 
-                    DataCardKey10_1 As Text:
+                    DataCardKey10 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =34
                         Text: =Parent.DisplayName
@@ -87,35 +87,30 @@
                         Y: =10
                         ZIndex: =1
 
-                    Image4_1 As image:
+                    Image1 As image:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1_1.Height
-                        Image: =If(IsBlank(AddPicture1_1.Media), Parent.Default, AddPicture1_1.Media)
+                        Height: =AddPicture1.Height
+                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
                         Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1_1.Width
-                        X: =AddPicture1_1.X
-                        Y: =AddPicture1_1.Y
+                        Width: =AddPicture1.Width
+                        X: =AddPicture1.X
+                        Y: =AddPicture1.Y
                         ZIndex: =2
 
-                    AddPicture1_1 As addMedia:
+                    AddPicture1 As addMedia:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
-                        OnSelect: |-
-                            =Set(FlowResults, TestingStupidStuff.Run(AddPicture1_1.Media));
-                            Set(VendorName, FlowResults.vendor_name); 
-                            Set(InvoiceDate, FlowResults.invoice_date);
-                            Set(AmountTotal, FlowResults.amount_total);
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey10_1.Y + DataCardKey10_1.Height + 5
+                        Y: =DataCardKey10.Y + DataCardKey10.Height + 5
                         ZIndex: =3
 
-                    ErrorMessage10_1 As Text:
+                    ErrorMessage10 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =10
                         Size: =12
@@ -123,38 +118,38 @@
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =Image4_1.Y + Image4_1.Height
+                        Y: =Image1.Y + Image1.Height
                         ZIndex: =4
 
-                    StarVisible10_1 As Text:
+                    StarVisible10 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
-                        Height: =DataCardKey10_1.Height
+                        Height: =DataCardKey10.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
                         X: =0
-                        Y: =DataCardKey10_1.Y
+                        Y: =DataCardKey10.Y
                         ZIndex: =5
 
-                "'Payment Type_DataCard1_1' As typedDataCard.fluentV9ComboBoxEditCard":
+                "'Payment Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Payment Type')
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,PaymentType)
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =74
+                    Height: =70
                     Required: =true
-                    Update: =DataCardValue2_1.Selected
+                    Update: =DataCardValue2.Selected
                     Width: =800
                     X: =0
                     Y: =1
                     ZIndex: =2
 
-                    DataCardKey2_1 As Text:
+                    DataCardKey2 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -165,20 +160,19 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue2_1 As Combobox.pcfdataset:
+                    DataCardValue2 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                        BasePaletteColor: =
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].'Payment Type')
+                        Items: =Choices([@'Add New Expense Temp'].PaymentType)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 4
+                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage2_1 As Text:
+                    ErrorMessage2 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -186,10 +180,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
+                        Y: =DataCardValue2.Y + DataCardValue2.Height
                         ZIndex: =3
 
-                    StarVisible2_1 As Text:
+                    StarVisible2 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
@@ -197,26 +191,26 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey2_1.Y
+                        Y: =DataCardKey2.Y
                         ZIndex: =4
 
-                "'Expense Type_DataCard1_1' As typedDataCard.fluentV9ComboBoxEditCard":
+                "'Expense Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Expense Type')
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ExpenseType)
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =74
+                    Height: =70
                     Required: =true
-                    Update: =DataCardValue4_1.Selected
+                    Update: =DataCardValue4.Selected
                     Width: =800
                     X: =0
                     Y: =2
                     ZIndex: =2
 
-                    DataCardKey4_1 As Text:
+                    DataCardKey4 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -227,19 +221,19 @@
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue4_1 As Combobox.pcfdataset:
+                    DataCardValue4 As Combobox.pcfdataset:
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].'Expense Type')
+                        Items: =Choices([@'Add New Expense Temp'].ExpenseType)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 4
+                        Y: =DataCardKey4.Y + DataCardKey4.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage4_1 As Text:
+                    ErrorMessage4 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -247,10 +241,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue4_1.Y + DataCardValue4_1.Height
+                        Y: =DataCardValue4.Y + DataCardValue4.Height
                         ZIndex: =3
 
-                    StarVisible4_1 As Text:
+                    StarVisible4 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =20
@@ -258,27 +252,27 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey4_1.Y
+                        Y: =DataCardKey4.Y
                         ZIndex: =4
 
-                "'Vendor Name_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
+                "'Vendor Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
                     Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,VendorName)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Vendor Name')
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, VendorName)
                     Required: =true
-                    Update: =DataCardValue5_1.Value
+                    Update: =DataCardValue5.Value
                     Width: =800
                     X: =0
                     Y: =3
                     ZIndex: =2
 
-                    DataCardKey5_1 As Text:
+                    DataCardKey5 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -289,7 +283,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue5_1 As 'Text input'":
+                    "DataCardValue5 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -299,10 +293,10 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 4
+                        Y: =DataCardKey5.Y + DataCardKey5.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage5_1 As Text:
+                    ErrorMessage5 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -310,10 +304,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                        Y: =DataCardValue5.Y + DataCardValue5.Height
                         ZIndex: =3
 
-                    StarVisible5_1 As Text:
+                    StarVisible5 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -321,26 +315,26 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey5_1.Y
+                        Y: =DataCardKey5.Y
                         ZIndex: =4
 
-                Date_DataCard1_1 As typedDataCard.fluentV9DateEditCard:
+                Date_DataCard1 As typedDataCard.fluentV9DateEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Date"
                     Default: =ThisItem.Date
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =true
-                    Update: =DataCardValue3_1.SelectedDate
+                    Update: =DataCardValue3.SelectedDate
                     Width: =800
                     X: =0
                     Y: =4
                     ZIndex: =2
 
-                    DataCardKey3_1 As Text:
+                    DataCardKey3 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -351,7 +345,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue3_1 As 'Date picker'":
+                    "DataCardValue3 As 'Date picker'":
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         DisplayMode: =Parent.DisplayMode
                         EndDate: =Date(Year(Today())+100, 12, 31)
@@ -361,10 +355,10 @@
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 4
+                        Y: =DataCardKey3.Y + DataCardKey3.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage3_1 As Text:
+                    ErrorMessage3 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -372,10 +366,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                        Y: =DataCardValue3.Y + DataCardValue3.Height
                         ZIndex: =3
 
-                    StarVisible3_1 As Text:
+                    StarVisible3 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -383,26 +377,26 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey3_1.Y
+                        Y: =DataCardKey3.Y
                         ZIndex: =4
 
-                Amount_DataCard1_1 As typedDataCard.fluentV9NumberEditCard:
+                Amount_DataCard1 As typedDataCard.fluentV9NumberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Amount"
                     Default: =ThisItem.Amount
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =72
+                    Height: =70
                     Required: =true
-                    Update: =Value(DataCardValue6_1.Value)
+                    Update: =Value(DataCardValue6.Value)
                     Width: =800
                     X: =0
                     Y: =5
                     ZIndex: =2
 
-                    DataCardKey6_1 As Text:
+                    DataCardKey6 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -410,10 +404,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =false
                         X: =24
-                        Y: =0
+                        Y: =10
                         ZIndex: =1
 
-                    "DataCardValue6_1 As 'Text input'":
+                    "DataCardValue6 As 'Text input'":
                         AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -421,10 +415,10 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 4
+                        Y: =DataCardKey6.Y + DataCardKey6.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage6_1 As Text:
+                    ErrorMessage6 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -432,10 +426,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue6_1.Y + DataCardValue6_1.Height
+                        Y: =DataCardValue6.Y + DataCardValue6.Height
                         ZIndex: =3
 
-                    StarVisible6_1 As Text:
+                    StarVisible6 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -443,27 +437,27 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey6_1.Y
+                        Y: =DataCardKey6.Y
                         ZIndex: =4
 
-                Comments_DataCard1_1 As typedDataCard.fluentV9TextualEditCard:
+                Comments_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Comments"
                     Default: =ThisItem.Comments
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Comments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, Comments)
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, Comments)
                     Required: =false
-                    Update: =DataCardValue7_1.Value
+                    Update: =DataCardValue7.Value
                     Width: =800
                     X: =0
                     Y: =6
                     ZIndex: =2
 
-                    DataCardKey7_1 As Text:
+                    DataCardKey7 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -474,7 +468,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue7_1 As 'Text input'":
+                    "DataCardValue7 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -484,10 +478,10 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 4
+                        Y: =DataCardKey7.Y + DataCardKey7.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage7_1 As Text:
+                    ErrorMessage7 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -495,10 +489,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue7_1.Y + DataCardValue7_1.Height
+                        Y: =DataCardValue7.Y + DataCardValue7.Height
                         ZIndex: =3
 
-                    StarVisible7_1 As Text:
+                    StarVisible7 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -506,27 +500,27 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey7_1.Y
+                        Y: =DataCardKey7.Y
                         ZIndex: =4
 
-                SubExpense_DataCard1_1 As typedDataCard.fluentV9TextualEditCard:
+                SubExpense_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="SubExpense"
                     Default: =ThisItem.SubExpense
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,SubExpense)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,SubExpense)
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =68
-                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, SubExpense)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, SubExpense)
                     Required: =false
-                    Update: =DataCardValue8_1.Value
+                    Update: =DataCardValue8.Value
                     Width: =800
                     X: =0
                     Y: =7
                     ZIndex: =2
 
-                    DataCardKey8_1 As Text:
+                    DataCardKey8 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =22
                         Text: =Parent.DisplayName
@@ -537,7 +531,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    "DataCardValue8_1 As 'Text input'":
+                    "DataCardValue8 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
@@ -547,10 +541,10 @@
                         Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
-                        Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 4
+                        Y: =DataCardKey8.Y + DataCardKey8.Height + 4
                         ZIndex: =2
 
-                    ErrorMessage8_1 As Text:
+                    ErrorMessage8 As Text:
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
                         Text: =Parent.Error
@@ -558,10 +552,10 @@
                         Width: =Parent.Width - 48
                         Wrap: =true
                         X: =24
-                        Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
+                        Y: =DataCardValue8.Y + DataCardValue8.Height
                         ZIndex: =3
 
-                    StarVisible8_1 As Text:
+                    StarVisible8 As Text:
                         Align: ='TextCanvas.Align'.Center
                         DisplayMode: =DisplayMode.Edit
                         Height: =30
@@ -569,7 +563,7 @@
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         X: =0
-                        Y: =DataCardKey8_1.Y
+                        Y: =DataCardKey8.Y
                         ZIndex: =4
 
         FooterContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
@@ -699,13 +693,13 @@
                 Form1_1.Valid,
                 // Run Power Automate flow with the form's data
                 'templist'.Run(
-                    DataCardValue2_1.Selected.Value,                // Dropdown or ComboBox selection
-                    DataCardValue4_1.Selected.Value,                // Dropdown or ComboBox selection
-                    DataCardValue5_1.Value,                   // Convert text to number
-                    Text(DataCardValue3_1.SelectedDate, "yyyymmdd"), // Convert date to ISO format
-                    Value(DataCardValue6_1.Value),                          // Text value
-                    DataCardValue7_1.Value,                          // Text value
-                    DataCardValue8_1.Value                           // Text value
+                    DataCardValue2.Selected.Value,                // Dropdown or ComboBox selection
+                    DataCardValue4.Selected.Value,                // Dropdown or ComboBox selection
+                    DataCardValue5.Value,                   // Convert text to number
+                    Text(DataCardValue3.SelectedDate, "yyyymmdd"), // Convert date to ISO format
+                    Value(DataCardValue6.Value),                          // Text value
+                    DataCardValue7.Value,                          // Text value
+                    DataCardValue8.Value                           // Text value
                 );
                 
                 // Reset the form after running the flow
