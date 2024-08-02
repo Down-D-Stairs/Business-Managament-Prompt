@@ -66,7 +66,7 @@
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ReceiptUpload)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Receipt Upload')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -145,7 +145,7 @@
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,PaymentType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =false
@@ -171,7 +171,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Add New Expense Temp'].PaymentType)
+                        Items: =Choices([@'Add New Expense Temp'].'Payment Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -206,7 +206,7 @@
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ExpenseType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Expense Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =true
@@ -232,7 +232,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Add New Expense Temp'].ExpenseType)
+                        Items: =Choices([@'Add New Expense Temp'].'Expense Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -267,10 +267,10 @@
                     DataField: ="VendorName"
                     Default: =VendorName
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,VendorName)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, VendorName)
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =true
                     Update: =DataCardValue5.Value
                     Width: =800
