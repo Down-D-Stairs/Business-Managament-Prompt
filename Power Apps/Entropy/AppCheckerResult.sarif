@@ -504,19 +504,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1_1'.AddPicture1_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1_1'.AddPicture1_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1'.AddPicture1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expense upload screen_1",
-                "type": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1_1'.AddPicture1_1"
+                "type": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.'Receipt Upload_DataCard1'.AddPicture1"
               }
             }
           ],
@@ -815,66 +815,6 @@
               },
               "properties": {
                 "member": "is_admin",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.InvoiceDate"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.InvoiceDate",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "InvoiceDate",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.AmountTotal"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.AmountTotal",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AmountTotal",
                 "module": "App",
                 "type": "App"
               }

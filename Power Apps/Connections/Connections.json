@@ -1,32 +1,4 @@
 {
-  "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed": {
-    "connectionRef": {
-      "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "61b30ab8-5818-4212-8f49-866434a06cbf"
-    ],
-    "id": "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed"
-  },
-  "22719de0-8490-44a8-9077-47db056fcafb": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "61b30ab8-5818-4212-8f49-866434a06cbf"
-    ],
-    "id": "22719de0-8490-44a8-9077-47db056fcafb"
-  },
   "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -59,6 +31,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0": {
+          "value": "shared_sharepointonline"
+        },
+        "d6077dac-d6c6-4dff-8f89-dbf5157ccf41": {
+          "value": "shared_commondataserviceforapps"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
@@ -70,6 +48,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "d6077dac-d6c6-4dff-8f89-dbf5157ccf41"
+        },
+        "shared_sharepointonline": {
+          "value": "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
