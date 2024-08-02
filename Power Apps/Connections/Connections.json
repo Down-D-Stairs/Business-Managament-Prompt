@@ -1,18 +1,4 @@
 {
-  "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7": {
-    "connectionRef": {
-      "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
-    ],
-    "id": "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7"
-  },
   "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -24,6 +10,9 @@
         "dataSources": {
           "Admin_List": {
             "tableName": "0e9fb0cf-b253-4620-aa66-02ab46da1980"
+          },
+          "Image": {
+            "tableName": "6ef54a65-85ca-4bfb-a847-a0a5a9e5b644"
           }
         }
       }
@@ -31,7 +20,8 @@
     "dataSources": [
       "Admin_List",
       "Expense Data",
-      "Add New Expense Temp"
+      "Add New Expense Temp",
+      "Image"
     ],
     "dependencies": {},
     "dependents": [
@@ -102,12 +92,32 @@
     "dependents": [],
     "id": "63335a81-6589-470f-a9f1-c1cca859f292"
   },
+  "6e16684b-7622-41ee-91c2-37a964b84ad6": {
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
+    ],
+    "id": "6e16684b-7622-41ee-91c2-37a964b84ad6"
+  },
   "7bb882e5-558c-4ad8-99fb-4ef9f63ab557": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "6e16684b-7622-41ee-91c2-37a964b84ad6": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b": {
+          "value": "shared_sharepointonline"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
@@ -119,6 +129,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "6e16684b-7622-41ee-91c2-37a964b84ad6"
+        },
+        "shared_sharepointonline": {
+          "value": "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
@@ -135,8 +151,8 @@
       "TestingStupidStuff"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7",
-      "shared_sharepointonline": "a27d2675-7c5d-4b31-b3e9-e06f899cac98"
+      "shared_commondataserviceforapps": "6e16684b-7622-41ee-91c2-37a964b84ad6",
+      "shared_sharepointonline": "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b"
     },
     "dependents": [],
     "id": "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
@@ -163,20 +179,6 @@
     "dependents": [],
     "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
   },
-  "a27d2675-7c5d-4b31-b3e9-e06f899cac98": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
-    ],
-    "id": "a27d2675-7c5d-4b31-b3e9-e06f899cac98"
-  },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
       "displayName": "Excel",
@@ -200,6 +202,20 @@
     },
     "dependents": [],
     "id": "af9be01c-69bb-4d01-aa5b-c419b6575a51"
+  },
+  "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
+    ],
+    "id": "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b"
   },
   "c4d5d2d0-1f55-4bd5-97ec-902e57b52742": {
     "connectionRef": {
