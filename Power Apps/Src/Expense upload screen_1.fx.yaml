@@ -110,6 +110,7 @@
                             Set(InvoiceDate, FlowResults.invoice_date);
                             Set(AmountTotal, FlowResults.amount_total);
                             Set(VendorName, FlowResults.vendor_name);
+                            Set(InvoiceTotal, FlowResults.invoice_total);
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
@@ -264,7 +265,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
-                    Default: =ThisItem.'Vendor Name'
+                    Default: =VendorName
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,VendorName)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -389,7 +390,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Amount"
-                    Default: =ThisItem.Amount
+                    Default: =AmountTotal
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)

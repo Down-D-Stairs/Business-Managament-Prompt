@@ -834,17 +834,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.AmountTotal"
+                  "fullyQualifiedName": "App.InvoiceTotal"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.AmountTotal",
+                  "fullyQualifiedName": "App.InvoiceTotal",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AmountTotal",
+                "member": "InvoiceTotal",
                 "module": "App",
                 "type": "App"
               }
