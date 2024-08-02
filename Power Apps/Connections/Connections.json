@@ -1,4 +1,32 @@
 {
+  "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed": {
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "61b30ab8-5818-4212-8f49-866434a06cbf"
+    ],
+    "id": "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed"
+  },
+  "22719de0-8490-44a8-9077-47db056fcafb": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "61b30ab8-5818-4212-8f49-866434a06cbf"
+    ],
+    "id": "22719de0-8490-44a8-9077-47db056fcafb"
+  },
   "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -58,8 +86,8 @@
       "TestingStupidStuff"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "d6077dac-d6c6-4dff-8f89-dbf5157ccf41",
-      "shared_sharepointonline": "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0"
+      "shared_commondataserviceforapps": "113d666f-2fc4-438c-a0b1-8bbb58e5f0ed",
+      "shared_sharepointonline": "22719de0-8490-44a8-9077-47db056fcafb"
     },
     "dependents": [],
     "id": "61b30ab8-5818-4212-8f49-866434a06cbf"
@@ -149,20 +177,6 @@
     "dependents": [],
     "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
   },
-  "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "61b30ab8-5818-4212-8f49-866434a06cbf"
-    ],
-    "id": "af7f2d90-3bd7-4f78-8b99-b9cfd4bc59d0"
-  },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
       "displayName": "Excel",
@@ -208,20 +222,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
-  },
-  "d6077dac-d6c6-4dff-8f89-dbf5157ccf41": {
-    "connectionRef": {
-      "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "61b30ab8-5818-4212-8f49-866434a06cbf"
-    ],
-    "id": "d6077dac-d6c6-4dff-8f89-dbf5157ccf41"
   },
   "e1ca99f5-5849-415d-a670-a26d99f16f71": {
     "connectionRef": {
