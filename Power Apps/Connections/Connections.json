@@ -1,5 +1,5 @@
 {
-  "43d6e130-abab-4ddd-96e0-7ff25486bc34": {
+  "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7": {
     "connectionRef": {
       "displayName": "Microsoft Dataverse",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
@@ -11,7 +11,7 @@
     "dependents": [
       "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
     ],
-    "id": "43d6e130-abab-4ddd-96e0-7ff25486bc34"
+    "id": "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7"
   },
   "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
     "connectionRef": {
@@ -135,25 +135,11 @@
       "TestingStupidStuff"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "43d6e130-abab-4ddd-96e0-7ff25486bc34",
-      "shared_sharepointonline": "88493d1f-ec6d-4151-bde5-3408cb401284"
+      "shared_commondataserviceforapps": "4099eb1f-feb6-4e1c-a48d-6a74fde3e4e7",
+      "shared_sharepointonline": "a27d2675-7c5d-4b31-b3e9-e06f899cac98"
     },
     "dependents": [],
     "id": "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
-  },
-  "88493d1f-ec6d-4151-bde5-3408cb401284": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
-    ],
-    "id": "88493d1f-ec6d-4151-bde5-3408cb401284"
   },
   "8ab04f69-9e29-40ec-b065-a66f1a7a80b3": {
     "connectionRef": {
@@ -176,6 +162,20 @@
     "dependencies": {},
     "dependents": [],
     "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
+  },
+  "a27d2675-7c5d-4b31-b3e9-e06f899cac98": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
+    ],
+    "id": "a27d2675-7c5d-4b31-b3e9-e06f899cac98"
   },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
