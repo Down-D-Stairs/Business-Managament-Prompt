@@ -1132,7 +1132,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1234,7 +1234,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1339,7 +1339,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1454,7 +1454,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10697,7 +10697,7 @@
       "MetaDataIDKey": "%ScreenContainer.ID%",
       "Name": "ScreenContainer3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

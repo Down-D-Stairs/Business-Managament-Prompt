@@ -105,6 +105,11 @@
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
+                        OnSelect: |-
+                            =Set(FlowResults, TestingStupidStuff.Run(AddPicture1_1.Media));
+                            Set(VendorName, FlowResults.vendor_name); 
+                            Set(InvoiceDate, FlowResults.invoice_date);
+                            Set(InvoiceTotal, FlowResults.invoice_total);
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10_1.Y + DataCardKey10_1.Height + 5
