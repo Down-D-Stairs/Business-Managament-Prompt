@@ -1005,3 +1005,23 @@
         Y: =40
         ZIndex: =5
 
+    ButtonCanvas3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="ArrowRight"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |-
+            =Set(
+                CurrentItemIndex,
+                If(
+                    CurrentItemIndex < CountRows('Expense Data'),
+                    CurrentItemIndex + 1,
+                    1
+                )
+            );
+        Text: ="Next Expense"
+        Width: =158
+        X: =1139
+        Y: =40
+        ZIndex: =6
+

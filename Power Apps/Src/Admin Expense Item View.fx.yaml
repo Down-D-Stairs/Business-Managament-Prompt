@@ -96,7 +96,9 @@
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
-                    OnSelect: =Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
+                    OnSelect: |-
+                        =Set(CurrentItemIndex, ThisItem.ID);
+                        Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
                     TemplatePadding: =0
                     TemplateSize: =108
                     Width: =922
