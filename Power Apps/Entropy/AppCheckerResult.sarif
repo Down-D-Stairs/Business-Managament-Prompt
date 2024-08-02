@@ -834,6 +834,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.InvoiceDate"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.InvoiceDate",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "InvoiceDate",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.AmountTotal"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.AmountTotal",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AmountTotal",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.SidebarContainer1.Form9.Item"
                 }
               ],
