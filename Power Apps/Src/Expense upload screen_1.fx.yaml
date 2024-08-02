@@ -66,7 +66,7 @@
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ReceiptUpload)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Receipt Upload')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -144,7 +144,7 @@
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,PaymentType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =true
@@ -170,7 +170,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Add New Expense Temp'].PaymentType)
+                        Items: =Choices([@'Add New Expense Temp'].'Payment Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -205,7 +205,7 @@
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ExpenseType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Expense Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
                     Required: =true
@@ -231,7 +231,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Add New Expense Temp'].ExpenseType)
+                        Items: =Choices([@'Add New Expense Temp'].'Expense Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -266,10 +266,10 @@
                     DataField: ="VendorName"
                     Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,VendorName)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, VendorName)
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =true
                     Update: =DataCardValue5.Value
                     Width: =800
@@ -585,13 +585,14 @@
             RadiusTopRight: =8
             ZIndex: =4
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+    "'temp expense list' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
         Items: ='Add New Expense Temp'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate('Upload Expense Item Detailed View', ScreenTransition.Fade)
         TemplatePadding: =0
         TemplateSize: =92
         Width: =508
@@ -695,24 +696,12 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
             =If(
-                Form1_1.Valid,
-                // Run Power Automate flow with the form's data
-                'templist'.Run(
-                    DataCardValue2.Selected.Value,                // Dropdown or ComboBox selection
-                    DataCardValue4.Selected.Value,                // Dropdown or ComboBox selection
-                    DataCardValue5.Value,                   // Convert text to number
-                    Text(DataCardValue3.SelectedDate, "yyyymmdd"), // Convert date to ISO format
-                    Value(DataCardValue6.Value),                          // Text value
-                    DataCardValue7.Value,                          // Text value
-                    DataCardValue8.Value                           // Text value
-                );
-                
-                // Reset the form after running the flow
-                ResetForm(Form1_1);
-                NewForm(Form1_1),
+                Form1_1.Valid, 
+                SubmitForm(Form1_1);
+                ResetForm(Form1_1),
                 
                 Notify("Please fill in all required fields.", NotificationType.Error)
-            );
+            )
         Text: ="Add New Expense"
         Width: =142
         X: =54

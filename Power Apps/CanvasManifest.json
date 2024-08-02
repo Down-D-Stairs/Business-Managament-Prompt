@@ -138,6 +138,7 @@
     "HomeScreen",
     "Expense upload screen_1",
     "Admin Expense Item Detailed View",
-    "Admin Expense Item View"
+    "Admin Expense Item View",
+    "Upload Expense Item Detailed View"
   ]
 }

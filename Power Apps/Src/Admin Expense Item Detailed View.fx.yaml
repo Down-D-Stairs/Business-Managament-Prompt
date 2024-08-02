@@ -359,10 +359,10 @@
                         DataField: ="VendorName"
                         Default: =ThisItem.'Vendor Name'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,VendorName)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, VendorName)
+                        MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Vendor Name')
                         Required: =false
                         Update: =DataCardValue142.Text
                         Width: =262
