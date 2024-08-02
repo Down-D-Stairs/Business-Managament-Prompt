@@ -45,6 +45,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "51b70c04-4460-4fc2-98f1-14e0b9a4b590": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "a2d2b33b-ba2d-40fc-a70f-b978804eba7b": {
+          "value": "shared_sharepointonline"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
@@ -56,6 +62,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "51b70c04-4460-4fc2-98f1-14e0b9a4b590"
+        },
+        "shared_sharepointonline": {
+          "value": "a2d2b33b-ba2d-40fc-a70f-b978804eba7b"
+        },
         "workflowDisplayName": {
           "value": "TestingStupidStuff"
         },
