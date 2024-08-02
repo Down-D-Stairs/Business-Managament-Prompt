@@ -8,11 +8,13 @@
       </object>
       <string name="ResponseActionOutput_vendor_name_def" />
       <string name="ResponseActionOutput_invoice_date_def" />
-      <string name="ResponseActionOutput_invoice_total_def" />
+      <number name="ResponseActionOutput_invoice_total_def" />
+      <string name="ResponseActionOutput_amount_total_def" />
       <object name="ResponseActionOutput">
         <property name="vendor_name" type="string" />
         <property name="invoice_date" type="string" />
-        <property name="invoice_total" type="string" />
+        <property name="invoice_total" type="number" />
+        <property name="amount_total" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
