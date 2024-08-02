@@ -4802,6 +4802,11 @@
         },
         {
           "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
           "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         },
@@ -4883,11 +4888,6 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderThickness",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
           "RuleProviderType": "Unknown"
         },
         {
@@ -5298,6 +5298,11 @@
         },
         {
           "Category": "Design",
+          "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
           "PropertyName": "BorderThickness",
           "RuleProviderType": "Unknown"
         },
@@ -5309,11 +5314,6 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderThickness",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         },
         {
@@ -5591,6 +5591,11 @@
         },
         {
           "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
           "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
@@ -5617,11 +5622,6 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderThickness",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         },
         {
@@ -6766,12 +6766,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "Role",
+          "PropertyName": "Text",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
-          "PropertyName": "Text",
+          "PropertyName": "Role",
           "RuleProviderType": "Unknown"
         },
         {
@@ -6856,7 +6856,7 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "FontWeight",
           "RuleProviderType": "Unknown"
         },
         {
@@ -6881,7 +6881,7 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "FontWeight",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
