@@ -105,7 +105,7 @@
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
-                        OnSelect: |-
+                        OnSelect: |
                             =Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
                             Set(InvoiceDate, FlowResults.invoice_date);
                             Set(AmountTotal, FlowResults.amount_total);
@@ -147,7 +147,7 @@
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,PaymentType)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    Required: =true
+                    Required: =false
                     Update: =DataCardValue2.Selected
                     Width: =800
                     X: =0
@@ -327,7 +327,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Date"
-                    Default: =ThisItem.Date
+                    Default: =InvoiceDate
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
