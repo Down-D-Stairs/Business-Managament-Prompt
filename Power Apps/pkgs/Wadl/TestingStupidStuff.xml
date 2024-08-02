@@ -6,13 +6,13 @@
       <object name="ManualTriggerInput">
         <property name="Extractinformationfrominvoices_Invoicefile" typeRef="ManualTriggerInput_Extractinformationfrominvoices_Invoicefile_def" />
       </object>
-      <string name="ResponseActionOutput_invoice_total_def" />
-      <string name="ResponseActionOutput_invoice_date_def" />
       <string name="ResponseActionOutput_vendor_name_def" />
+      <string name="ResponseActionOutput_invoice_date_def" />
+      <string name="ResponseActionOutput_invoice_total_def" />
       <object name="ResponseActionOutput">
-        <property name="invoice_total" type="string" />
-        <property name="invoice_date" type="string" />
         <property name="vendor_name" type="string" />
+        <property name="invoice_date" type="string" />
+        <property name="invoice_total" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
