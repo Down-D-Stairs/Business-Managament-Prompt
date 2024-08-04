@@ -39,6 +39,7 @@
       "OData__ColorTag": "Color Tag",
       "PaymentType": "Payment Type",
       "PaymentType#Id": "Payment Type Id",
+      "ReceiptImage": "Receipt Image",
       "ReceiptUpload": "Receipt Upload",
       "SubExpense": "SubExpense",
       "Title": "Title",
