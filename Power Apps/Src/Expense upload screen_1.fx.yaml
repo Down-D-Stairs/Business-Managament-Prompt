@@ -593,7 +593,7 @@
         Items: ='Add New Expense Temp'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate('Upload Expense Item Detailed View', ScreenTransition.Fade)
+        OnSelect: =Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
         TemplatePadding: =0
         TemplateSize: =116
         Width: =508
@@ -757,7 +757,7 @@
     ButtonCanvas10 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Navigate(HomeScreen, ScreenTransition.Fade)
+        OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
         Text: ="Back"
         Width: =96
         X: =40

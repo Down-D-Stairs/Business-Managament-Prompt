@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 1,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -135,9 +135,9 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "HomeScreen",
     "Expense upload screen_1",
     "Admin Expense Item Detailed View",
-    "Admin Expense Item View"
+    "Admin Expense Item View",
+    "Expense Upload Detailed Item View"
   ]
 }

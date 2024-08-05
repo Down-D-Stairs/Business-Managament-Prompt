@@ -1023,7 +1023,7 @@
                 Set(CurrentItemID, CurrentItemID + 1),
                 Notify("No more entries", NotificationType.Information)
             )
-        Text: ="Next Expens"
+        Text: ="Next Expense"
         Width: =158
         X: =1139
         Y: =40

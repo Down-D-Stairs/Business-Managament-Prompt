@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =ClearCollect(AllItemsCollection, 'Admin Expense View_1'.AllItems)
+        =ClearCollect(AllItemsCollection, 'Admin Expense View'.AllItems)
 
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -69,6 +69,17 @@
                 RadiusTopRight: =8
                 ZIndex: =4
 
+                TextCanvas2 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="POWER BI"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
             MainContainer4 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.End
                 DropShadow: =DropShadow.Light
@@ -87,7 +98,7 @@
                 RadiusTopRight: =8
                 ZIndex: =5
 
-                "'Admin Expense View_1' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
+                "'Admin Expense View' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =1
@@ -230,4 +241,23 @@
         X: =473
         Y: =114
         ZIndex: =2
+
+        TextCanvas3 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: ="FILTER"
+            Width: =96
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+    ButtonCanvas5 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
+        Text: ="Upload Expens"
+        Width: =154
+        X: =1164
+        Y: =36
+        ZIndex: =3
 
