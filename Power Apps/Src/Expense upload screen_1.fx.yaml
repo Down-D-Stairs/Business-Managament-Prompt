@@ -586,7 +586,7 @@
             RadiusTopRight: =8
             ZIndex: =4
 
-    "'temp expense list' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+    "'temp expense list' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
@@ -595,11 +595,121 @@
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate('Upload Expense Item Detailed View', ScreenTransition.Fade)
         TemplatePadding: =0
-        TemplateSize: =92
+        TemplateSize: =116
         Width: =508
         X: =816
         Y: =105
         ZIndex: =1
+
+        Image3 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =84
+            Image: =ThisItem.'Receipt Upload'
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =84
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 185
+            X: =115
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle1.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Payment Type'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height
+            ZIndex: =3
+
+        Body2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Subtitle1.Width
+            X: =Title1.X
+            Y: =Subtitle1.Y + Subtitle1.Height
+            ZIndex: =4
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =0.1
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
+
+        Rectangle1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
+            Height: =Parent.TemplateHeight - Separator1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =7
 
     ButtonCanvas7_1 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -611,7 +721,10 @@
             =If(
                 Form1_1.Valid, 
                 SubmitForm(Form1_1);
-                ResetForm(Form1_1),
+                ResetForm(Form1_1);
+                copyList.Run();
+                Refresh('Add New Expense Temp');
+                Notify("Form submitted successfully.", NotificationType.Success),
                 
                 Notify("Please fill in all required fields.", NotificationType.Error)
             )

@@ -1,6 +1,8 @@
 "'Admin Expense Item View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |
+        =ClearCollect(AllItemsCollection, 'Admin Expense View_1'.AllItems)
 
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -97,7 +99,7 @@
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     OnSelect: |-
-                        =Set(CurrentItemIndex, ThisItem.ID);
+                        =Set(CurrentItemID, ThisItem.ID);
                         Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
                     TemplatePadding: =0
                     TemplateSize: =108

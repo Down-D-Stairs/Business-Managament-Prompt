@@ -1,7 +1,7 @@
 "'Admin Expense Item Detailed View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: =Set(EditMode, false)
+    OnVisible: =Set(EditMode, false);
 
     ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -74,7 +74,8 @@
                     DataSource: ='Expense Data'
                     DefaultMode: =If(EditMode, FormMode.Edit, FormMode.View)
                     FillPortions: =0.8
-                    Item: ='Admin Expense View'.Selected
+                    Item: |
+                        =LookUp('Expense Data', ID = CurrentItemID)
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     ZIndex: =1
@@ -963,6 +964,7 @@
         Height: =30
         Icon: ="ArrowClockwise"
         Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: =Notify("Record updated successfully", NotificationType.Success);
         Text: ="Update Entry"
         Width: =232
         X: =969
@@ -998,7 +1000,7 @@
     ButtonCanvas9 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =Navigate(HomeScreen, ScreenTransition.Fade)
+        OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
         Text: ="Back"
         Width: =96
         X: =40
@@ -1011,17 +1013,41 @@
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
-            =Set(
-                CurrentItemIndex,
-                If(
-                    CurrentItemIndex < CountRows('Expense Data'),
-                    CurrentItemIndex + 1,
-                    1
-                )
-            );
-        Text: ="Next Expense"
+            =If(
+                !IsEmpty(
+                    Filter(
+                        'Expense Data', 
+                        ID = CurrentItemID + 1
+                    )
+                ),
+                Set(CurrentItemID, CurrentItemID + 1),
+                Notify("No more entries", NotificationType.Information)
+            )
+        Text: ="Next Expens"
         Width: =158
         X: =1139
         Y: =40
         ZIndex: =6
+
+    ButtonCanvas3_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="ArrowLeft"
+        Layout: ='ButtonCanvas.Layout'.IconBefore
+        OnSelect: |-
+            =If(
+                !IsEmpty(
+                    Filter(
+                        'Expense Data', 
+                        ID = CurrentItemID - 1
+                    )
+                ),
+                Set(CurrentItemID, CurrentItemID - 1),
+                Notify("No more entries", NotificationType.Information)
+            )
+        Text: ="Previous Expense"
+        Width: =176
+        X: =927
+        Y: =40
+        ZIndex: =7
 
