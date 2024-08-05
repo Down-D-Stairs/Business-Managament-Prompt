@@ -255,7 +255,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expens"
+        Text: ="Upload Expense"
         Width: =154
         X: =1164
         Y: =36
