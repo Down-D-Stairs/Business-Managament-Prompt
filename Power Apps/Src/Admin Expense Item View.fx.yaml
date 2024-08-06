@@ -392,7 +392,10 @@
         ZIndex: =3
 
     ButtonCanvas12 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="Edit"
         Layout: ='ButtonCanvas.Layout'.IconAfter
