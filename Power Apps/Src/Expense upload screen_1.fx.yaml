@@ -3,6 +3,7 @@
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =UpdateContext({SelectMode: false});
+        UpdateContext({deleteConfirm: false});
         Refresh('Add New Expense Temp');
 
     ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
@@ -778,6 +779,7 @@
             Icon: =Icon.ChevronRight
             OnSelect: |-
                 =!SelectMode;
+                Set(CurrentItemUploadID, ThisItem.ID);
                 Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
             PaddingBottom: =16
             PaddingLeft: =16
@@ -839,6 +841,7 @@
                 SubmitForm(Form1_1);
                 ResetForm(Form1_1);
                 copyList.Run();
+                Refresh('Add New Expense Temp');
                 
                 Notify("Form submitted successfully.", NotificationType.Success),
                 
@@ -881,8 +884,11 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
-        OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
-        Text: ="Back"
+        OnSelect: |-
+            =UpdateContext({deleteConfirm: true});
+            Notify("Are you sure? Exiting will result in loss of any data on this page", NotificationType.Error)
+        Text: ="Exit"
+        Visible: =!deleteConfirm
         Width: =96
         X: =40
         Y: =40
@@ -898,7 +904,7 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =UpdateContext({SelectMode: true})
-        Text: ="Edit Expenses"
+        Text: ="Edit Expense"
         Width: =162
         X: =816
         Y: =40
@@ -920,4 +926,18 @@
         X: =1176
         Y: =40
         ZIndex: =6
+
+    ButtonCanvas15 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =deletetemp.Run();
+            Navigate('Admin Expense Item View', ScreenTransition.Fade)
+        Text: ="CONFIRM"
+        Visible: =deleteConfirm
+        Width: =96
+        X: =40
+        Y: =40
+        ZIndex: =7
 

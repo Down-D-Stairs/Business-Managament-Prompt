@@ -51,7 +51,7 @@
             Form1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='Add New Expense Temp'
-                Item: ='temp expense list'.Selected
+                Item: =LookUp('Add New Expense Temp', ID = CurrentItemUploadID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
@@ -814,4 +814,74 @@
         X: =40
         Y: =40
         ZIndex: =2
+
+    ButtonCanvas3_2 As Button:
+        BasePaletteColor: =
+        BorderColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Icon: ="ArrowRight"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |
+            =// Find the next item with an ID greater than CurrentItemID
+            Set(
+                NextItem,
+                First(
+                    SortByColumns(
+                        Filter(
+                            'Expense Data',
+                            ID > CurrentItemUploadID
+                        ),
+                        "ID"
+                    )
+                )
+            );
+            
+            // Update CurrentItemID or notify if no next item exists
+            If(
+                !IsBlank(NextItem),
+                Set(CurrentItemUploadID, NextItem.ID),
+                Notify("No further entries", NotificationType.Information)
+            )
+        Text: ="Next Expense"
+        Width: =158
+        X: =1149
+        Y: =40
+        ZIndex: =3
+
+    ButtonCanvas3_3 As Button:
+        BasePaletteColor: =
+        BorderColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =32
+        Icon: ="ArrowLeft"
+        Layout: ='ButtonCanvas.Layout'.IconBefore
+        OnSelect: |
+            =// Find the next item with an ID greater than CurrentItemID
+            Set(
+                NextItem,
+                First(
+                    SortByColumns(
+                        Filter(
+                            'Expense Data',
+                            ID < CurrentItemUploadID
+                        ),
+                        "ID"
+                    )
+                )
+            );
+            
+            // Update CurrentItemID or notify if no next item exists
+            If(
+                !IsBlank(NextItem),
+                Set(CurrentItemUploadID, NextItem.ID),
+                Notify("No further entries", NotificationType.Information)
+            )
+        Text: ="Previous Expense"
+        Width: =176
+        X: =949
+        Y: =40
+        ZIndex: =4
 

@@ -70,20 +70,6 @@
                 RadiusTopRight: =8
                 ZIndex: =4
 
-                TextCanvas2 As Text:
-                    BorderColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    Fill: =
-                    FontColor: =
-                    Height: =32
-                    LayoutMinHeight: =32
-                    LayoutMinWidth: =96
-                    Text: ="POWER BI"
-                    Width: =96
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
                 CompositePieChart1 As group:
                     Height: =5
                     LayoutMinHeight: =5
@@ -584,7 +570,7 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense"
+        Text: ="Upload Expense(s)"
         Width: =154
         X: =1164
         Y: =36
