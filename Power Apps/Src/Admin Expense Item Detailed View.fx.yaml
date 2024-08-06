@@ -992,6 +992,7 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: =Notify("Record updated successfully", NotificationType.Success);
         Text: ="Update Entry"
+        Visible: =is_admin
         Width: =232
         X: =969
         Y: =441

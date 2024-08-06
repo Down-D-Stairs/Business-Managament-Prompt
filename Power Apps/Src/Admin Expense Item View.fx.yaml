@@ -309,6 +309,7 @@
             Fill: =
             FontColor: =
             Height: =40
+            Placeholder: ="Select start date..."
             Width: =260
             X: =328
             Y: =0
@@ -321,6 +322,7 @@
             Fill: =
             FontColor: =
             Height: =40
+            Placeholder: ="Select end date..."
             Width: =284
             X: =588
             Y: =0
