@@ -820,6 +820,7 @@
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
+                Visible: =is_admin
                 ZIndex: =5
 
                 Form5 As form.PowerApps_CoreControls_Form:
@@ -1005,6 +1006,7 @@
         Icon: ="Edit"
         OnSelect: =Set(EditMode, true)
         Text: =
+        Visible: =is_admin
         Width: =70
         X: =51
         Y: =642
@@ -1023,6 +1025,7 @@
             Notify("Record updated successfully", NotificationType.Success);
             Set(EditMode,false)
         Text: ="Save"
+        Visible: =is_admin
         Width: =170
         X: =598
         Y: =658

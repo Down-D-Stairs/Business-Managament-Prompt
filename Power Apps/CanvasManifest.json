@@ -135,8 +135,8 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Expense upload screen_1",
     "Admin Expense Item Detailed View",
+    "Expense upload screen_1",
     "Admin Expense Item View",
     "Expense Upload Detailed Item View"
   ]
