@@ -149,23 +149,8 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: |-
-                        =SortByColumns(
-                            Filter(
-                                'Expense Data',
-                                ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                                (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
-                                (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                                (StartsWith('Vendor Name', TextInput1.Text)) &&
-                                (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
-                            ),
-                            "Amount",
-                            If(
-                                Dropdown1.Selected.Value = "Ascending",
-                                SortOrder.Ascending,
-                                SortOrder.Descending
-                            )
-                        )
+                    Items: |
+                        =SortedData
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -336,6 +321,32 @@
             InputTextPlaceholder: ="Expense Type"
             Items: |
                 =Distinct('Expense Data','Expense Type'.Value)
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["Value"]
@@ -352,6 +363,32 @@
             Fill: =
             FontColor: =
             Height: =40
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             Placeholder: ="Select start date..."
             Width: =260
             X: =328
@@ -365,6 +402,32 @@
             Fill: =
             FontColor: =
             Height: =40
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             Placeholder: ="Select end date..."
             Width: =284
             X: =588
@@ -386,6 +449,32 @@
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
             Items: =["Ascending", "Descending"]
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
             SelectionFill: =App.Theme.Colors.Primary
@@ -406,6 +495,32 @@
             HoverBorderColor: =App.Theme.Colors.Darker40
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             Size: =13
             Width: =328
             ZIndex: =5
@@ -427,6 +542,32 @@
             InputTextPlaceholder: ="Approval Status"
             Items: |
                 =Distinct('Expense Data', ApprovalStatus.Value)
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["Value"]
@@ -443,7 +584,7 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expens"
+        Text: ="Upload Expense"
         Width: =154
         X: =1164
         Y: =36

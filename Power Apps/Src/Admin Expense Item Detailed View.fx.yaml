@@ -1,7 +1,34 @@
 "'Admin Expense Item Detailed View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: =Set(EditMode, false);
+    OnVisible: |
+        =Set(EditMode, false);
+        // Define the filter conditions
+        Set(
+            FilteredData,
+            Filter(
+                'Expense Data',
+                ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                (StartsWith('Vendor Name', TextInput1.Text)) &&
+                (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+            )
+        );
+        
+        // Define the sort order
+        Set(
+            SortedData,
+            SortByColumns(
+                FilteredData,
+                "Amount",
+                If(
+                    Dropdown1.Selected.Value = "Ascending",
+                    SortOrder.Ascending,
+                    SortOrder.Descending
+                )
+            )
+        );
 
     ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -1054,20 +1081,23 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
             =// Find the next item with an ID greater than CurrentItemID
-            // Using Sort function
             Set(
                 NextItem,
                 First(
-                    Sort(
+                    SortByColumns(
                         Filter(
-                            'Expense Data',
+                            SortedData,
                             ID > CurrentItemID
                         ),
-                        ID
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
                     )
                 )
             );
-            
             
             // Update CurrentItemID or notify if no next item exists
             If(
@@ -1090,27 +1120,30 @@
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
-            =// Find the next item with an ID greater than CurrentItemID
-            // Using Sort function
+            =// Find the previous item with an ID less than CurrentItemID
             Set(
-                NextItem,
+                PreviousItem,
                 First(
-                    Sort(
+                    SortByColumns(
                         Filter(
-                            'Expense Data',
+                            SortedData,
                             ID < CurrentItemID
                         ),
-                        ID
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Descending, // For previous item, reverse the sort order
+                            SortOrder.Ascending
+                        )
                     )
                 )
             );
             
-            
-            // Update CurrentItemID or notify if no next item exists
+            // Update CurrentItemID or notify if no previous item exists
             If(
-                !IsBlank(NextItem),
-                Set(CurrentItemID, NextItem.ID),
-                Notify("No further entries", NotificationType.Information)
+                !IsBlank(PreviousItem),
+                Set(CurrentItemID, PreviousItem.ID),
+                Notify("No previous entries", NotificationType.Information)
             )
         Text: ="Previous Expense"
         Width: =176
