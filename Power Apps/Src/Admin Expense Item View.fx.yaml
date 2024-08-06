@@ -349,7 +349,8 @@
                 =Reset(ComboBox1);
                 Reset(DatePickerStart);
                 Reset(DatePickerEnd);
-                Reset(TextInput1)
+                Reset(TextInput1);
+                Reset(ComboBox2);
             Text: ="Clear All"
             Width: =96
             X: =776
