@@ -1006,6 +1006,7 @@
         Icon: ="Edit"
         OnSelect: =Set(EditMode, true)
         Text: =
+        Visible: =is_admin
         Width: =70
         X: =51
         Y: =642
@@ -1024,6 +1025,7 @@
             Notify("Record updated successfully", NotificationType.Success);
             Set(EditMode,false)
         Text: ="Save"
+        Visible: =is_admin
         Width: =170
         X: =598
         Y: =658
