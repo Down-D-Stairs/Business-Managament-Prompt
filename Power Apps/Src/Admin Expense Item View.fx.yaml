@@ -433,6 +433,8 @@
                     )
                 );
             Placeholder: ="Select end date..."
+            Visible: |
+                =If(DatePickerEnd.SelectedDate > Today(), true, false)
             Width: =284
             X: =588
             Y: =0
