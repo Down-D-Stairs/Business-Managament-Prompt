@@ -377,7 +377,10 @@
             ZIndex: =7
 
         ButtonCanvas12 As Button:
+            BasePaletteColor: =
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             Height: =32
             OnSelect: |
                 =Reset(ComboBox1);
