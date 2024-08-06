@@ -339,6 +339,20 @@
             Width: =328
             ZIndex: =5
 
+        ButtonCanvas1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            OnSelect: |-
+                =Reset(ComboBox1);
+                Reset(DatePickerStart);
+                Reset(DatePickerEnd);
+                Reset(TextInput1)
+            Text: ="Clear All"
+            Width: =96
+            X: =776
+            Y: =131
+            ZIndex: =6
+
     ButtonCanvas5 As Button:
         BasePaletteColor: =
         BorderColor: =
