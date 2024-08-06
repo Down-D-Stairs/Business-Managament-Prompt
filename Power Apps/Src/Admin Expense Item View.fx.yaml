@@ -433,8 +433,7 @@
                     )
                 );
             Placeholder: ="Select end date..."
-            Visible: |
-                =If(DatePickerEnd.SelectedDate > Today(), true, false)
+            Visible: =true
             Width: =284
             X: =588
             Y: =0
@@ -597,6 +596,20 @@
             X: =776
             Y: =120
             ZIndex: =8
+
+        Label1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Size: =13
+            Text: ="Text"
+            Visible: |
+                =If(DatePickerEnd.SelectedDate > Today(), true, false)
+            Width: =284
+            X: =588
+            Y: =40
+            ZIndex: =9
 
     ButtonCanvas5 As Button:
         BasePaletteColor: =
