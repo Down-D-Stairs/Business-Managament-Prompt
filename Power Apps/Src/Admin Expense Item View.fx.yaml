@@ -78,7 +78,7 @@
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
-                    Text: ="POWER BI"
+                    Text: =""
                     Width: =96
                     X: =0
                     Y: =0
@@ -99,7 +99,8 @@
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =25
-                        Text: ="Chart Title"
+                        Text: ="Expense Types"
+                        Visible: =is_admin
                         Width: =400
                         X: =40
                         Y: =40
@@ -110,6 +111,7 @@
                         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                         Items: |
                             =AddColumns(AddColumns(GroupBy(AddColumns(ShowColumns(Testing,ExpenseType,Amount), expenses, ExpenseType.Value),expenses,Groupnames),uses,Sum(Groupnames, Amount)),Label, Concatenate(expenses,"($",uses,")"))
+                        Visible: =is_admin
                         X: =40
                         Y: =70
                         ZIndex: =4
@@ -121,6 +123,7 @@
                         ItemColorSet: =PieChart1.ItemColorSet
                         Items: =PieChart1.SeriesLabels
                         Size: =16
+                        Visible: =is_admin
                         Width: =400
                         X: =40
                         Y: =470
@@ -602,6 +605,7 @@
         OnSelect: |-
             =UpdateContext({SelectMode2: true})
         Text: ="Edit Expenses"
+        Visible: =is_admin
         Width: =139
         X: =996
         Y: =234
