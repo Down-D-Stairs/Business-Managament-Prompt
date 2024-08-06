@@ -293,6 +293,7 @@
                     CheckboxCanvas1 As Checkbox:
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =39
                         Label: =
                         OnCheck: =Collect(SelectedItems2, ThisItem)
@@ -465,7 +466,9 @@
 
     ButtonCanvas13 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |
             =ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
