@@ -660,3 +660,18 @@
         Y: =234
         ZIndex: =5
 
+    Label3 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(12, 59, 94, 1)
+        Font: =App.Theme.Font
+        Height: =75
+        Size: =20
+        Text: ="Welcome To ""Blank"""
+        Width: =440
+        X: =16
+        Y: =16
+        ZIndex: =6
+
