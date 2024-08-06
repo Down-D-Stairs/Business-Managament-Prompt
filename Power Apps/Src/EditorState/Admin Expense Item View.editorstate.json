@@ -3832,7 +3832,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"VendorName\",\"Series\":\"Amount\"}",
+          "NameMap": "{\"Labels\":\"Label\",\"Series\":\"uses\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
