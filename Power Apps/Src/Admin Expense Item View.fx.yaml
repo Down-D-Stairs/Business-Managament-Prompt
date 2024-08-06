@@ -378,6 +378,21 @@
             Y: =40
             ZIndex: =7
 
+        ButtonCanvas13 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =34
+            OnSelect: |-
+                =Reset(ComboBox1);
+                Reset(DatePickerStart);
+                Reset(DatePickerEnd);
+                Reset(TextInput1);
+                Reset(ComboBox2)
+            Text: ="Clear All"
+            Width: =136
+            X: =736
+            Y: =132
+            ZIndex: =8
+
     ButtonCanvas5 As Button:
         BasePaletteColor: =
         BorderColor: =
@@ -401,7 +416,7 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         Text: ="Edit Expenses"
         Width: =139
-        X: =1025
-        Y: =237
+        X: =1205
+        Y: =153
         ZIndex: =4
 
