@@ -275,6 +275,7 @@
             Font: =App.Theme.Font
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
+            InputTextPlaceholder: ="Expense Type"
             Items: |
                 =Distinct('Expense Data','Expense Type'.Value)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -369,6 +370,7 @@
             Font: =App.Theme.Font
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
+            InputTextPlaceholder: ="Approval Status"
             Items: |
                 =Distinct('Expense Data', ApprovalStatus.Value)
             PressedColor: =RGBA(255, 255, 255, 1)
