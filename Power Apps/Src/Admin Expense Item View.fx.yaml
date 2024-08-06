@@ -288,7 +288,11 @@
             ZIndex: =1
 
         "DatePickerStart As 'Date picker'":
+            BasePaletteColor: =
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            Fill: =
+            FontColor: =
             Height: =40
             Width: =260
             X: =328
@@ -296,7 +300,11 @@
             ZIndex: =2
 
         "DatePickerEnd As 'Date picker'":
+            BasePaletteColor: =
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            Fill: =
+            FontColor: =
             Height: =40
             Width: =284
             X: =588
@@ -375,9 +383,20 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense"
+        Text: ="Upload Expens"
         Width: =154
         X: =1164
         Y: =36
         ZIndex: =3
+
+    ButtonCanvas12 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="Edit"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        Text: ="Edit Expenses"
+        Width: =139
+        X: =1025
+        Y: =237
+        ZIndex: =4
 
