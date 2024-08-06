@@ -851,7 +851,10 @@
                         ZIndex: =2
 
                         DataCardKey106 As Text:
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =22
                             Text: =Parent.DisplayName
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -874,7 +877,10 @@
                             ZIndex: =2
 
                         ErrorMessage66 As Text:
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =30
                             Text: =Parent.Error
                             Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -886,7 +892,10 @@
 
                         StarVisible66 As Text:
                             Align: ='TextCanvas.Align'.Center
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =20
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -913,7 +922,10 @@
                         ZIndex: =2
 
                         DataCardKey107 As Text:
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =22
                             Text: =Parent.DisplayName
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -925,7 +937,11 @@
 
                         "DataCardValue106 As 'Text input'":
                             AccessibleLabel: =Parent.DisplayName
+                            BasePaletteColor: =
+                            BorderColor: =
                             DisplayMode: =Parent.DisplayMode
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                             Required: =Parent.Required
@@ -937,7 +953,10 @@
                             ZIndex: =2
 
                         ErrorMessage67 As Text:
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =30
                             Text: =Parent.Error
                             Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -949,7 +968,10 @@
 
                         StarVisible67 As Text:
                             Align: ='TextCanvas.Align'.Center
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =30
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -960,7 +982,10 @@
 
     ButtonCanvas4 As Button:
         Align: =Align.Center
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =30
         Icon: ="ArrowClockwise"
         Layout: ='ButtonCanvas.Layout'.IconAfter
@@ -972,7 +997,10 @@
         ZIndex: =2
 
     ButtonCanvas6 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =64
         Icon: ="Edit"
         OnSelect: =Set(EditMode, true)
@@ -983,7 +1011,10 @@
         ZIndex: =3
 
     ButtonCanvas7 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =48
         Icon: ="Save"
         Layout: ='ButtonCanvas.Layout'.IconAfter
@@ -998,7 +1029,10 @@
         ZIndex: =4
 
     ButtonCanvas9 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
         Text: ="Back"
@@ -1008,7 +1042,10 @@
         ZIndex: =5
 
     ButtonCanvas3 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
@@ -1030,7 +1067,10 @@
         ZIndex: =6
 
     ButtonCanvas3_1 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore

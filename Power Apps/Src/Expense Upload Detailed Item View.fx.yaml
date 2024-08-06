@@ -800,7 +800,10 @@
             ZIndex: =4
 
     ButtonCanvas11 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |-
             =SubmitForm(Form1);

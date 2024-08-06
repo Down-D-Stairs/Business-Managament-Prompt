@@ -70,7 +70,10 @@
                 ZIndex: =4
 
                 TextCanvas2 As Text:
+                    BorderColor: =
                     DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
@@ -243,7 +246,10 @@
         ZIndex: =2
 
         TextCanvas3 As Text:
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            Fill: =
+            FontColor: =
             Height: =32
             Text: ="FILTER"
             Width: =96
@@ -252,7 +258,10 @@
             ZIndex: =1
 
     ButtonCanvas5 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
         Text: ="Upload Expense"
