@@ -85,7 +85,8 @@
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =25
-                        Text: ="Chart Title"
+                        Text: ="Expense Types"
+                        Visible: =is_admin
                         Width: =400
                         X: =40
                         Y: =40
@@ -94,7 +95,9 @@
                     PieChart1 As pieChart:
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                        Items: =Testing
+                        Items: |
+                            =AddColumns(AddColumns(GroupBy(AddColumns(ShowColumns(Testing,ExpenseType,Amount), expenses, ExpenseType.Value),expenses,Groupnames),uses,Sum(Groupnames, Amount)),Label, Concatenate(expenses,"($",uses,")"))
+                        Visible: =is_admin
                         X: =40
                         Y: =70
                         ZIndex: =4
@@ -106,6 +109,7 @@
                         ItemColorSet: =PieChart1.ItemColorSet
                         Items: =PieChart1.SeriesLabels
                         Size: =16
+                        Visible: =is_admin
                         Width: =400
                         X: =40
                         Y: =470
@@ -415,6 +419,7 @@
                     )
                 );
             Placeholder: ="Select end date..."
+            Visible: =true
             Width: =284
             X: =588
             Y: =0
@@ -563,6 +568,37 @@
             Y: =40
             ZIndex: =7
 
+        ButtonCanvas14 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |-
+                =Reset(ComboBox1);
+                Reset(DatePickerStart);
+                Reset(DatePickerEnd);
+                Reset(TextInput1);
+                Reset(ComboBox2)
+            Text: ="Clear All"
+            Width: =96
+            X: =776
+            Y: =120
+            ZIndex: =8
+
+        Label1 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(15, 108, 189, 1)
+            Font: =App.Theme.Font
+            Size: =13
+            Text: ="Nuh uh"
+            Visible: |
+                =If(DatePickerEnd.SelectedDate > Today(), true, false)
+            Width: =284
+            X: =588
+            Y: =40
+            ZIndex: =9
+
     ButtonCanvas5 As Button:
         BasePaletteColor: =
         BorderColor: =
@@ -587,6 +623,7 @@
         OnSelect: |-
             =UpdateContext({SelectMode2: true})
         Text: ="Edit Expenses"
+        Visible: =is_admin
         Width: =139
         X: =996
         Y: =234
@@ -608,4 +645,19 @@
         X: =1193
         Y: =234
         ZIndex: =5
+
+    Label3 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(12, 59, 94, 1)
+        Font: =App.Theme.Font
+        Height: =75
+        Size: =20
+        Text: ="Welcome To ""Blank"""
+        Width: =440
+        X: =16
+        Y: =16
+        ZIndex: =6
 
