@@ -1304,36 +1304,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.is_admin"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.is_admin",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "is_admin",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.InvoiceTotal"
                 }
               ],

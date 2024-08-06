@@ -257,8 +257,8 @@
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =872
-        X: =473
-        Y: =114
+        X: =472
+        Y: =112
         ZIndex: =2
 
         ComboBox1 As combobox:
