@@ -17,8 +17,7 @@
     "dataSources": [
       "Admin_List",
       "Expense Data",
-      "Add New Expense Temp",
-      "Testing"
+      "Add New Expense Temp"
     ],
     "dependencies": {},
     "dependents": [
