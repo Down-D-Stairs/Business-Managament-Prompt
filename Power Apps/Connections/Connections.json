@@ -22,7 +22,7 @@
     "dependencies": {},
     "dependents": [
       "62f8cba4-5bca-4d41-81cf-82f6f97fd299",
-      "b28fad20-dfd1-4184-af87-f9b5fa298984"
+      "676ab5f4-8975-4425-a4d4-148fdcd78cff"
     ],
     "id": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
   },
@@ -275,6 +275,28 @@
     "dependencies": {},
     "dependents": [],
     "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
+  },
+  "de91faf6-ca14-4c4f-9417-ab685d106bdd": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
+        "dataSources": {
+          "Testing": {
+            "tableName": "7f0b6c7e-f53a-434b-906f-cbdd5ee8c9ca"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Testing"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "de91faf6-ca14-4c4f-9417-ab685d106bdd"
   },
   "e1ca99f5-5849-415d-a670-a26d99f16f71": {
     "connectionRef": {

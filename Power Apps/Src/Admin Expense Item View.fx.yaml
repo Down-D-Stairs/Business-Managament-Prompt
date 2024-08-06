@@ -107,7 +107,23 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: ='Expense Data'
+                    Items: |-
+                        =SortByColumns(
+                            Filter(
+                                'Expense Data',
+                                ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                                (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                                (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                                (StartsWith('Vendor Name', TextInput1.Text)) &&
+                                (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                            ),
+                            "Amount",
+                            If(
+                                Dropdown1.Selected.Value = "Ascending",
+                                SortOrder.Ascending,
+                                SortOrder.Descending
+                            )
+                        )
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -168,7 +184,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.'Expense Type'.Value
+                        Text: =ThisItem.'Payment Type'.Value
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_1.Width
                         X: =Title2_1.X
@@ -245,17 +261,112 @@
         Y: =114
         ZIndex: =2
 
-        TextCanvas3 As Text:
-            BorderColor: =
-            DisplayMode: =DisplayMode.Edit
-            Fill: =
-            FontColor: =
-            Height: =32
-            Text: ="FILTER"
-            Width: =96
-            X: =40
-            Y: =40
+        ComboBox1 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["Value"]
+            Font: =App.Theme.Font
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            InputTextPlaceholder: ="Expense Type"
+            Items: |
+                =Distinct('Expense Data','Expense Type'.Value)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
+            SearchFields: =["Value"]
+            SearchItems: =Search(Distinct('Expense Data','Expense Type'.Value),ComboBox1.SearchText,Value)
+            SelectionFill: =App.Theme.Colors.Primary
+            Size: =13
+            Y: =80
             ZIndex: =1
+
+        "DatePickerStart As 'Date picker'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =40
+            Width: =260
+            X: =328
+            Y: =0
+            ZIndex: =2
+
+        "DatePickerEnd As 'Date picker'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =40
+            Width: =284
+            X: =588
+            Y: =0
+            ZIndex: =3
+
+        Dropdown1 As dropdown:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Font: =App.Theme.Font
+            Height: =46
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Items: =["Ascending", "Descending"]
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
+            SelectionFill: =App.Theme.Colors.Primary
+            Size: =13
+            Y: =120
+            ZIndex: =4
+
+        TextInput1 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Size: =13
+            Width: =328
+            ZIndex: =5
+
+        ComboBox2 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["Value"]
+            Font: =App.Theme.Font
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            InputTextPlaceholder: ="Approval Status"
+            Items: |
+                =Distinct('Expense Data', ApprovalStatus.Value)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
+            SearchFields: =["Value"]
+            SearchItems: =Search(Distinct('Expense Data',ApprovalStatus.Value),ComboBox2.SearchText,Value)
+            SelectionFill: =App.Theme.Colors.Primary
+            Size: =13
+            Y: =40
+            ZIndex: =7
 
     ButtonCanvas5 As Button:
         BasePaletteColor: =

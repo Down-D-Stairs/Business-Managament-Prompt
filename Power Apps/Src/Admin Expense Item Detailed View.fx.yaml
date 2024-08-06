@@ -86,7 +86,7 @@
                         DataField: ="ReceiptUpload"
                         Default: =ThisItem.'Receipt Upload'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ReceiptUpload)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         Required: =false
@@ -172,7 +172,7 @@
                         DataField: ="PaymentType"
                         Default: =ThisItem.'Payment Type'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaymentType)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Payment Type')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         Required: =false
@@ -212,12 +212,12 @@
                             Font: =App.Theme.Font
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
-                            Items: =Choices([@'Expense Data'].PaymentType)
+                            Items: =Choices([@'Expense Data'].'Payment Type')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =App.Theme.Colors.Darker30
                             SearchFields: =["Value"]
-                            SearchItems: =Choices('Expense Data'.PaymentType,DataCardValue139.SearchText)
+                            SearchItems: =Choices('Expense Data'.'Payment Type',DataCardValue139.SearchText)
                             SelectionFill: =App.Theme.Colors.Primary
                             SelectMultiple: =false
                             Size: =13
@@ -266,7 +266,7 @@
                         DataField: ="ExpenseType"
                         Default: =ThisItem.'Expense Type'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ExpenseType)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Expense Type')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         Required: =false
@@ -306,12 +306,12 @@
                             Font: =App.Theme.Font
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
-                            Items: =Choices([@'Expense Data'].ExpenseType)
+                            Items: =Choices([@'Expense Data'].'Expense Type')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =App.Theme.Colors.Darker30
                             SearchFields: =["Value"]
-                            SearchItems: =Choices('Expense Data'.ExpenseType,DataCardValue141.SearchText)
+                            SearchItems: =Choices('Expense Data'.'Expense Type',DataCardValue141.SearchText)
                             SelectionFill: =App.Theme.Colors.Primary
                             SelectMultiple: =false
                             Size: =13
@@ -910,10 +910,10 @@
                         DataField: ="AdministrativeComments"
                         Default: =ThisItem.'Administrative Comments'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,AdministrativeComments)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Administrative Comments')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =70
-                        MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, AdministrativeComments)
+                        MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Administrative Comments')
                         Required: =false
                         Update: =DataCardValue106.Value
                         Width: =525
