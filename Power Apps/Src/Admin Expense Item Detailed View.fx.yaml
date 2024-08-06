@@ -74,8 +74,7 @@
                     DataSource: ='Expense Data'
                     DefaultMode: =If(EditMode, FormMode.Edit, FormMode.View)
                     FillPortions: =0.8
-                    Item: |
-                        =LookUp('Expense Data', ID = CurrentItemID)
+                    Item: =LookUp('Expense Data', ID = CurrentItemID)
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     ZIndex: =1
@@ -1053,15 +1052,32 @@
         Height: =32
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |-
-            =If(
-                !IsBlank(LookUp('Expense Data', ID = CurrentItemID + 1)),
-                Set(CurrentItemID, CurrentItemID + 1),
+        OnSelect: |
+            =// Find the next item with an ID greater than CurrentItemID
+            // Using Sort function
+            Set(
+                NextItem,
+                First(
+                    Sort(
+                        Filter(
+                            'Expense Data',
+                            ID > CurrentItemID
+                        ),
+                        ID
+                    )
+                )
+            );
+            
+            
+            // Update CurrentItemID or notify if no next item exists
+            If(
+                !IsBlank(NextItem),
+                Set(CurrentItemID, NextItem.ID),
                 Notify("No further entries", NotificationType.Information)
             )
         Text: ="Next Expense"
         Width: =158
-        X: =1139
+        X: =1127
         Y: =40
         ZIndex: =6
 
@@ -1073,16 +1089,28 @@
         Height: =32
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore
-        OnSelect: |-
-            =If(
-                !IsEmpty(
-                    Filter(
-                        'Expense Data', 
-                        ID = CurrentItemID - 1
+        OnSelect: |
+            =// Find the next item with an ID greater than CurrentItemID
+            // Using Sort function
+            Set(
+                NextItem,
+                First(
+                    Sort(
+                        Filter(
+                            'Expense Data',
+                            ID < CurrentItemID
+                        ),
+                        ID
                     )
-                ),
-                Set(CurrentItemID, CurrentItemID - 1),
-                Notify("No previous entries", NotificationType.Information)
+                )
+            );
+            
+            
+            // Update CurrentItemID or notify if no next item exists
+            If(
+                !IsBlank(NextItem),
+                Set(CurrentItemID, NextItem.ID),
+                Notify("No further entries", NotificationType.Information)
             )
         Text: ="Previous Expense"
         Width: =176

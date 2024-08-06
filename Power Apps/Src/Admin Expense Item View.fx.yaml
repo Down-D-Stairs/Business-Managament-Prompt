@@ -2,7 +2,8 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =UpdateContext({SelectMode: false})
+        =UpdateContext({SelectMode2: false});
+        Refresh('Expense Data');
 
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -252,6 +253,7 @@
                     CheckboxCanvas1 As Checkbox:
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =39
                         Label: =
                         OnCheck: =Collect(SelectedItems2, ThisItem)
@@ -400,7 +402,7 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense"
+        Text: ="Upload Expens"
         Width: =154
         X: =1164
         Y: =36
@@ -424,7 +426,9 @@
 
     ButtonCanvas13 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |
             =ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
