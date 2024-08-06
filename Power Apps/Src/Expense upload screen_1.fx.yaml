@@ -686,7 +686,7 @@
         Items: ='Add New Expense Temp'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
+        OnSelect: =
         TemplatePadding: =0
         TemplateSize: =116
         Width: =508
@@ -774,12 +774,13 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =50
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
             Tooltip: ="View item details"
+            Visible: =!SelectMode
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
@@ -804,8 +805,21 @@
             Width: =4
             ZIndex: =7
 
+        CheckboxCanvas2 As Checkbox:
+            DisplayMode: =DisplayMode.Edit
+            Height: =43
+            Label: =
+            OnCheck: =Collect(SelectedItems, ThisItem)
+            OnSelect: =Select(Parent)
+            OnUncheck: =Remove(SelectedItems, ThisItem)
+            Visible: =SelectMode
+            Width: =38
+            X: =446
+            Y: =40
+            ZIndex: =8
+
     ButtonCanvas7_1 As Button:
-        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BasePaletteColor: =RGBA(8, 222, 8, 1)
         BorderColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
@@ -824,8 +838,9 @@
                 Notify("Please fill in all required fields.", NotificationType.Error)
             );
             
+            copyList.Run();
             Refresh('Add New Expense Temp');
-        Text: ="Submit Expense(s)"
+        Text: ="Submit Expense(s"
         Width: =132
         X: =1182
         Y: =579
@@ -865,4 +880,32 @@
         X: =40
         Y: =40
         ZIndex: =4
+
+    ButtonCanvas1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="Delete"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |-
+            =UpdateContext({SelectMode: !SelectMode})
+        Text: ="Edit Expenses"
+        Width: =162
+        X: =816
+        Y: =40
+        ZIndex: =5
+
+    ButtonCanvas2 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =ForAll(SelectedItems, Remove('Add New Expense Temp', ThisRecord));
+                                     Clear(SelectedItems);
+                                     UpdateContext({SelectMode: false});
+        Text: ="DELETE SELECTED"
+        Visible: =SelectMode
+        Width: =152
+        X: =1176
+        Y: =40
+        ZIndex: =6
 
