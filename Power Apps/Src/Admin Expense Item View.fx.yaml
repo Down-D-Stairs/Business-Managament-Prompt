@@ -378,24 +378,6 @@
             Y: =40
             ZIndex: =7
 
-        ButtonCanvas12 As Button:
-            BasePaletteColor: =
-            BorderColor: =
-            DisplayMode: =DisplayMode.Edit
-            FontColor: =
-            Height: =32
-            OnSelect: |
-                =Reset(ComboBox1);
-                Reset(DatePickerStart);
-                Reset(DatePickerEnd);
-                Reset(TextInput1);
-                Reset(ComboBox2);
-            Text: ="Clear All"
-            Width: =96
-            X: =776
-            Y: =134
-            ZIndex: =8
-
     ButtonCanvas5 As Button:
         BasePaletteColor: =
         BorderColor: =
@@ -403,9 +385,20 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense"
+        Text: ="Upload Expens"
         Width: =154
         X: =1164
         Y: =36
         ZIndex: =3
+
+    ButtonCanvas12 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="Edit"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        Text: ="Edit Expenses"
+        Width: =139
+        X: =1025
+        Y: =237
+        ZIndex: =4
 
