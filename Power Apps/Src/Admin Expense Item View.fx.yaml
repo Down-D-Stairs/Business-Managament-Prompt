@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =ClearCollect(AllItemsCollection, 'Admin Expense View'.AllItems)
+        =UpdateContext({SelectMode: false})
 
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -128,9 +128,7 @@
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
-                    OnSelect: |-
-                        =Set(CurrentItemID, ThisItem.ID);
-                        Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
+                    OnSelect: =
                     TemplatePadding: =0
                     TemplateSize: =108
                     Width: =922
@@ -218,12 +216,15 @@
                         DisabledColor: =RGBA(244, 244, 244, 1)
                         Height: =50
                         Icon: =Icon.ChevronRight
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =Set(CurrentItemID, ThisItem.ID);
+                            Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
                         PaddingBottom: =16
                         PaddingLeft: =16
                         PaddingRight: =16
                         PaddingTop: =16
                         Tooltip: ="View item details"
+                        Visible: =!SelectMode2
                         Width: =50
                         X: =Parent.TemplateWidth - Self.Width - 12
                         Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
@@ -247,6 +248,20 @@
                         Visible: =ThisItem.IsSelected
                         Width: =4
                         ZIndex: =7
+
+                    CheckboxCanvas1 As Checkbox:
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =39
+                        Label: =
+                        OnCheck: =Collect(SelectedItems2, ThisItem)
+                        OnSelect: =Select(Parent)
+                        OnUncheck: =Remove(SelectedItems2, ThisItem)
+                        Visible: =SelectMode2
+                        Width: =40
+                        X: =792
+                        Y: =40
+                        ZIndex: =8
 
     Container6 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -383,20 +398,40 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expens"
+        Text: ="Upload Expense"
         Width: =154
         X: =1164
         Y: =36
         ZIndex: =3
 
     ButtonCanvas12 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="Edit"
         Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |-
+            =UpdateContext({SelectMode2: true})
         Text: ="Edit Expenses"
         Width: =139
-        X: =1025
-        Y: =237
+        X: =996
+        Y: =234
         ZIndex: =4
+
+    ButtonCanvas13 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
+                                     Clear(SelectedItems2);
+                                     UpdateContext({SelectMode2: false});
+        Text: ="DELETE SELECTED"
+        Visible: =SelectMode2
+        Width: =151
+        X: =1193
+        Y: =234
+        ZIndex: =5
 

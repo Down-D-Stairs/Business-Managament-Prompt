@@ -1054,14 +1054,9 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =If(
-                !IsEmpty(
-                    Filter(
-                        'Expense Data', 
-                        ID = CurrentItemID + 1
-                    )
-                ),
+                !IsBlank(LookUp('Expense Data', ID = CurrentItemID + 1)),
                 Set(CurrentItemID, CurrentItemID + 1),
-                Notify("No more entries", NotificationType.Information)
+                Notify("No further entries", NotificationType.Information)
             )
         Text: ="Next Expense"
         Width: =158
@@ -1086,7 +1081,7 @@
                     )
                 ),
                 Set(CurrentItemID, CurrentItemID - 1),
-                Notify("No more entries", NotificationType.Information)
+                Notify("No previous entries", NotificationType.Information)
             )
         Text: ="Previous Expense"
         Width: =176
