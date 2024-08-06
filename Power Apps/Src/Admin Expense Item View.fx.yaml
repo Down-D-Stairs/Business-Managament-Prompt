@@ -598,9 +598,11 @@
             ZIndex: =8
 
         Label1 As label:
+            Align: =Align.Center
             BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(15, 108, 189, 1)
             Font: =App.Theme.Font
             Size: =13
             Text: ="Nuh uh"
