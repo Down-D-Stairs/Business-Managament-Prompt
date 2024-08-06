@@ -1,9 +1,7 @@
 "'Admin Expense Item Detailed View' As screen.'autoLayout_Sidebar_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: |-
-        =Set(EditMode, false);
-        is_admin
+    OnVisible: =Set(EditMode, false);
 
     ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -822,6 +820,7 @@
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
+                Visible: =is_admin
                 ZIndex: =5
 
                 Form5 As form.PowerApps_CoreControls_Form:
