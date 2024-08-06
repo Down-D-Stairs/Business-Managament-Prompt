@@ -603,7 +603,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =App.Theme.Font
             Size: =13
-            Text: ="Text"
+            Text: ="Nuh uh"
             Visible: |
                 =If(DatePickerEnd.SelectedDate > Today(), true, false)
             Width: =284
