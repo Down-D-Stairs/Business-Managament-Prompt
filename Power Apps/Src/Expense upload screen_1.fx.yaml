@@ -806,7 +806,9 @@
             ZIndex: =7
 
         CheckboxCanvas2 As Checkbox:
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             Height: =43
             Label: =
             OnCheck: =Collect(SelectedItems, ThisItem)
@@ -882,7 +884,10 @@
         ZIndex: =4
 
     ButtonCanvas1 As Button:
+        BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="Delete"
         Layout: ='ButtonCanvas.Layout'.IconAfter
@@ -896,7 +901,9 @@
 
     ButtonCanvas2 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |
             =ForAll(SelectedItems, Remove('Add New Expense Temp', ThisRecord));
