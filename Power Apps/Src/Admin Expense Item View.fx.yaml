@@ -343,7 +343,8 @@
             SearchItems: =Search(Distinct('Expense Data','Expense Type'.Value),ComboBox1.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
-            Y: =80
+            Width: =180
+            X: =426
             ZIndex: =1
 
         "DatePickerStart As 'Date picker'":
@@ -380,9 +381,9 @@
                     )
                 );
             Placeholder: ="Select start date..."
-            Width: =260
-            X: =328
-            Y: =0
+            Width: =180
+            X: =0
+            Y: =44
             ZIndex: =2
 
         "DatePickerEnd As 'Date picker'":
@@ -420,9 +421,9 @@
                 );
             Placeholder: ="Select end date..."
             Visible: =true
-            Width: =284
-            X: =588
-            Y: =0
+            Width: =180
+            X: =190
+            Y: =44
             ZIndex: =3
 
         Dropdown1 As dropdown:
@@ -436,7 +437,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Font: =App.Theme.Font
-            Height: =46
+            Height: =44
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
             Items: =["Ascending", "Descending"]
@@ -470,7 +471,8 @@
             PressedFill: =App.Theme.Colors.Darker30
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
-            Y: =120
+            Width: =180
+            X: =692
             ZIndex: =4
 
         TextInput1 As text:
@@ -483,6 +485,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =App.Theme.Font
+            HintText: ="Search..."
             HoverBorderColor: =App.Theme.Colors.Darker40
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
@@ -513,7 +516,7 @@
                     )
                 );
             Size: =13
-            Width: =328
+            Width: =246
             ZIndex: =5
 
         ComboBox2 As combobox:
@@ -565,11 +568,15 @@
             SearchItems: =Search(Distinct('Expense Data',ApprovalStatus.Value),ComboBox2.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
-            Y: =40
+            Width: =180
+            X: =246
             ZIndex: =7
 
         ButtonCanvas14 As Button:
+            BasePaletteColor: =
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             Height: =32
             OnSelect: |-
                 =Reset(ComboBox1);
@@ -606,7 +613,7 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense(s)"
+        Text: ="Upload Expense(s"
         Width: =154
         X: =1164
         Y: =36
@@ -625,7 +632,7 @@
         Text: ="Edit Expenses"
         Visible: =is_admin
         Width: =139
-        X: =996
+        X: =484
         Y: =234
         ZIndex: =4
 
@@ -635,14 +642,15 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
-        OnSelect: |
+        OnSelect: |-
             =ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
                                      Clear(SelectedItems2);
                                      UpdateContext({SelectMode2: false});
+            Refresh('Expense Data');
         Text: ="DELETE SELECTED"
         Visible: =SelectMode2
         Width: =151
-        X: =1193
+        X: =655
         Y: =234
         ZIndex: =5
 
@@ -655,7 +663,7 @@
         Font: =App.Theme.Font
         Height: =75
         Size: =20
-        Text: ="Welcome To ""Blank"""
+        Text: ="Welcome To Your Expense Manager"
         Width: =440
         X: =16
         Y: =16
