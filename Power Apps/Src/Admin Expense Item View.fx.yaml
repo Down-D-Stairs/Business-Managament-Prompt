@@ -615,7 +615,7 @@
             Text: ="Sorry! No Time Traveling!"
             Visible: |
                 =If(DatePickerStart.SelectedDate > Today(), true, false)
-            Width: =190
+            Width: =180
             Y: =84
             ZIndex: =9
 
