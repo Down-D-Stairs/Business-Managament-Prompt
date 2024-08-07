@@ -57,14 +57,12 @@
     "dataSources": [
       "Admin_List",
       "Expense Data",
-      "Add New Expense Temp",
-      "Testing"
+      "Add New Expense Temp"
     ],
     "dependencies": {},
     "dependents": [
       "62f8cba4-5bca-4d41-81cf-82f6f97fd299",
-      "57133be4-d3da-4cb0-a157-44398d5b9a61",
-      "ed51e0f2-e06f-44b3-8176-b01ebae5005c"
+      "b28fad20-dfd1-4184-af87-f9b5fa298984"
     ],
     "id": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
   },

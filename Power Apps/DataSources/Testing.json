@@ -37,8 +37,6 @@
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title",
-      "User": "UsersEmail",
-      "User#Claims": "UsersEmail Claims",
       "VendorName": "Vendor Name"
     },
     "DatasetName": "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists",
