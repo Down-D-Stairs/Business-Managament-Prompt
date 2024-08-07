@@ -1914,6 +1914,35 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-DataSourceDefaultMaxRowsLimit",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Admin Expense Item Detailed View'.ScreenContainer3.BottomContainer1.MainContainer2.Form5.Item"
                 }
               ],
@@ -1937,7 +1966,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         }
       ],
       "tool": {
@@ -2063,6 +2092,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+              }
+            },
+            {
+              "id": "app-DataSourceDefaultMaxRowsLimit",
+              "messageStrings": {
+                "issue": {
+                  "text": "Data row limit for non-delegable queries is more than 500"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Update 'Data row limit for non-delegable queries' in the advanced app settings."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "A 'data row limit' more than 500 may result in a slower app when running non-delegable queries, because the app will have to process every row itself, rather than running the query on the server."
               }
             },
             {
