@@ -78,11 +78,14 @@
                     Update: =DataCardValue1.Value
                     Width: =800
                     X: =0
-                    Y: =1
+                    Y: =0
                     ZIndex: =1
 
                     DataCardKey1 As Text:
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =22
                         Text: =Parent.DisplayName
                         Weight: ='TextCanvas.Weight'.Semibold
@@ -94,7 +97,11 @@
 
                     "DataCardValue1 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BasePaletteColor: =
+                        BorderColor: =
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =
+                        FontColor: =
                         Height: =32
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
@@ -106,7 +113,10 @@
                         ZIndex: =2
 
                     ErrorMessage1 As Text:
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =30
                         Text: =Parent.Error
                         Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -118,7 +128,10 @@
 
                     StarVisible1 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =30
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -140,7 +153,7 @@
                     Update: =Image1.Image
                     Width: =800
                     X: =0
-                    Y: =0
+                    Y: =1
                     ZIndex: =1
 
                     DataCardKey10 As Text:
