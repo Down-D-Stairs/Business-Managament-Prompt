@@ -64,6 +64,69 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
+                User_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="User"
+                    Default: =Name
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,User)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, User)
+                    Required: =false
+                    Update: =DataCardValue1.Value
+                    Width: =800
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey1 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue1 As 'Text input'":
+                        AccessibleLabel: =Parent.DisplayName
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage1 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue1.Y + DataCardValue1.Height
+                        ZIndex: =3
+
+                    StarVisible1 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey1.Y
+                        ZIndex: =4
+
                 "'Receipt Upload_DataCard1' As typedDataCard.fluentV9AddLargePictureCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -165,7 +228,7 @@
                     Update: =DataCardValue2.Selected
                     Width: =800
                     X: =0
-                    Y: =1
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey2 As Text:
@@ -235,7 +298,7 @@
                     Update: =DataCardValue4.Selected
                     Width: =800
                     X: =0
-                    Y: =2
+                    Y: =3
                     ZIndex: =2
 
                     DataCardKey4 As Text:
@@ -306,7 +369,7 @@
                     Update: =DataCardValue5.Value
                     Width: =800
                     X: =0
-                    Y: =3
+                    Y: =4
                     ZIndex: =2
 
                     DataCardKey5 As Text:
@@ -381,7 +444,7 @@
                     Update: =DataCardValue3.SelectedDate
                     Width: =800
                     X: =0
-                    Y: =4
+                    Y: =5
                     ZIndex: =2
 
                     DataCardKey3 As Text:
@@ -456,7 +519,7 @@
                     Update: =Value(DataCardValue6.Value)
                     Width: =800
                     X: =0
-                    Y: =5
+                    Y: =6
                     ZIndex: =2
 
                     DataCardKey6 As Text:
@@ -530,7 +593,7 @@
                     Update: =DataCardValue7.Value
                     Width: =800
                     X: =0
-                    Y: =6
+                    Y: =7
                     ZIndex: =2
 
                     DataCardKey7 As Text:
@@ -606,7 +669,7 @@
                     Update: =DataCardValue8.Value
                     Width: =800
                     X: =0
-                    Y: =7
+                    Y: =8
                     ZIndex: =2
 
                     DataCardKey8 As Text:
