@@ -688,7 +688,7 @@
         DelayItemLoading: =true
         Height: =447
         Items: |
-            =If(is_admin,Blank(),Filter(Testing,UsersEmail.Email = User().Email))
+            =If(is_admin,Filter(Testing,UsersEmail.Email = User().Email),Blank())
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
