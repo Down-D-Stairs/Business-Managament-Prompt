@@ -611,12 +611,12 @@
             Fill: =RGBA(15, 108, 189, 1)
             Font: =App.Theme.Font
             Size: =13
-            Text: ="Nuh uh"
+            Text: ="Sorry! No Time Traveling!"
             Visible: |
                 =If(DatePickerEnd.SelectedDate > Today(), true, false)
             Width: =284
-            X: =588
-            Y: =40
+            X: =370
+            Y: =44
             ZIndex: =9
 
     ButtonCanvas5 As Button:
