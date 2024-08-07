@@ -106,6 +106,92 @@
                     LayoutMinWidth: =400
                     ZIndex: =1
 
+                    "'Receipt Upload_DataCard7' As typedDataCard.addLargePictureCard":
+                        BorderColor: =App.Theme.Colors.Darker40
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="ReceiptUpload"
+                        Default: =ThisItem.'Receipt Upload'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =Image6.Image
+                        Width: =262
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey150 As label:
+                            AutoHeight: =true
+                            Color: =App.Theme.Colors.Darker30
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =34
+                            Size: =13
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        Image6 As image:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =AddPicture3.Height
+                            Image: =If(IsBlank(AddPicture3.Media), Parent.Default, AddPicture3.Media)
+                            Tooltip: =Parent.DisplayName
+                            Width: =AddPicture3.Width
+                            X: =AddPicture3.X
+                            Y: =AddPicture3.Y
+                            ZIndex: =2
+
+                        AddPicture3 As addMedia:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =200
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey150.Y + DataCardKey150.Height + 5
+                            ZIndex: =3
+
+                        ErrorMessage110 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(168, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =Image6.Y + Image6.Height
+                            ZIndex: =4
+
+                        StarVisible110 As label:
+                            Align: =Align.Center
+                            Color: =App.Theme.Colors.Darker30
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =DataCardKey150.Height
+                            Size: =13
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey150.Y
+                            ZIndex: =5
+
                     ApprovalStatus_DataCard1 As typedDataCard.comboBoxEditCard:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Solid
@@ -199,92 +285,6 @@
                             Wrap: =false
                             Y: =DataCardKey17.Y
                             ZIndex: =4
-
-                    "'Receipt Upload_DataCard7' As typedDataCard.addLargePictureCard":
-                        BorderColor: =App.Theme.Colors.Darker40
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReceiptUpload"
-                        Default: =ThisItem.'Receipt Upload'
-                        DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =false
-                        Update: =Image6.Image
-                        Width: =262
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
-
-                        DataCardKey150 As label:
-                            AutoHeight: =true
-                            Color: =App.Theme.Colors.Darker30
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Height: =34
-                            Size: =13
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        Image6 As image:
-                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            DisplayMode: =Parent.DisplayMode
-                            Height: =AddPicture3.Height
-                            Image: =If(IsBlank(AddPicture3.Media), Parent.Default, AddPicture3.Media)
-                            Tooltip: =Parent.DisplayName
-                            Width: =AddPicture3.Width
-                            X: =AddPicture3.X
-                            Y: =AddPicture3.Y
-                            ZIndex: =2
-
-                        AddPicture3 As addMedia:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            Fill: =RGBA(255, 255, 255, 1)
-                            Height: =200
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey150.Y + DataCardKey150.Height + 5
-                            ZIndex: =3
-
-                        ErrorMessage110 As label:
-                            AutoHeight: =true
-                            Color: =RGBA(168, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =Image6.Y + Image6.Height
-                            ZIndex: =4
-
-                        StarVisible110 As label:
-                            Align: =Align.Center
-                            Color: =App.Theme.Colors.Darker30
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Height: =DataCardKey150.Height
-                            Size: =13
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            Y: =DataCardKey150.Y
-                            ZIndex: =5
 
                     "'Payment Type_DataCard12' As typedDataCard.comboBoxEditCard":
                         BorderColor: =App.Theme.Colors.Darker40
