@@ -5,6 +5,18 @@
         =UpdateContext({SelectMode2: false});
         Refresh('Expense Data');
 
+    HomeScreenImage As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =638
+        Image: ='reine-norway-norwegian-lofoten-mountains-village'
+        ImagePosition: =ImagePosition.Fill
+        Width: =440
+        X: =16
+        Y: =112
+        ZIndex: =1
+
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
@@ -22,7 +34,7 @@
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =Parent.Width
-        ZIndex: =1
+        ZIndex: =2
 
         HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -96,7 +108,7 @@
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                         Items: |
-                            =AddColumns(AddColumns(GroupBy(AddColumns(ShowColumns(Testing,ExpenseType,Amount), expenses, ExpenseType.Value),expenses,Groupnames),uses,Sum(Groupnames, Amount)),Label, Concatenate(expenses,"($",uses,")"))
+                            =AddColumns(AddColumns(GroupBy(AddColumns(ShowColumns(Testing,'Expense Type',Amount), expenses, ExpenseType.Value),expenses,Groupnames),uses,Sum(Groupnames, Amount)),Label, Concatenate(expenses,"($",uses,")"))
                         Visible: =is_admin
                         X: =40
                         Y: =70
@@ -148,6 +160,7 @@
                     OnSelect: =
                     TemplatePadding: =0
                     TemplateSize: =108
+                    Visible: =is_admin
                     Width: =922
                     X: =444
                     Y: =204
@@ -292,7 +305,7 @@
         Width: =872
         X: =472
         Y: =112
-        ZIndex: =2
+        ZIndex: =3
 
         ComboBox1 As combobox:
             BorderColor: =App.Theme.Colors.Darker40
@@ -565,11 +578,15 @@
             SearchItems: =Search(Distinct('Expense Data',ApprovalStatus.Value),ComboBox2.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
+            Visible: =is_admin
             Y: =40
             ZIndex: =7
 
         ButtonCanvas14 As Button:
+            BasePaletteColor: =
+            BorderColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             Height: =32
             OnSelect: |-
                 =Reset(ComboBox1);
@@ -610,7 +627,7 @@
         Width: =154
         X: =1164
         Y: =36
-        ZIndex: =3
+        ZIndex: =4
 
     ButtonCanvas12 As Button:
         BasePaletteColor: =
@@ -627,7 +644,7 @@
         Width: =139
         X: =996
         Y: =234
-        ZIndex: =4
+        ZIndex: =5
 
     ButtonCanvas13 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
@@ -644,7 +661,7 @@
         Width: =151
         X: =1193
         Y: =234
-        ZIndex: =5
+        ZIndex: =6
 
     Label3 As label:
         Align: =Align.Center
@@ -659,5 +676,105 @@
         Width: =440
         X: =16
         Y: =16
-        ZIndex: =6
+        ZIndex: =7
+
+    "'Employee Expense View' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Height: =447
+        Items: =Filter(Testing,UsersEmail.Email = User().Email)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =818
+        X: =500
+        Y: =302
+        ZIndex: =8
+
+        Image7 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =72
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title4 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle3.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle3 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Amount
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle3 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
 

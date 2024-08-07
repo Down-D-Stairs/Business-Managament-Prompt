@@ -929,7 +929,9 @@
 
     ButtonCanvas15 As Button:
         BasePaletteColor: =RGBA(249, 83, 109, 1)
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |-
             =deletetemp.Run();
