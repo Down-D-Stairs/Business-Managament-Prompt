@@ -1,4 +1,38 @@
 {
+  "040c9515-b3db-4c85-87e9-d58d7b8f3454": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "copyList"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "7ee35b8b-b96d-4705-b5ad-9060983dc0f5"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "copyList"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "7ee35b8b-b96d-4705-b5ad-9060983dc0f5"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "copyList"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
+    },
+    "dependents": [],
+    "id": "040c9515-b3db-4c85-87e9-d58d7b8f3454"
+  },
   "57133be4-d3da-4cb0-a157-44398d5b9a61": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -278,46 +312,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
-  },
-  "ca16c5b7-7a2e-4fdd-aaa4-4d619c1d43d5": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "5e2ac83f-f521-4bb1-93e8-a70bc730a894": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowDisplayName": {
-          "value": "copyList"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "7ee35b8b-b96d-4705-b5ad-9060983dc0f5"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
-        },
-        "workflowDisplayName": {
-          "value": "copyList"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "7ee35b8b-b96d-4705-b5ad-9060983dc0f5"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "copyList"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
-    },
-    "dependents": [],
-    "id": "ca16c5b7-7a2e-4fdd-aaa4-4d619c1d43d5"
   },
   "de91faf6-ca14-4c4f-9417-ab685d106bdd": {
     "connectionRef": {
