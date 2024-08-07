@@ -58,7 +58,8 @@
       "Admin_List",
       "Expense Data",
       "Add New Expense Temp",
-      "Testing"
+      "Testing",
+      "UserRoles"
     ],
     "dependencies": {},
     "dependents": [
