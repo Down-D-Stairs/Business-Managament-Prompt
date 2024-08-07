@@ -43,6 +43,8 @@
       "ReceiptUpload": "Receipt Upload",
       "SubExpense": "SubExpense",
       "Title": "Title",
+      "User": "User",
+      "User#Claims": "User Claims",
       "VendorName": "Vendor Name"
     },
     "DatasetName": "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists",

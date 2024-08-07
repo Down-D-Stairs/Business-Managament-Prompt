@@ -63,7 +63,7 @@
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ReceiptUpload)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Receipt Upload')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -149,7 +149,7 @@
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,PaymentType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -189,12 +189,12 @@
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Choices([@'Add New Expense Temp'].PaymentType)
+                        Items: =Choices([@'Add New Expense Temp'].'Payment Type')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["Value"]
-                        SearchItems: =Choices('Add New Expense Temp'.PaymentType,DataCardValue9.SearchText)
+                        SearchItems: =Choices('Add New Expense Temp'.'Payment Type',DataCardValue9.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
@@ -243,7 +243,7 @@
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,ExpenseType)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Expense Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -283,12 +283,12 @@
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Choices([@'Add New Expense Temp'].ExpenseType)
+                        Items: =Choices([@'Add New Expense Temp'].'Expense Type')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["Value"]
-                        SearchItems: =Choices('Add New Expense Temp'.ExpenseType,DataCardValue11.SearchText)
+                        SearchItems: =Choices('Add New Expense Temp'.'Expense Type',DataCardValue11.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
@@ -337,10 +337,10 @@
                     DataField: ="VendorName"
                     Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,VendorName)
+                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, VendorName)
+                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =false
                     Update: =DataCardValue12.Text
                     Width: =667
