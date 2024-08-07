@@ -687,7 +687,8 @@
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =447
-        Items: =Filter(Testing,UsersEmail.Email = User().Email)
+        Items: |
+            =If(is_admin,Blank(),Filter(Testing,UsersEmail.Email = User().Email))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
