@@ -12,7 +12,7 @@
                 (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                 (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                 (StartsWith('Vendor Name', TextInput1.Text)) &&
-                (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
             )
         );
         
@@ -196,9 +196,9 @@
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="ApprovalStatus"
-                        Default: =ThisItem.ApprovalStatus
+                        Default: =ThisItem.'Approval Status'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ApprovalStatus)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Approval Status')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         Required: =false
@@ -238,12 +238,12 @@
                             Font: =App.Theme.Font
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
-                            Items: =Choices([@'Expense Data'].ApprovalStatus)
+                            Items: =Choices([@'Expense Data'].'Approval Status')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =App.Theme.Colors.Darker30
                             SearchFields: =["Value"]
-                            SearchItems: =Choices('Expense Data'.ApprovalStatus,DataCardValue16.SearchText)
+                            SearchItems: =Choices('Expense Data'.'Approval Status',DataCardValue16.SearchText)
                             SelectionFill: =App.Theme.Colors.Primary
                             SelectMultiple: =false
                             Size: =13
@@ -959,9 +959,9 @@
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="ApprovalStatus"
-                        Default: =ThisItem.ApprovalStatus
+                        Default: =ThisItem.'Approval Status'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,ApprovalStatus)
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Approval Status')
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =70
                         Required: =false
@@ -990,7 +990,7 @@
                             DefaultSelectedItems: =[Parent.Default]
                             DisplayMode: =Parent.DisplayMode
                             Height: =32
-                            Items: =Choices([@'Expense Data'].ApprovalStatus)
+                            Items: =Choices([@'Expense Data'].'Approval Status')
                             ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                             Width: =Parent.Width - 48
                             X: =24

@@ -99,7 +99,8 @@
                         AccessibleLabel: =Parent.DisplayName
                         BasePaletteColor: =
                         BorderColor: =
-                        DisplayMode: =Parent.DisplayMode
+                        DisplayMode: |
+                            =DisplayMode.View
                         Fill: =
                         FontColor: =
                         Height: =32

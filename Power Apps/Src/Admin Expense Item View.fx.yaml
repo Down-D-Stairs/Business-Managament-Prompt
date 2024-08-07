@@ -335,7 +335,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -378,7 +378,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -417,7 +417,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -465,7 +465,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -513,7 +513,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -549,7 +549,7 @@
             HoverFill: =App.Theme.Colors.Lighter70
             InputTextPlaceholder: ="Approval Status"
             Items: |
-                =Distinct('Expense Data', ApprovalStatus.Value)
+                =Distinct('Expense Data', 'Approval Status'.Value)
             OnChange: |
                 =// Update variables when a dropdown value changes
                 Set(
@@ -560,7 +560,7 @@
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
-                        (ApprovalStatus.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
                 
@@ -579,7 +579,7 @@
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct('Expense Data',ApprovalStatus.Value),ComboBox2.SearchText,Value)
+            SearchItems: =Search(Distinct('Expense Data','Approval Status'.Value),ComboBox2.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
             Width: =180
@@ -644,7 +644,7 @@
         FontColor: =
         Height: =32
         OnSelect: =Navigate('Expense upload screen_1', ScreenTransition.Fade)
-        Text: ="Upload Expense(s"
+        Text: ="Upload Expense(s)"
         Width: =154
         X: =1164
         Y: =36
