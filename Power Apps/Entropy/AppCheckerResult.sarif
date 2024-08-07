@@ -1854,6 +1854,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Name"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Name",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Name",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.InvoiceTotal"
                 }
               ],
