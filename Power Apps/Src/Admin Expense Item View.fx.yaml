@@ -5,18 +5,6 @@
         =UpdateContext({SelectMode2: false});
         Refresh('Expense Data');
 
-    HomeScreenImage As image:
-        BorderColor: =App.Theme.Colors.Darker40
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =638
-        Image: ='reine-norway-norwegian-lofoten-mountains-village'
-        ImagePosition: =ImagePosition.Fill
-        Width: =440
-        X: =16
-        Y: =112
-        ZIndex: =1
-
     ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
@@ -34,7 +22,7 @@
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =Parent.Width
-        ZIndex: =2
+        ZIndex: =1
 
         HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -293,6 +281,19 @@
                         X: =792
                         Y: =40
                         ZIndex: =8
+
+    HomeScreenImage As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =638
+        Image: ='reine-norway-norwegian-lofoten-mountains-village'
+        ImagePosition: =ImagePosition.Fill
+        Visible: =is_admin = false
+        Width: =440
+        X: =16
+        Y: =112
+        ZIndex: =2
 
     Container6 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -610,14 +611,31 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(15, 108, 189, 1)
             Font: =App.Theme.Font
+            Height: =36
             Size: =13
-            Text: ="Nuh uh"
+            Text: ="Sorry! No Time Traveling!"
+            Visible: |
+                =If(DatePickerStart.SelectedDate > Today(), true, false)
+            Width: =180
+            Y: =84
+            ZIndex: =9
+
+        Label1_1 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(15, 108, 189, 1)
+            Font: =App.Theme.Font
+            Height: =36
+            Size: =13
+            Text: ="Sorry! No Time Traveling!"
             Visible: |
                 =If(DatePickerEnd.SelectedDate > Today(), true, false)
-            Width: =284
-            X: =588
-            Y: =40
-            ZIndex: =9
+            Width: =180
+            X: =190
+            Y: =84
+            ZIndex: =10
 
     ButtonCanvas5 As Button:
         BasePaletteColor: =
