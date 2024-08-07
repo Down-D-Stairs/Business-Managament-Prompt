@@ -610,14 +610,31 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(15, 108, 189, 1)
             Font: =App.Theme.Font
+            Height: =36
+            Size: =13
+            Text: ="Sorry! No Time Traveling!"
+            Visible: |
+                =If(DatePickerStart.SelectedDate > Today(), true, false)
+            Width: =190
+            Y: =84
+            ZIndex: =9
+
+        Label1_1 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(15, 108, 189, 1)
+            Font: =App.Theme.Font
+            Height: =36
             Size: =13
             Text: ="Sorry! No Time Traveling!"
             Visible: |
                 =If(DatePickerEnd.SelectedDate > Today(), true, false)
-            Width: =284
-            X: =370
-            Y: =44
-            ZIndex: =9
+            Width: =180
+            X: =190
+            Y: =84
+            ZIndex: =10
 
     ButtonCanvas5 As Button:
         BasePaletteColor: =
