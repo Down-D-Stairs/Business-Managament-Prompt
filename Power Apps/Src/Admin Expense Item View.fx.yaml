@@ -581,7 +581,6 @@
             SearchItems: =Search(Distinct('Expense Data',ApprovalStatus.Value),ComboBox2.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
-            Visible: =is_admin
             Width: =180
             X: =246
             ZIndex: =7
@@ -688,7 +687,7 @@
         DelayItemLoading: =true
         Height: =447
         Items: |
-            =If(is_admin,Filter(Testing,UsersEmail.Email = User().Email),Blank())
+            =If(is_admin,Filter(Testing,UsersEmail.Email = ""),Filter(Testing,UsersEmail.Email = User().Email))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
