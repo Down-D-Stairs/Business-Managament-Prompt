@@ -943,6 +943,9 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =
+            If(
+                Form1_1.Valid,
+                
             Patch(
                 'Expense Data',
                 Defaults('Expense Data'),
@@ -974,9 +977,7 @@
                     User: User_DataCard1,
                     'User - Temp': User_DataCard1
                 }
-            );
-            If(
-                Form1_1.Valid, 
+                ); 
                 SubmitForm(Form1_1);
                 ResetForm(Form1_1),
                 
