@@ -918,7 +918,7 @@
             ForAll(
                 DATA,
             Patch(
-                'Expense Data',
+                'DATA',
                 LookUp('Expense Data',ID = 'temp expense list'.Selected.ID),
                 { 
                     'Date - Temp': Blank(),
