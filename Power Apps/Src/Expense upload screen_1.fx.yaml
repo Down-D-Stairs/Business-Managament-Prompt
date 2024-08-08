@@ -944,6 +944,12 @@
                 'Expense Data',
                 Defaults('Expense Data'),
                 {
+                    'Expense Type': DataCardValue4.Selected,
+                    'Expense Type - Temp': DataCardValue4.Selected,
+            
+                    'Vendor Name': DataCardValue5.Value,
+                    'Vendor Name - Temp': DataCardValue5.Value, 
+                    
                     'Payment Type': DataCardValue2.Selected,
                     'Payment Type - Temp': DataCardValue2.Selected,
                     
