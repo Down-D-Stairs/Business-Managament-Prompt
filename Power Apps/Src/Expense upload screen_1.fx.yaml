@@ -913,7 +913,7 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =ClearCollect(DATA,'Expense Data');
+            =ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
             
             
             ForAll(
