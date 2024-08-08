@@ -966,7 +966,7 @@
                 )
             );
             ResetForm(Form1_1);
-            Reset(DataCardValue5);
+            
             
         Text: ="Submit Expense(s"
         Width: =132
