@@ -1059,7 +1059,7 @@
         OnSelect: |-
             =UpdateContext({cancelMode: true});
             UpdateContext({SelectMode: true})
-        Text: ="Edit Expense(s)"
+        Text: ="Edit Expense(s"
         Width: =162
         X: =816
         Y: =40
@@ -1072,9 +1072,17 @@
         FontColor: =
         Height: =32
         OnSelect: |-
-            =ForAll(SelectedItems, Remove('Expense Data', ThisRecord));
-                                     Clear(SelectedItems);
-                                     UpdateContext({SelectMode: false});
+            =If(
+                CountRows(SelectedItems) > 0,
+                ForAll(SelectedItems, Remove('Expense Data', ThisRecord));
+                Clear(SelectedItems);
+                UpdateContext({ SelectMode: false });
+                Notify("Items successfully deleted", NotificationType.Success);
+                Refresh('Expense Data'),
+            
+                Notify("No items selected for deletion. Please select items to delete.", NotificationType.Error)
+            
+            );
             Refresh('Expense Data');
         Text: ="DELETE SELECTED"
         Visible: =SelectMode
