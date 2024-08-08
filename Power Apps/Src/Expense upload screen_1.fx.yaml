@@ -375,7 +375,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
-                    Default: =VendorName
+                    Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
@@ -413,7 +413,7 @@
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =Parent.Default
+                        Value: =VendorName
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey5.Y + DataCardKey5.Height + 4
