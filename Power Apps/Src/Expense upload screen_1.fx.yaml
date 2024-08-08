@@ -803,7 +803,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Amount
+            Text: =ThisItem.'Amount - Temp'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 185
             X: =115
@@ -841,7 +841,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Date
+            Text: =ThisItem.'Date - Temp'
             VerticalAlign: =VerticalAlign.Top
             Width: =Subtitle1.Width
             X: =Title1.X
