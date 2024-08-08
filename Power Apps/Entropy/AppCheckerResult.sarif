@@ -1404,19 +1404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas16.AccessibleLabel"
+                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas16.AccessibleLabel",
+                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expense upload screen_1",
-                "type": "'Expense upload screen_1'.ButtonCanvas16"
+                "type": "'Expense upload screen_1'.ButtonCanvas17"
               }
             }
           ],
@@ -1477,6 +1477,36 @@
                 "member": "AccessibleLabel",
                 "module": "Expense upload screen_1",
                 "type": "'Expense upload screen_1'.ButtonCanvas15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Expense upload screen_1'.ButtonCanvas16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Expense upload screen_1",
+                "type": "'Expense upload screen_1'.ButtonCanvas16"
               }
             }
           ],
