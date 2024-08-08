@@ -5,6 +5,7 @@
         =UpdateContext({SelectMode: false});
         UpdateContext({deleteConfirm: false});
         UpdateContext({hideGallery: false});
+        UpdateContext({cancelMode: false});
         Refresh('Expense Data');
 
     ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
@@ -1084,4 +1085,17 @@
         X: =154
         Y: =40
         ZIndex: =8
+
+    ButtonCanvas17 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =UpdateContext({cancelMode: false});
+        Text: ="CANCEL"
+        Visible: =cancelMode
+        Width: =96
+        X: =1164
+        Y: =40
+        ZIndex: =9
 
