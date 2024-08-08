@@ -1414,7 +1414,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Notify(\"Record updated successfully\", NotificationType.Success);",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BasePaletteColor",
         "FontColor",
         "BorderColor",
@@ -1507,7 +1514,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
