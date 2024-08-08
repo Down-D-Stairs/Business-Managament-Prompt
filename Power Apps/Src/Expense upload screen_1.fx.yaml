@@ -914,8 +914,8 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
             =
-            If(Form1.Valid,SubmitForm(Form1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
-            ResetForm(Form1);
+            If(Form1_1.Valid,SubmitForm(Form1_1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
+            ResetForm(Form1_1);
             ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
             
             
