@@ -944,6 +944,9 @@
                 'Expense Data',
                 Defaults('Expense Data'),
                 {
+                    'Receipt Upload': Image1.Image,
+                    'Receipt Upload - Temp': Image1.Image,
+                    
                     Date: DataCardValue3.SelectedDate,
                     'Date - Temp': DataCardValue3.SelectedDate,
             
