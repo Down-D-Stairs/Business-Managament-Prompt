@@ -809,7 +809,7 @@
             =
             Patch(
                 'Expense Data',
-                Defaults('Expense Data'),
+                LookUp('Expense Data', ID = 'temp expense list'.Selected.ID),
                 {
                     'Receipt Upload': Image4.Image,
                     'Receipt Upload - Temp': Image4.Image,
@@ -839,6 +839,7 @@
                     'User - Temp': DataCardValue1.Value
                 }
             );
+            
             Notify("Record updated successfully", NotificationType.Success);
             Navigate('Expense upload screen_1')
         Text: ="Back"
