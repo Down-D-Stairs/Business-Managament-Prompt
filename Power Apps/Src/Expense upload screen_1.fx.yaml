@@ -1068,7 +1068,9 @@
 
     ButtonCanvas16 As Button:
         BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Icon: ="Dismiss"
         OnSelect: |-
