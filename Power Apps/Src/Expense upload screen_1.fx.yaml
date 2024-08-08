@@ -941,8 +941,41 @@
         Height: =44
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
-            =If(
+        OnSelect: |-
+            =
+            Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                {
+                    'Receipt Upload': Image1,
+                    'Receipt Upload - Temp': Image1,
+                    
+                    'Payment Type': 'Payment Type_DataCard1',
+                    'Payment Type - Temp': 'Payment Type_DataCard1',
+                    
+                    'Expense Type': 'Expense Type_DataCard1',
+                    'Expense Type - Temp': 'Expense Type_DataCard1',
+            
+                    'Vendor Name': 'Vendor Name_DataCard1',
+                    'Vendor Name - Temp': 'Vendor Name_DataCard1',
+            
+                    Date: 'Date_DataCard1',
+                    'Date - Temp': 'Date_DataCard1',
+                    
+                    Amount: Amount_DataCard1,
+                    'Amount - Temp': Amount_DataCard1,
+            
+                    Comments: Comments_DataCard1,
+                    'Comments - Temp': Comments_DataCard1,
+            
+                    SubExpense: SubExpense_DataCard1,
+                    'SubExpense - Temp': SubExpense_DataCard1,
+            
+                    User: User_DataCard1,
+                    'User - Temp': User_DataCard1
+                }
+            );
+            If(
                 Form1_1.Valid, 
                 SubmitForm(Form1_1);
                 ResetForm(Form1_1),
