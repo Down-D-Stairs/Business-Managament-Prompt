@@ -913,7 +913,10 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
+            =
+            If(Form1.Valid,SubmitForm(Form1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
+            ResetForm(Form1);
+            ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
             
             
             ForAll(
@@ -935,7 +938,6 @@
             )
             );
             
-            If(Form1.Valid,SubmitForm(Form1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
             
             Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
             Refresh('Add New Expense Temp');
