@@ -950,6 +950,14 @@
                     "Please fill in all required fields.",
                     NotificationType.Error
                 )
+            );
+            Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                {
+                    User: DataCardValue1.Value,
+                    'User - Temp': DataCardValue1.Value
+                }
             )
         Text: ="Add New Expense"
         Width: =142
