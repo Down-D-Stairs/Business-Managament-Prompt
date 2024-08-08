@@ -233,8 +233,8 @@
                 "'Payment Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="PaymentType"
-                    Default: =ThisItem.'Payment Type - Temp'
+                    DataField: ="PaymentType-Temp"
+                    Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
