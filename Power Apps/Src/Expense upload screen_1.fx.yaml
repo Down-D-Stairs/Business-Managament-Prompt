@@ -886,7 +886,9 @@
             ZIndex: =7
 
         CheckboxCanvas2 As Checkbox:
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontColor: =
             Height: =29
             Label: =
             OnCheck: =Collect(SelectedItems, ThisItem)
