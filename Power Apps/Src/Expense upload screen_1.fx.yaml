@@ -915,12 +915,12 @@
         OnSelect: |+
             =Patch(
                 'Expense Data',
-                'temp expense list'.Selected,
+                LookUp('Expense Data',ID = 'temp expense list'.Selected.ID),
                 { 
                     'Date - Temp': Blank(),
                     'Receipt Upload - Temp': Blank(), 
                     'Payment Type - Temp': Blank(),
-                    
+                    'Amount - Temp': Blank(),
                     'Expense Type - Temp': Blank(),
                     'Vendor Name - Temp': Blank(),
                     'SubExpense - Temp':Blank(),
