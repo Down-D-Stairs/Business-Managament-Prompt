@@ -331,6 +331,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -374,6 +375,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -413,6 +415,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -461,6 +464,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -509,6 +513,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -556,6 +561,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -596,7 +602,8 @@
                 Reset(DatePickerStart);
                 Reset(DatePickerEnd);
                 Reset(TextInput1);
-                Reset(ComboBox2)
+                Reset(ComboBox2);
+                Reset(ComboBox3);
             Text: ="Clear All"
             Width: =96
             X: =776
@@ -635,6 +642,62 @@
             X: =190
             Y: =84
             ZIndex: =10
+
+        ComboBox3 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["Value"]
+            Font: =App.Theme.Font
+            Height: =44
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Items: |+
+                =Distinct('Expense Data',User)
+                
+            OnChange: |
+                =// Update variables when a dropdown value changes
+                Set(
+                    FilteredData,
+                    Filter(
+                        'Expense Data',
+                        ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                        (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                        (StartsWith('Vendor Name', TextInput1.Text)) &&
+                        ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+                    )
+                );
+                
+                Set(
+                    SortedData,
+                    SortByColumns(
+                        FilteredData,
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Ascending,
+                            SortOrder.Descending
+                        )
+                    )
+                );
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
+            SearchFields: =["Value"]
+            SearchItems: =Search(Distinct('Expense Data',User),ComboBox3.SearchText,Value)
+            SelectionFill: =App.Theme.Colors.Primary
+            Size: =13
+            Width: =236
+            X: =370
+            Y: =40
+            ZIndex: =11
 
     ButtonCanvas5 As Button:
         BasePaletteColor: =
