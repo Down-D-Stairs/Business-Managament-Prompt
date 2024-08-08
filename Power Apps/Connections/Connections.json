@@ -105,7 +105,8 @@
     "dependents": [
       "62f8cba4-5bca-4d41-81cf-82f6f97fd299",
       "57133be4-d3da-4cb0-a157-44398d5b9a61",
-      "040c9515-b3db-4c85-87e9-d58d7b8f3454"
+      "040c9515-b3db-4c85-87e9-d58d7b8f3454",
+      "c0028af4-3a24-457f-bcac-c483e0ce6c0d"
     ],
     "id": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
   },
@@ -296,6 +297,40 @@
       "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
     ],
     "id": "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b"
+  },
+  "c0028af4-3a24-457f-bcac-c483e0ce6c0d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Delete Temp Columns"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "5c99982b-73b4-4365-b886-e274bed1ad21"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Delete Temp Columns"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "5c99982b-73b4-4365-b886-e274bed1ad21"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "DeleteTempColumns"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "5e2ac83f-f521-4bb1-93e8-a70bc730a894"
+    },
+    "dependents": [],
+    "id": "c0028af4-3a24-457f-bcac-c483e0ce6c0d"
   },
   "c4d5d2d0-1f55-4bd5-97ec-902e57b52742": {
     "connectionRef": {

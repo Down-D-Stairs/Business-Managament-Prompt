@@ -1,11 +1,11 @@
 "'Expense upload screen_1' As screen.'autoLayout_HeaderFooter_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: |-
+    OnVisible: |
         =UpdateContext({SelectMode: false});
         UpdateContext({deleteConfirm: false});
         UpdateContext({hideGallery: false});
-        Refresh('Add New Expense Temp');
+        Refresh('Expense Data');
 
     ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -912,21 +912,20 @@
         Height: =44
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
-            =If(
-                Form1_1.Valid, 
-                SubmitForm(Form1_1);
-                ResetForm(Form1_1);
-                copyList.Run();
-                Refresh('Add New Expense Temp');
-                
-                Notify("Form submitted successfully.", NotificationType.Success),
-                
-                Notify("Please fill in all required fields.", NotificationType.Error)
+        OnSelect: |+
+            =Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                { 
+                    'Receipt Upload - Temp': Blank(), 
+                    'Payment Type - Temp': Blank()
+                }
             );
             
-            copyList.Run();
+            
+            Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
             Refresh('Add New Expense Temp');
+            
         Text: ="Submit Expense(s"
         Width: =132
         X: =1182
