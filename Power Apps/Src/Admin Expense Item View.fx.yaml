@@ -139,7 +139,23 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: =If(is_admin,'Expense Data',Filter('Expense Data',User = User().Email))
+                    Items: |-
+                        =If(is_admin,'Expense Data',Filter('Expense Data',User = User().Email));
+                         SortByColumns(
+                            Filter(
+                                Testing,
+                                ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                                (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                                (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                                (StartsWith('Vendor Name', TextInput1.Text))
+                            ),
+                            "Amount",
+                            If(
+                                Dropdown1.Selected.Value = "Ascending",
+                                SortOrder.Ascending,
+                                SortOrder.Descending
+                            )
+                        )
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
