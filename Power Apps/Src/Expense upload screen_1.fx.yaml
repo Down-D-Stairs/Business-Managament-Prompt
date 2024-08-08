@@ -913,13 +913,16 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =Patch(
-                'Expense Data',
-                Defaults('Expense Data'),
-                { 
-                    'Receipt Upload - Temp': Blank(), 
-                    'Payment Type - Temp': Blank()
-                }
+            =ForAll(
+                'Expense Data'
+                    Patch(
+                    'Expense Data',
+                    Defaults('Expense Data'),
+                    { 
+                        'Receipt Upload - Temp': Blank(), 
+                        'Payment Type - Temp': Blank()
+                    }
+            )
             );
             
             
@@ -1052,4 +1055,18 @@
         X: =40
         Y: =40
         ZIndex: =7
+
+    ButtonCanvas16 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Icon: ="Dismiss"
+        OnSelect: |-
+            =UpdateContext({deleteConfirm: false});
+        Text: =
+        Visible: =deleteConfirm
+        Width: =32
+        X: =154
+        Y: =40
+        ZIndex: =8
 
