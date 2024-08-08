@@ -199,7 +199,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.'Approval Status'.Value
+                        Text: =ThisItem.'Approve/Deny'
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_1.Width
                         X: =Title2_1.X
@@ -331,7 +331,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -375,7 +375,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -415,7 +415,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -464,7 +464,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -513,7 +513,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -561,7 +561,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
@@ -659,7 +659,7 @@
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
             Items: |+
-                =Distinct('Expense Data','User')
+                =Distinct('Expense Data',User)
                 
             OnChange: |
                 =// Update variables when a dropdown value changes
@@ -668,7 +668,7 @@
                     Filter(
                         'Expense Data',
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
-                        ('User'= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
+                        (User= ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
                         (StartsWith('Vendor Name', TextInput1.Text)) &&
