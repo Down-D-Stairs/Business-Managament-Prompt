@@ -233,7 +233,7 @@
                 "'Payment Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="PaymentType - Temp"
+                    DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
@@ -265,7 +265,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].'Payment Type - Temp')
+                        Items: =Choices([@'Expense Data'].'Payment Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
