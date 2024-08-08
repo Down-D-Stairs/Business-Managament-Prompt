@@ -1110,8 +1110,10 @@
         Height: =30
         Icon: ="ArrowClockwise"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: =Notify("Record updated successfully", NotificationType.Success);
-        Text: ="Update Entry"
+        OnSelect: |-
+            =SubmitForm(Form5);
+            Notify("Record updated successfully", NotificationType.Success);
+        Text: ="Update Entr"
         Visible: =is_admin
         Width: =232
         X: =969
