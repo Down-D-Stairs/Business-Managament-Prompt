@@ -853,7 +853,7 @@
                     BorderThickness: =1
                     DataSource: ='Expense Data'
                     FillPortions: =0.5
-                    Item: ='Admin Expense View'.Selected
+                    Item: =LookUp('Expense Data', ID = CurrentItemID)
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     NumberOfColumns: =1
