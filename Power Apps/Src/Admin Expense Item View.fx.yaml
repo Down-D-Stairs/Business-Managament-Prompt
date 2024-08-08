@@ -577,7 +577,7 @@
                 );
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
-            SearchFields: =[""]
+            SearchFields: =["Value"]
             SearchItems: =Search(Distinct('Expense Data','Approval Status'.Value),ComboBox2.SearchText,Value)
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13

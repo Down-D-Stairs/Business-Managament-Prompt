@@ -50,8 +50,8 @@
 
             Form1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
-                DataSource: ='Add New Expense Temp'
-                Item: =LookUp('Add New Expense Temp', ID = CurrentItemUploadID)
+                DataSource: ='Expense Data'
+                Item: =LookUp('Expense Data', ID = CurrentItemUploadID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
@@ -877,7 +877,7 @@
             If(
                 !IsBlank(NextItem),
                 Set(CurrentItemUploadID, NextItem.ID),
-                Notify("No further entries", NotificationType.Information)
+                Notify("No Previous entries", NotificationType.Information)
             )
         Text: ="Previous Expense"
         Width: =176
