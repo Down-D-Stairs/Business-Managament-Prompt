@@ -759,11 +759,11 @@
             RadiusTopRight: =8
             ZIndex: =4
 
-    "'temp expense list' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+    "'temp expense list' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
-        Items: ='Add New Expense Temp'
+        Items: ='Expense Data'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -774,7 +774,7 @@
         Y: =105
         ZIndex: =1
 
-        Image3 As image:
+        Image2 As image:
             BorderColor: =App.Theme.Colors.Darker40
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -801,11 +801,11 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Title
+            Text: =ThisItem.'Expense Type'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 185
             X: =115
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle1.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle1.Size*1.8 + 2 + Body1.Size*1.8)) / 2
             ZIndex: =2
 
         Subtitle1 As label:
@@ -820,14 +820,14 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Payment Type'.Value
+            Text: =ThisItem.Date
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
             Y: =Title1.Y + Title1.Height
             ZIndex: =3
 
-        Body2 As label:
+        Body1 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =App.Theme.Font
@@ -839,7 +839,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Date
+            Text: =ThisItem.Amount
             VerticalAlign: =VerticalAlign.Top
             Width: =Subtitle1.Width
             X: =Title1.X
@@ -854,10 +854,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =50
             Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =!SelectMode;
-                Set(CurrentItemUploadID, ThisItem.ID);
-                Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
+            OnSelect: =Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -889,19 +886,16 @@
             ZIndex: =7
 
         CheckboxCanvas2 As Checkbox:
-            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            FontColor: =
-            Height: =43
+            Height: =29
             Label: =
-            OnCheck: |
-                =Collect(SelectedItems, ThisItem)
+            OnCheck: =Collect(SelectedItems, ThisItem)
             OnSelect: =Select(Parent)
             OnUncheck: =Remove(SelectedItems, ThisItem)
             Visible: =SelectMode
             Width: =38
-            X: =446
-            Y: =40
+            X: =438
+            Y: =44
             ZIndex: =8
 
     ButtonCanvas7_1 As Button:
@@ -996,7 +990,7 @@
         FontColor: =
         Height: =32
         OnSelect: |
-            =ForAll(SelectedItems, Remove('Add New Expense Temp', ThisRecord));
+            =ForAll(SelectedItems, Remove('Expense Data', ThisRecord));
                                      Clear(SelectedItems);
                                      UpdateContext({SelectMode: false});
         Text: ="DELETE SELECTED"
