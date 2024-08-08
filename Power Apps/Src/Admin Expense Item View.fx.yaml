@@ -333,7 +333,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
@@ -376,7 +376,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
@@ -415,7 +415,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
@@ -463,7 +463,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
@@ -511,7 +511,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
@@ -558,7 +558,7 @@
                         ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                         (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                         (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                        (StartsWith('User', TextInput1.Text)) &&
+                        (StartsWith(User, TextInput1.Text)) &&
                         ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
                     )
                 );
