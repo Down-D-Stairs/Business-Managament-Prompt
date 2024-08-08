@@ -1059,7 +1059,7 @@
         OnSelect: |-
             =UpdateContext({cancelMode: true});
             UpdateContext({SelectMode: true})
-        Text: ="Edit Expense(s"
+        Text: ="Edit Expense(s)"
         Width: =162
         X: =816
         Y: =40
