@@ -944,6 +944,12 @@
                 'Expense Data',
                 Defaults('Expense Data'),
                 {
+                    Date: DataCardValue3.SelectedDate,
+                    'Date - Temp': DataCardValue3.SelectedDate,
+            
+                    Amount: Value(DataCardValue6.Value),
+                    'Amount - Temp': Value(DataCardValue6.Value),
+                    
                     Comments: DataCardValue7.Value,
                     'Comments - Temp': DataCardValue7.Value,
             
