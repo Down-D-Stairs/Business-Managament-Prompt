@@ -759,7 +759,7 @@
             RadiusTopRight: =8
             ZIndex: =4
 
-    "'temp expense list' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
+    "'temp expense list' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
@@ -944,6 +944,14 @@
                     "Please fill in all required fields.",
                     NotificationType.Error
                 )
+            );
+            Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                {
+                    User: DataCardValue1.Value,
+                    'User - Temp': DataCardValue1.Value
+                }
             )
         Text: ="Add New Expense"
         Width: =142
