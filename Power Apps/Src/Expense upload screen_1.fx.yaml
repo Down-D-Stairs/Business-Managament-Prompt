@@ -759,7 +759,7 @@
             RadiusTopRight: =8
             ZIndex: =4
 
-    "'temp expense list' As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+    "'temp expense list' As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
@@ -779,7 +779,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =84
-            Image: =ThisItem.'Receipt Upload'
+            Image: =ThisItem.'Receipt Upload - Temp'
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
@@ -801,7 +801,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Expense Type'.Value
+            Text: =ThisItem.'Amount - Temp'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 185
             X: =115
@@ -820,7 +820,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Date
+            Text: =ThisItem.'Payment Type - Temp'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
@@ -839,7 +839,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Amount
+            Text: =ThisItem.'Date - Temp'
             VerticalAlign: =VerticalAlign.Top
             Width: =Subtitle1.Width
             X: =Title1.X
@@ -886,16 +886,14 @@
             ZIndex: =7
 
         CheckboxCanvas2 As Checkbox:
-            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            FontColor: =
             Height: =29
             Label: =
             OnCheck: =Collect(SelectedItems, ThisItem)
             OnSelect: =Select(Parent)
             OnUncheck: =Remove(SelectedItems, ThisItem)
             Visible: =SelectMode
-            Width: =38
+            Width: =34
             X: =438
             Y: =44
             ZIndex: =8
@@ -1011,7 +1009,7 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =UpdateContext({SelectMode: true})
-        Text: ="Edit Expense"
+        Text: ="Edit Expens"
         Width: =162
         X: =816
         Y: =40
