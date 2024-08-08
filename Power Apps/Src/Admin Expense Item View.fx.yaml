@@ -140,8 +140,7 @@
                     DelayItemLoading: =true
                     Height: =564
                     Items: |
-                        =
-                        If(is_admin,'Expense Data',Filter('Expense Data',User = User().Email))
+                        ='Expense Data'
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -201,7 +200,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.'Approval Status'.Value
+                        Text: =ThisItem.'Payment Type'.Value
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_1.Width
                         X: =Title2_1.X
