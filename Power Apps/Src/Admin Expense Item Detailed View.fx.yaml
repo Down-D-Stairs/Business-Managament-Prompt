@@ -1113,7 +1113,7 @@
         OnSelect: |-
             =SubmitForm(Form5);
             Notify("Record updated successfully", NotificationType.Success);
-        Text: ="Update Entr"
+        Text: ="Update Entry"
         Visible: =is_admin
         Width: =232
         X: =969
