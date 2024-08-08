@@ -5,7 +5,6 @@
         =UpdateContext({SelectMode: false});
         UpdateContext({deleteConfirm: false});
         UpdateContext({hideGallery: false});
-        UpdateContext({cancelMode: false});
         Refresh('Expense Data');
 
     ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
@@ -899,7 +898,9 @@
             FontColor: =
             Height: =29
             Label: =
-            OnCheck: =Collect(SelectedItems, ThisItem)
+            OnCheck: |-
+                =Collect(SelectedItems, ThisItem);
+                UpdateContext({cancelMode:false})
             OnSelect: =Select(Parent)
             OnUncheck: =Remove(SelectedItems, ThisItem)
             Visible: =SelectMode
@@ -1056,7 +1057,8 @@
         Icon: ="Delete"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
-            =UpdateContext({SelectMode: true})
+            =UpdateContext({cancelMode: true});
+            UpdateContext({SelectMode: true})
         Text: ="Edit Expense(s)"
         Width: =162
         X: =816
@@ -1069,14 +1071,15 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
-        OnSelect: |
+        OnSelect: |-
             =ForAll(SelectedItems, Remove('Expense Data', ThisRecord));
                                      Clear(SelectedItems);
                                      UpdateContext({SelectMode: false});
+            Refresh('Expense Data');
         Text: ="DELETE SELECTED"
         Visible: =SelectMode
         Width: =152
-        X: =1176
+        X: =1056
         Y: =40
         ZIndex: =6
 
@@ -1119,11 +1122,12 @@
         FontColor: =
         Height: =32
         OnSelect: |-
-            =UpdateContext({cancelMode: false});
+            =Clear(SelectedItems);
+            UpdateContext({SelectMode: false});
         Text: ="CANCEL"
-        Visible: =cancelMode
+        Visible: =SelectMode
         Width: =96
-        X: =1164
+        X: =1228
         Y: =40
         ZIndex: =9
 

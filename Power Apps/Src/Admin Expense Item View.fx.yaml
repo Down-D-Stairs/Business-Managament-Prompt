@@ -597,7 +597,7 @@
                 Reset(DatePickerEnd);
                 Reset(TextInput1);
                 Reset(ComboBox2)
-            Text: ="Clear All"
+            Text: ="Clear Al"
             Width: =96
             X: =776
             Y: =120
