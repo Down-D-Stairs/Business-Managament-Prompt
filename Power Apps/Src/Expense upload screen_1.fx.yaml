@@ -944,20 +944,44 @@
         OnSelect: |
             =If(
                 Form1_1.Valid,
-                SubmitForm(Form1_1);
+                Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                {
+                    'Receipt Upload': AddPicture1,
+                    'Receipt Upload - Temp': AddPicture1,
+            
+                    'Payment Type': DataCardValue2.Selected,
+                    'Payment Type - Temp': DataCardValue2.Selected,
+            
+                    'Expense Type': DataCardValue4.Selected,
+                    'Expense Type - Temp': DataCardValue4.Selected,
+            
+                    'Vendor Name': DataCardValue5.Value,
+                    'Vendor Name - Temp': DataCardValue5.Value,
+            
+                    Date: DataCardValue3,
+                    'Date - Temp': DataCardValue3,
+            
+                    Amount: DataCardValue6,
+                    'Amount - Temp': DataCardValue6,
+            
+                    Comments: DataCardValue7.Value,
+                    'Comments - Temp': DataCardValue7.Value,
+            
+                    SubExpense: DataCardValue8.Value,
+                    'SubExpense - Temp': DataCardValue8.Value,
+                    
+                    User: DataCardValue1.Value,
+                    'User - Temp': DataCardValue1.Value
+                }
+            );
+            
                 ResetForm(Form1_1),
                 Notify(
                     "Please fill in all required fields.",
                     NotificationType.Error
                 )
-            );
-            Patch(
-                'Expense Data',
-                Defaults('Expense Data'),
-                {
-                    User: DataCardValue1.Value,
-                    'User - Temp': DataCardValue1.Value
-                }
             )
         Text: ="Add New Expense"
         Width: =142
