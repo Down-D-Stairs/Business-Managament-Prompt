@@ -944,8 +944,6 @@
                 'Expense Data',
                 Defaults('Expense Data'),
                 {
-                    'Receipt Upload': AddPicture1,
-                    'Receipt Upload - Temp': AddPicture1,
             
                     'Payment Type': DataCardValue2.Selected,
                     'Payment Type - Temp': DataCardValue2.Selected,
