@@ -191,12 +191,14 @@
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
-                        OnSelect: |
-                            =Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
+                        OnSelect: |+
+                            =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Information);
+                            Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
                             Set(InvoiceDate, FlowResults.invoice_date);
                             Set(AmountTotal, FlowResults.amount_total);
                             Set(VendorName, FlowResults.vendor_name);
                             Set(InvoiceTotal, FlowResults.invoice_total);
+                            
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
@@ -486,6 +488,7 @@
                         Fill: =
                         FontColor: =
                         Height: =32
+                        OnChange: =false
                         SelectedDate: =Parent.Default
                         StartDate: =Date(1900, 1, 1)
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
@@ -914,34 +917,57 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =
-            If(Form1_1.Valid,SubmitForm(Form1_1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
-            ResetForm(Form1_1);
-            ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
-            
-            
-            ForAll(
+            =ClearCollect(
                 DATA,
-            Patch(
-                'Expense Data',
-                LookUp('Expense Data',ID = 'temp expense list'.Selected.ID),
-                { 
-                    'Date - Temp': Blank(),
-                    'Receipt Upload - Temp': Blank(), 
-                    'Payment Type - Temp': Blank(),
-                    'Amount - Temp': Blank(),
-                    'Expense Type - Temp': Blank(),
-                    'Vendor Name - Temp': Blank(),
-                    'SubExpense - Temp':Blank(),
-                    'Comments - Temp': Blank(),
-                    'User - Temp': Blank()
-                }
-            )
+                ShowColumns(
+                    'Expense Data',
+                    'Date - Temp',
+                    'Receipt Upload - Temp',
+                    'Payment Type - Temp',
+                    'Amount - Temp',
+                    'Expense Type - Temp',
+                    'Vendor Name - Temp',
+                    'SubExpense - Temp',
+                    'Comments - Temp',
+                    'User - Temp'
+                )
             );
+            If(
+                Form1_1.Valid,
+                ForAll(
+                    DATA,
+                    Patch(
+                        'Expense Data',
+                        LookUp(
+                            'Expense Data',
+                            ID = 'temp expense list'.Selected.ID
+                        ),
+                        {
+                            'Date - Temp': Blank(),
+                            'Receipt Upload - Temp': Blank(),
+                            'Payment Type - Temp': Blank(),
+                            'Amount - Temp': Blank(),
+                            'Expense Type - Temp': Blank(),
+                            'Vendor Name - Temp': Blank(),
+                            'SubExpense - Temp': Blank(),
+                            'Comments - Temp': Blank(),
+                            'User - Temp': Blank()
+                        }
+                    )
+                );
+                SubmitForm(Form1_1);
+                Notify(
+                "Expenses Have been Successfully Submitted",
+                NotificationType.Success
+                );
+                Refresh('Expense Data');,
+                Notify(
+                    "All Necessary Fields Need To Be Filled Out",
+                    NotificationType.Error
+                )
+            );
+            ResetForm(Form1_1);
             
-            
-            Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
-            Refresh('Add New Expense Temp');
             
         Text: ="Submit Expense(s"
         Width: =132
