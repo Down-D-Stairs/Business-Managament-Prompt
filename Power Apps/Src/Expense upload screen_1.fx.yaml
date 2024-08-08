@@ -944,6 +944,8 @@
                 'Expense Data',
                 Defaults('Expense Data'),
                 {
+                    'Payment Type': DataCardValue2.Selected,
+                    'Payment Type - Temp': DataCardValue2.Selected,
                     
                     User: DataCardValue1.Value,
                     'User - Temp': DataCardValue1.Value
