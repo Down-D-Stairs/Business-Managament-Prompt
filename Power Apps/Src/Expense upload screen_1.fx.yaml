@@ -190,13 +190,14 @@
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
-                        OnSelect: |
-                            =Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
+                        OnSelect: |+
+                            =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Information);
+                            Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
                             Set(InvoiceDate, FlowResults.invoice_date);
                             Set(AmountTotal, FlowResults.amount_total);
                             Set(VendorName, FlowResults.vendor_name);
                             Set(InvoiceTotal, FlowResults.invoice_total);
-                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Information);
+                            
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
@@ -375,7 +376,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
-                    Default: =ThisItem.'Vendor Name'
+                    Default: =VendorName
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
@@ -413,7 +414,7 @@
                         Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                         Required: =Parent.Required
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                        Value: =VendorName
+                        Value: =Parent.Default
                         Width: =Parent.Width - 48
                         X: =24
                         Y: =DataCardKey5.Y + DataCardKey5.Height + 4
