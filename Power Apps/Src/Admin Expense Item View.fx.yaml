@@ -139,8 +139,7 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: |
-                        ='Expense Data'
+                    Items: =If(is_admin,'Expense Data',Filter('Expense Data',User = User().Email))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
