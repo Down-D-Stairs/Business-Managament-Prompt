@@ -913,8 +913,7 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =
-            If(Form1_1.Valid,SubmitForm(Form1_1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
+            =If(Form1_1.Valid,SubmitForm(Form1_1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
             ResetForm(Form1_1);
             ClearCollect(DATA,ShowColumns('Expense Data','Date - Temp','Receipt Upload - Temp','Payment Type - Temp','Amount - Temp','Expense Type - Temp','Vendor Name - Temp','SubExpense - Temp','Comments - Temp','User - Temp'));
             
@@ -940,7 +939,7 @@
             
             
             Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
-            Refresh('Add New Expense Temp');
+            Refresh('Expense Data');
             
         Text: ="Submit Expense(s"
         Width: =132
