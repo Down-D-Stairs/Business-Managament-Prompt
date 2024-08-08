@@ -918,7 +918,8 @@
                 'temp expense list'.Selected,
                 { 
                     'Receipt Upload - Temp': Blank(), 
-                    'Payment Type - Temp': Blank()
+                    'Payment Type - Temp': Blank(),
+                    'Amount - Temp': Blank()
                 }
             );
             
