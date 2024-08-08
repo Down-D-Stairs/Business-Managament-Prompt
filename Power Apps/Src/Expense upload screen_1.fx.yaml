@@ -943,9 +943,6 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =
-            If(
-                Form1_1.Valid,
-                
             Patch(
                 'Expense Data',
                 Defaults('Expense Data'),
@@ -977,12 +974,7 @@
                     User: User_DataCard1,
                     'User - Temp': User_DataCard1
                 }
-                ); 
-                SubmitForm(Form1_1);
-                ResetForm(Form1_1),
-                
-                Notify("Please fill in all required fields.", NotificationType.Error)
-            )
+            ) 
         Text: ="Add New Expense"
         Width: =142
         X: =54
