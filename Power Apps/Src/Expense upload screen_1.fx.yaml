@@ -917,9 +917,15 @@
                 'Expense Data',
                 'temp expense list'.Selected,
                 { 
+                    'Date - Temp': Blank(),
                     'Receipt Upload - Temp': Blank(), 
                     'Payment Type - Temp': Blank(),
-                    'Amount - Temp': Blank()
+                    'Amount - Temp': Blank(),
+                    'Expense Type - Temp': Blank(),
+                    'Vendor Name - Temp': Blank(),
+                    'SubExpense - Temp':Blank(),
+                    'Comments - Temp': Blank(),
+                    'User - Temp': Blank()
                 }
             );
             
