@@ -809,36 +809,37 @@
             =
             Patch(
                 'Expense Data',
-                Defaults('Expense Data'),
+                LookUp('Expense Data', ID = 'temp expense list'.Selected.ID),
                 {
-                    'Receipt Upload': Image1.Image,
-                    'Receipt Upload - Temp': Image1.Image,
+                    'Receipt Upload': Image4.Image,
+                    'Receipt Upload - Temp': Image4.Image,
                     
-                    Date: DataCardValue3.SelectedDate,
-                    'Date - Temp': DataCardValue3.SelectedDate,
+                    Date: DataCardValue10.SelectedDate,
+                    'Date - Temp': DataCardValue10.SelectedDate,
             
-                    Amount: Value(DataCardValue6.Value),
-                    'Amount - Temp': Value(DataCardValue6.Value),
+                    Amount: Value(DataCardValue13.Text),
+                    'Amount - Temp': Value(DataCardValue13.Text),
                     
-                    Comments: DataCardValue7.Value,
-                    'Comments - Temp': DataCardValue7.Value,
+                    Comments: DataCardValue14.Text,
+                    'Comments - Temp': DataCardValue14.Text,
             
-                    SubExpense: DataCardValue8.Value,
-                    'SubExpense - Temp': DataCardValue8.Value,
+                    SubExpense: DataCardValue15.Text,
+                    'SubExpense - Temp': DataCardValue15.Text,
                     
-                    'Expense Type': DataCardValue4.Selected,
-                    'Expense Type - Temp': DataCardValue4.Selected,
+                    'Expense Type': DataCardValue11.Selected,
+                    'Expense Type - Temp': DataCardValue11.Selected,
             
-                    'Vendor Name': DataCardValue5.Value,
-                    'Vendor Name - Temp': DataCardValue5.Value, 
+                    'Vendor Name': DataCardValue12.Text,
+                    'Vendor Name - Temp': DataCardValue12.Text, 
                     
-                    'Payment Type': DataCardValue2.Selected,
-                    'Payment Type - Temp': DataCardValue2.Selected,
+                    'Payment Type': DataCardValue9.Selected,
+                    'Payment Type - Temp': DataCardValue9.Selected,
                     
                     User: DataCardValue1.Value,
                     'User - Temp': DataCardValue1.Value
                 }
             );
+            
             Notify("Record updated successfully", NotificationType.Success);
             Navigate('Expense upload screen_1')
         Text: ="Back"

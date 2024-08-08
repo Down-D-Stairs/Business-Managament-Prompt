@@ -8658,8 +8658,7 @@
         "Y",
         "Width",
         "Height",
-        "ZIndex",
-        "Visible"
+        "ZIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate6",
       "HasDynamicProperties": false,
@@ -8684,11 +8683,6 @@
         {
           "Category": "Data",
           "PropertyName": "Items",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         },
         {
