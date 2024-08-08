@@ -913,7 +913,11 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =Patch(
+            =ClearCollect(DATA,'Expense Data');
+            
+            ForAll(
+                DATA,
+            Patch(
                 'Expense Data',
                 LookUp('Expense Data',ID = 'temp expense list'.Selected.ID),
                 { 
@@ -927,6 +931,7 @@
                     'Comments - Temp': Blank(),
                     'User - Temp': Blank()
                 }
+            )
             );
             
             
