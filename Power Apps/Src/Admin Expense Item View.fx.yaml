@@ -271,7 +271,7 @@
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         Height: =39
-                        Label: =
+                        Label: =ThisItem.'Approval Status'.Value
                         OnCheck: =Collect(SelectedItems2, ThisItem)
                         OnSelect: =Select(Parent)
                         OnUncheck: =Remove(SelectedItems2, ThisItem)
