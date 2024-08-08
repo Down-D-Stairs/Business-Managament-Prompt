@@ -935,6 +935,7 @@
             )
             );
             
+            If(Form1.Valid,SubmitForm(Form1),Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error));
             
             Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
             Refresh('Add New Expense Temp');
