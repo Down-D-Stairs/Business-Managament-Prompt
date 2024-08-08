@@ -139,7 +139,7 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: =If(is_admin,'SortedData',Filter('SortedData',User = User().Email))
+                    Items: =If(is_admin,SortedData,Filter(SortedData,User = User().Email))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -597,7 +597,7 @@
                 Reset(DatePickerEnd);
                 Reset(TextInput1);
                 Reset(ComboBox2)
-            Text: ="Clear Al"
+            Text: ="Clear All"
             Width: =96
             X: =776
             Y: =120
@@ -673,9 +673,17 @@
         FontColor: =
         Height: =32
         OnSelect: |-
-            =ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
-                                     Clear(SelectedItems2);
-                                     UpdateContext({SelectMode2: false});
+            =If(
+                CountRows(SelectedItems2) > 0,
+                ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
+                Clear(SelectedItems2);
+                UpdateContext({ SelectMode: false });
+                Notify("Items successfully deleted", NotificationType.Success);
+                Refresh('Expense Data'),
+            
+                Notify("No items selected for deletion. Please select items to delete.", NotificationType.Error)
+            
+            );
             Refresh('Expense Data');
         Text: ="DELETE SELECTED"
         Visible: =SelectMode2
@@ -698,4 +706,18 @@
         X: =16
         Y: =16
         ZIndex: =7
+
+    ButtonCanvas18 As Button:
+        BasePaletteColor: =RGBA(249, 83, 109, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =Clear(SelectedItems2);
+                                     UpdateContext({SelectMode2: false});
+        Text: ="CANCEL"
+        Visible: =SelectMode2
+        Width: =96
+        X: =845
+        Y: =234
+        ZIndex: =8
 
