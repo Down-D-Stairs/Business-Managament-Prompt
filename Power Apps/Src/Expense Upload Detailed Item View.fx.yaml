@@ -63,7 +63,7 @@
                     DataField: ="ReceiptUpload"
                     Default: =ThisItem.'Receipt Upload'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Receipt Upload')
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Receipt Upload')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -149,7 +149,7 @@
                     DataField: ="PaymentType"
                     Default: =ThisItem.'Payment Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -243,7 +243,7 @@
                     DataField: ="ExpenseType"
                     Default: =ThisItem.'Expense Type'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Expense Type')
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Expense Type')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -337,7 +337,7 @@
                     DataField: ="VendorName"
                     Default: =ThisItem.'Vendor Name'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Vendor Name')
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
@@ -429,7 +429,7 @@
                     DataField: ="Date"
                     Default: =ThisItem.Date
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Date)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -516,7 +516,7 @@
                     DataField: ="Amount"
                     Default: =ThisItem.Amount
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Amount)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -607,7 +607,7 @@
                     DataField: ="Comments"
                     Default: =ThisItem.Comments
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,Comments)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, Comments)
@@ -699,7 +699,7 @@
                     DataField: ="SubExpense"
                     Default: =ThisItem.SubExpense
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,SubExpense)
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,SubExpense)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, SubExpense)
