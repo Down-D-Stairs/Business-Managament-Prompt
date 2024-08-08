@@ -768,7 +768,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Height: =441
-        Items: =If(is_admin,Filter('Expense Data','User - Temp' = User().Email),Filter('Expense Data','User - Temp' = ""))
+        Items: =Filter('Expense Data','User - Temp' = User().Email)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =

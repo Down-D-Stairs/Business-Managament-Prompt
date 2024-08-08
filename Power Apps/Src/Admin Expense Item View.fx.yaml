@@ -139,7 +139,7 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: =If(is_admin,Filter('Expense Data',User = User().Email),Filter('Expense Data',User = ""))
+                    Items: =If(is_admin,Filter('Expense Data',User = ""),Filter('Expense Data',User = User().Email))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -271,7 +271,7 @@
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         Height: =39
-                        Label: =
+                        Label: =ThisItem.'Approval Status'.Value
                         OnCheck: =Collect(SelectedItems2, ThisItem)
                         OnSelect: =Select(Parent)
                         OnUncheck: =Remove(SelectedItems2, ThisItem)
