@@ -234,7 +234,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="PaymentType"
-                    Default: =ThisItem.'Payment Type'
+                    Default: =ThisItem.'Payment Type - Temp'
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Add New Expense Temp'],DataSourceInfo.DisplayName,'Payment Type')
                     Fill: =RGBA(0, 0, 0, 0)
@@ -265,7 +265,7 @@
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayMode: =Parent.DisplayMode
                         Height: =32
-                        Items: =Choices([@'Expense Data'].'Payment Type - Temp')
+                        Items: =Choices([@'Expense Data'].'Payment Type')
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
