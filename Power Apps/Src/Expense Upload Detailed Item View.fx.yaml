@@ -807,38 +807,7 @@
         Height: =32
         OnSelect: |-
             =
-            Patch(
-                'Expense Data',
-                Defaults('Expense Data'),
-                {
-                    'Receipt Upload': Image1.Image,
-                    'Receipt Upload - Temp': Image1.Image,
-                    
-                    Date: DataCardValue3.SelectedDate,
-                    'Date - Temp': DataCardValue3.SelectedDate,
-            
-                    Amount: Value(DataCardValue6.Value),
-                    'Amount - Temp': Value(DataCardValue6.Value),
-                    
-                    Comments: DataCardValue7.Value,
-                    'Comments - Temp': DataCardValue7.Value,
-            
-                    SubExpense: DataCardValue8.Value,
-                    'SubExpense - Temp': DataCardValue8.Value,
-                    
-                    'Expense Type': DataCardValue4.Selected,
-                    'Expense Type - Temp': DataCardValue4.Selected,
-            
-                    'Vendor Name': DataCardValue5.Value,
-                    'Vendor Name - Temp': DataCardValue5.Value, 
-                    
-                    'Payment Type': DataCardValue2.Selected,
-                    'Payment Type - Temp': DataCardValue2.Selected,
-                    
-                    User: DataCardValue1.Value,
-                    'User - Temp': DataCardValue1.Value
-                }
-            );
+            SubmitForm(Form1);
             Notify("Record updated successfully", NotificationType.Success);
             Navigate('Expense upload screen_1')
         Text: ="Back"
