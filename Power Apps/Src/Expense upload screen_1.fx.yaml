@@ -55,7 +55,7 @@
             Form1_1 As form.PowerApps_CoreControls_Form:
                 AlignInContainer: =AlignInContainer.Start
                 BorderColor: =App.Theme.Colors.Darker40
-                DataSource: ='Add New Expense Temp'
+                DataSource: ='Expense Data'
                 DefaultMode: =FormMode.New
                 FillPortions: =0.8
                 LayoutMinHeight: =250
