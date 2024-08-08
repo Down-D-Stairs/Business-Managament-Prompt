@@ -915,10 +915,11 @@
         OnSelect: |+
             =ClearCollect(DATA,'Expense Data');
             
+            
             ForAll(
                 DATA,
             Patch(
-                'DATA',
+                'Expense Data',
                 LookUp('Expense Data',ID = 'temp expense list'.Selected.ID),
                 { 
                     'Date - Temp': Blank(),
