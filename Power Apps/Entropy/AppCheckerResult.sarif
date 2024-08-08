@@ -1734,19 +1734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Admin Expense Item View'.Container6.Dropdown2.AccessibleLabel"
+                  "fullyQualifiedName": "'Admin Expense Item View'.Container6.ComboBox3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Admin Expense Item View'.Container6.Dropdown2.AccessibleLabel",
+                  "fullyQualifiedName": "'Admin Expense Item View'.Container6.ComboBox3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Admin Expense Item View",
-                "type": "'Admin Expense Item View'.Container6.Dropdown2"
+                "type": "'Admin Expense Item View'.Container6.ComboBox3"
               }
             }
           ],
