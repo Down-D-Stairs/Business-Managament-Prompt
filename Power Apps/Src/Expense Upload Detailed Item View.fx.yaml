@@ -817,8 +817,7 @@
                     Date: DataCardValue10.SelectedDate,
                     'Date - Temp': DataCardValue10.SelectedDate,
             
-                    Amount: (DataCardValue13),
-                    'Amount - Temp': (DataCardValue13),
+                    
                     
                     Comments: DataCardValue14.Text,
                     'Comments - Temp': DataCardValue14.Text,
