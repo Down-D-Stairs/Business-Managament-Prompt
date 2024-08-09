@@ -377,7 +377,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="VendorName"
-                    Default: =If(IsBlank(Image1), ThisItem.'Vendor Name',VendorName)
+                    Default: =If(IsBlank(Image1), VendorName,ThisItem.'Vendor Name')
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
