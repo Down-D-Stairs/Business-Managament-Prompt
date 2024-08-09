@@ -233,7 +233,8 @@
                         Height: =50
                         Icon: =Icon.ChevronRight
                         OnSelect: |-
-                            =Set(CurrentItemID, ThisItem.ID);
+                            =Collect(MainExpenses, 'Admin Expense View'.AllItems);
+                            Set(CurrentItemID, LookUp(MainExpenses, ID = ThisItem.ID, ID));
                             Navigate('Admin Expense Item Detailed View', ScreenTransition.Fade)
                         PaddingBottom: =16
                         PaddingLeft: =16
@@ -267,6 +268,7 @@
 
                     CheckboxCanvas1 As Checkbox:
                         BasePaletteColor: =
+                        Checked: =varSelectAll
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         Height: =39
@@ -356,7 +358,7 @@
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
             Width: =180
-            X: =426
+            X: =190
             ZIndex: =1
 
         "DatePickerStart As 'Date picker'":
@@ -530,6 +532,7 @@
             Size: =13
             Visible: =is_admin
             Width: =246
+            X: =370
             ZIndex: =5
 
         ComboBox2 As combobox:
@@ -582,7 +585,7 @@
             SelectionFill: =App.Theme.Colors.Primary
             Size: =13
             Width: =180
-            X: =246
+            X: =10
             ZIndex: =7
 
         ButtonCanvas14 As Button:
@@ -677,7 +680,7 @@
                 CountRows(SelectedItems2) > 0,
                 ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
                 Clear(SelectedItems2);
-                UpdateContext({ SelectMode: false });
+                UpdateContext({ SelectMode2: false });
                 Notify("Items successfully deleted", NotificationType.Success);
                 Refresh('Expense Data'),
             
@@ -713,13 +716,29 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
-        OnSelect: |-
-            =Clear(SelectedItems2);
-                                     UpdateContext({SelectMode2: false});
+        OnSelect: |+
+            =Set(varSelectAll, false);
+            Clear(SelectedItems2);
+            UpdateContext({SelectMode2: false});
+            
         Text: ="CANCEL"
         Visible: =SelectMode2
         Width: =96
         X: =845
         Y: =234
         ZIndex: =8
+
+    ButtonCanvas19 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =Set(varSelectAll, true);
+            Collect(SelectedItems2, 'Admin Expense View'.AllItems)
+        Text: ="SELECT ALL"
+        Visible: =SelectMode2
+        Width: =114
+        X: =1018
+        Y: =234
+        ZIndex: =9
 

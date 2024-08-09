@@ -1,6 +1,7 @@
 "'Expense Upload Detailed Item View' As screen.'autoLayout_HeaderFooter_ver1.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Refresh('Expense Data')
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -51,7 +52,8 @@
             Form1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='Expense Data'
-                Item: =LookUp('Expense Data', ID = CurrentItemUploadID)
+                Item: |
+                    =LookUp(tempExpenses, ID = CurrentItemUploadID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
@@ -806,8 +808,7 @@
         FontColor: =
         Height: =32
         OnSelect: |-
-            =
-            Patch(
+            =Patch(
                 'Expense Data',
                 LookUp('Expense Data', ID = 'temp expense list'.Selected.ID),
                 {
@@ -839,7 +840,7 @@
                     'User - Temp': DataCardValue1.Value
                 }
             );
-            
+            Clear(tempExpenses);
             Notify("Record updated successfully", NotificationType.Success);
             Navigate('Expense upload screen_1')
         Text: ="Back"
@@ -857,30 +858,13 @@
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
-            =// Find the previous item with an ID less than CurrentItemID
-            Set(
-                PreviousItem,
-                First(
-                    SortByColumns(
-                        Filter(
-                            SortedData,
-                            ID < CurrentItemUploadID
-                        ),
-                        "Amount",
-                        If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Descending, // For previous item, reverse the sort order
-                            SortOrder.Ascending
-                        )
-                    )
-                )
-            );
-            
-            // Update CurrentItemID or notify if no previous item exists
-            If(
-                !IsBlank(PreviousItem),
-                Set(CurrentItemID, PreviousItem.ID),
-                Notify("No previous entries", NotificationType.Information)
+            =If(
+                !IsBlank(LookUp(tempExpenses, ID > CurrentItemUploadID, ID)),
+                Set(
+                    CurrentItemUploadID,
+                    LookUp(tempExpenses, ID > CurrentItemUploadID, ID)
+                ),
+                Notify("No next item available", NotificationType.Error)
             )
         Text: ="Next Expense"
         Width: =158
@@ -897,30 +881,13 @@
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
-            =// Find the previous item with an ID less than CurrentItemID
-            Set(
-                PreviousItem,
-                First(
-                    SortByColumns(
-                        Filter(
-                            SortedData,
-                            ID < CurrentItemUploadID
-                        ),
-                        "Amount",
-                        If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Descending, // For previous item, reverse the sort order
-                            SortOrder.Ascending
-                        )
-                    )
-                )
-            );
-            
-            // Update CurrentItemID or notify if no previous item exists
-            If(
-                !IsBlank(PreviousItem),
-                Set(CurrentItemID, PreviousItem.ID),
-                Notify("No previous entries", NotificationType.Information)
+            =If(
+                !IsBlank(Last(Filter(tempExpenses, ID < CurrentItemUploadID))),
+                Set(
+                    CurrentItemUploadID,
+                    Last(Filter(tempExpenses, ID < CurrentItemUploadID)).ID
+                ),
+                Notify("No previous item available", NotificationType.Error)
             )
         Text: ="Previous Expense"
         Width: =176
