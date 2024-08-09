@@ -74,7 +74,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,User)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, User)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, User)
                     Required: =false
                     Update: =DataCardValue1.Value
                     Width: =800
@@ -381,7 +381,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =true
                     Update: =DataCardValue5.Value
                     Width: =800
@@ -606,7 +606,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, Comments)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, Comments)
                     Required: =false
                     Update: =DataCardValue7.Value
                     Width: =800
@@ -682,7 +682,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,SubExpense)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, SubExpense)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, SubExpense)
                     Required: =false
                     Update: =DataCardValue8.Value
                     Width: =800
@@ -917,7 +917,7 @@
         Height: =44
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |+
+        OnSelect: |
             =ClearCollect(
                 DATA,
                 ShowColumns(
@@ -941,7 +941,7 @@
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = 'temp expense list'.Selected.ID
+                            ID = ThisRecord.ID
                         ),
                         {
                             'Date - Temp': Blank(),
@@ -958,18 +958,17 @@
                 );
                 SubmitForm(Form1_1);
                 Notify(
-                "Expenses Have been Successfully Submitted",
-                NotificationType.Success
+                    "Expenses Have been Successfully Submitted",
+                    NotificationType.Success
                 );
-                Refresh('Expense Data');,
+                Refresh('Expense Data');
+                ,
                 Notify(
                     "All Necessary Fields Need To Be Filled Out",
                     NotificationType.Error
                 )
             );
             ResetForm(Form1_1);
-            
-            
         Text: ="Submit Expense(s"
         Width: =132
         X: =1182

@@ -238,28 +238,6 @@
     "dependents": [],
     "id": "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
   },
-  "8ab04f69-9e29-40ec-b065-a66f1a7a80b3": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {
-      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
-        "dataSources": {
-          "Add New Expense Temp": {
-            "tableName": "d15c49f9-5e2a-4ddd-aa21-efc0007742f8"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "Add New Expense Temp"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
-  },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {
       "displayName": "Excel",
