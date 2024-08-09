@@ -453,7 +453,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Date"
-                    Default: =InvoiceDate
+                    Default: =If(IsBlank(AddPicture1.Media), ThisItem.'Date',InvoiceDate)
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Date)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -529,7 +529,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Amount"
-                    Default: =AmountTotal
+                    Default: =If(IsBlank(AddPicture1.Media), ThisItem.Amount,AmountTotal)
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Amount)
                     Fill: =RGBA(0, 0, 0, 0)
