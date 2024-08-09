@@ -987,7 +987,10 @@
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |+
-            =If(
+            =
+            
+            
+            If(
                 Form1_1.Valid,
                 Patch(
                 'Expense Data',
