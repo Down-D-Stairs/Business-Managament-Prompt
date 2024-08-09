@@ -238,7 +238,7 @@
     "dependents": [],
     "id": "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
   },
-  "8ab04f69-9e29-40ec-b065-a66f1a7a80b3": {
+  "7f343321-7554-4ed0-8876-22a4fc72e580": {
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
@@ -258,7 +258,7 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "8ab04f69-9e29-40ec-b065-a66f1a7a80b3"
+    "id": "7f343321-7554-4ed0-8876-22a4fc72e580"
   },
   "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
     "connectionRef": {

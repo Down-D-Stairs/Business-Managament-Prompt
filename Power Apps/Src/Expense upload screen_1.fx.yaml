@@ -74,7 +74,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,User)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =70
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, User)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, User)
                     Required: =false
                     Update: =DataCardValue1.Value
                     Width: =800
