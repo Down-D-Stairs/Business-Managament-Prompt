@@ -189,12 +189,12 @@
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Choices([@'Add New Expense Temp'].'Payment Type')
+                        Items: =Choices([@'Expense Data'].'Payment Type')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["Value"]
-                        SearchItems: =Choices('Add New Expense Temp'.'Payment Type',DataCardValue9.SearchText)
+                        SearchItems: =Choices('Expense Data'.'Payment Type',DataCardValue9.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
@@ -283,12 +283,12 @@
                         Font: =App.Theme.Font
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Choices([@'Add New Expense Temp'].'Expense Type')
+                        Items: =Choices([@'Expense Data'].'Expense Type')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["Value"]
-                        SearchItems: =Choices('Add New Expense Temp'.'Expense Type',DataCardValue11.SearchText)
+                        SearchItems: =Choices('Expense Data'.'Expense Type',DataCardValue11.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
@@ -340,7 +340,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Vendor Name')
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, 'Vendor Name')
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, 'Vendor Name')
                     Required: =false
                     Update: =DataCardValue12.Text
                     Width: =667
@@ -610,7 +610,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Comments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, Comments)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, Comments)
                     Required: =false
                     Update: =DataCardValue14.Text
                     Width: =667
@@ -702,7 +702,7 @@
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,SubExpense)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'Add New Expense Temp'], DataSourceInfo.MaxLength, SubExpense)
+                    MaxLength: =DataSourceInfo([@'Expense Data'], DataSourceInfo.MaxLength, SubExpense)
                     Required: =false
                     Update: =DataCardValue15.Text
                     Width: =667
