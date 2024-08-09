@@ -909,23 +909,6 @@
             Y: =44
             ZIndex: =8
 
-        CheckboxCanvas3 As Checkbox:
-            BasePaletteColor: =
-            DisplayMode: =DisplayMode.Edit
-            Height: =40
-            Label: =
-            OnCheck: |-
-                =Collect(
-                    SelectedItemsCollection,
-                    ThisItem.ID
-                )
-            OnSelect: =Select(Parent)
-            OnUncheck: =false
-            Width: =35
-            X: =311
-            Y: =38
-            ZIndex: =9
-
     ButtonCanvas7_1 As Button:
         BasePaletteColor: =RGBA(8, 222, 8, 1)
         BorderColor: =
