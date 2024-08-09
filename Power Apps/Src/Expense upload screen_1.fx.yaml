@@ -933,15 +933,25 @@
                     'User - Temp'
                 )
             );
+            
+            ClearCollect(
+                ItemID,
+                ForAll(
+                    'temp expense list'.AllItems,
+                    ThisRecord.ID
+                )
+            );
+            
+            
             If(
                 Form1_1.Valid,
                 ForAll(
-                    DATA,
+                    ItemID,
                     Patch(
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = 'temp expense list'.Selected.ID
+                            ID = ThisRecord.ID
                         ),
                         {
                             'Date - Temp': Blank(),

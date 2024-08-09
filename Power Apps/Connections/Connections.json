@@ -238,30 +238,6 @@
     "dependents": [],
     "id": "7bb882e5-558c-4ad8-99fb-4ef9f63ab557"
   },
-  "af9be01c-69bb-4d01-aa5b-c419b6575a51": {
-    "connectionRef": {
-      "displayName": "Excel",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/excel/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excel"
-    },
-    "datasets": {
-      "b!s3aC32zLqkimE9elEnt_A3BBeOoEMXtHurqLN-z3v2p12f5asJ8yQqahIkEDPZRB.01WXUHHMCTIHFQHR56KFFLASIJRYZOQR5C": {
-        "dataSources": {
-          "CoffeeMachines": {
-            "tableName": "CoffeeMachines"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "CoffeeMachines"
-    ],
-    "dependencies": {
-      "fileSource": "e69fed1f-1485-4840-b234-f1bf51af3194"
-    },
-    "dependents": [],
-    "id": "af9be01c-69bb-4d01-aa5b-c419b6575a51"
-  },
   "b8b1bd5a-b2e8-42f0-ba62-c4712d9ecb6b": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -381,19 +357,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "e1ca99f5-5849-415d-a670-a26d99f16f71"
-  },
-  "e69fed1f-1485-4840-b234-f1bf51af3194": {
-    "connectionRef": {
-      "displayName": "OneDrive for Business",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "af9be01c-69bb-4d01-aa5b-c419b6575a51"
-    ],
-    "id": "e69fed1f-1485-4840-b234-f1bf51af3194"
   }
 }
