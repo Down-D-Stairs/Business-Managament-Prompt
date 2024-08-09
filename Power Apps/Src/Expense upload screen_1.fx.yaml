@@ -985,7 +985,7 @@
         Height: =44
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
+        OnSelect: |+
             =If(
                 Form1_1.Valid,
                 Patch(
@@ -1027,6 +1027,8 @@
                     NotificationType.Error
                 )
             );
+            
+            
         Text: ="Add New Expense"
         Width: =142
         X: =54
