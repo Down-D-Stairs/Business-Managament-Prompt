@@ -976,12 +976,12 @@
                 )
             );
             ForAll(
-                    ItemID,
+                    DATA,
                     Patch(
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = ThisRecord.ID
+                            ID=ThisRecord.ID
                         ),
                         {
                             'Date - Temp': Blank(),
