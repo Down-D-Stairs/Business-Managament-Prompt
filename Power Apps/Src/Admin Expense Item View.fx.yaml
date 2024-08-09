@@ -139,7 +139,7 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: =If(is_admin,SortedData,Filter('Expense Data',User = User().Email))
+                    Items: =If(is_admin,SortedData,Filter('SortedData',User = User().Email))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
