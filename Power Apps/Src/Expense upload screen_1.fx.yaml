@@ -917,7 +917,7 @@
         Height: =44
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |+
+        OnSelect: |
             =ClearCollect(
                 DATA,
                 ShowColumns(
@@ -939,7 +939,10 @@
                     DATA,
                     Patch(
                         'Expense Data',
-                        ThisRecord,
+                        LookUp(
+                            'Expense Data',
+                            ID = ThisRecord.ID
+                        ),
                         {
                             'Date - Temp': Blank(),
                             'Receipt Upload - Temp': Blank(),
@@ -955,18 +958,17 @@
                 );
                 SubmitForm(Form1_1);
                 Notify(
-                "Expenses Have been Successfully Submitted",
-                NotificationType.Success
+                    "Expenses Have been Successfully Submitted",
+                    NotificationType.Success
                 );
-                Refresh('Expense Data');,
+                Refresh('Expense Data');
+                ,
                 Notify(
                     "All Necessary Fields Need To Be Filled Out",
                     NotificationType.Error
                 )
             );
             ResetForm(Form1_1);
-            
-            
         Text: ="Submit Expense(s"
         Width: =132
         X: =1182
