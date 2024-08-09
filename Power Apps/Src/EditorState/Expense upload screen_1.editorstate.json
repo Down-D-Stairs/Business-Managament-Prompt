@@ -1664,14 +1664,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BasePaletteColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BasePaletteColor",
         "FontColor"
       ],
       "HasDynamicProperties": false,
@@ -6555,14 +6548,7 @@
         "PressedBorderColor",
         "HoverBorderColor",
         "FocusedBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Set(CurrentItemUploadID, ThisItem.ID);\nNavigate('Expense Upload Detailed Item View', ScreenTransition.Fade)",
-          "InvariantPropertyName": "OnSelect",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "OnSelect",
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
@@ -6747,7 +6733,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultIconStyle",

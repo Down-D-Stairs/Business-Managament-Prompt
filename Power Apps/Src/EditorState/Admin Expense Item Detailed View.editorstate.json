@@ -369,7 +369,7 @@
       "MetaDataIDKey": "",
       "Name": "Administrative Comments_DataCard7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -831,7 +831,7 @@
       "MetaDataIDKey": "",
       "Name": "ApprovalStatus_DataCard12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

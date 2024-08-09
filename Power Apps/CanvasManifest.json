@@ -108,9 +108,9 @@
     "DocumentAppType": "DesktopOrTablet",
     "DocumentLayoutHeight": 768,
     "DocumentLayoutLockOrientation": false,
-    "DocumentLayoutMaintainAspectRatio": false,
+    "DocumentLayoutMaintainAspectRatio": true,
     "DocumentLayoutOrientation": "landscape",
-    "DocumentLayoutScaleToFit": false,
+    "DocumentLayoutScaleToFit": true,
     "DocumentLayoutWidth": 1366,
     "DocumentType": "App",
     "EnableInstrumentation": false,
@@ -124,7 +124,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "My Expense Manager",
+    "AppName": "Test App",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
