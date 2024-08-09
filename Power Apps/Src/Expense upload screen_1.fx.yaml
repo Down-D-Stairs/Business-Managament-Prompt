@@ -1097,8 +1097,10 @@
         FontColor: =
         Height: =32
         OnSelect: |-
-            =deletetemp.Run();
-            Navigate('Admin Expense Item View', ScreenTransition.Fade)
+            =Collect(TempItems, (Filter('Expense Data','User - Temp' = User().Email)));
+            ForAll(TempItems, Remove('Expense Data', ThisRecord));
+            Clear(TempItems);
+            Navigate('Admin Expense Item View', ScreenTransition.Fade);
         Text: ="CONFIRM"
         Visible: =deleteConfirm
         Width: =96
