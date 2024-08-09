@@ -979,10 +979,7 @@
                     DATA,
                     Patch(
                         'Expense Data',
-                        LookUp(
-                            'Expense Data',
-                            ID=ThisRecord.ID
-                        ),
+                        ThisRecord,
                         {
                             'Date - Temp': Blank(),
                             'Receipt Upload - Temp': Blank(),
