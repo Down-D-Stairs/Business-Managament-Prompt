@@ -730,7 +730,9 @@
 
     ButtonCanvas19 As Button:
         BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         OnSelect: |
             =Set(varSelectAll, true);

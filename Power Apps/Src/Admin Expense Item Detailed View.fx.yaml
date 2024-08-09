@@ -877,7 +877,10 @@
                         ZIndex: =1
 
                         DataCardKey18 As Text:
+                            BorderColor: =
                             DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
                             Height: =22
                             Text: =Parent.DisplayName
                             Weight: ='TextCanvas.Weight'.Semibold
@@ -888,7 +891,11 @@
                             ZIndex: =1
 
                         "DataCardValue17 As 'Text input'":
+                            BasePaletteColor: =
+                            BorderColor: =
                             DisplayMode: =DisplayMode.View
+                            Fill: =
+                            FontColor: =
                             Height: =32
                             Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                             ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
