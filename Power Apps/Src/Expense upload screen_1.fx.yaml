@@ -984,7 +984,7 @@
         Height: =44
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
+        OnSelect: |-
             =If(
                 Form1_1.Valid,
                 Patch(
@@ -1025,7 +1025,9 @@
                     "Please fill in all required fields.",
                     NotificationType.Error
                 )
-            )
+            );
+            UpdateContext({ VendorName: "New Default Value" });
+            Reset(DataCardValue5)
         Text: ="Add New Expense"
         Width: =142
         X: =54
