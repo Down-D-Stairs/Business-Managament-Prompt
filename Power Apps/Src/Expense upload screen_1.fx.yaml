@@ -785,7 +785,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =84
-            Image: =ThisItem.'Receipt Upload - Temp'
+            Image: =ThisItem.'Receipt Upload'
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
@@ -807,7 +807,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Amount - Temp'
+            Text: =ThisItem.Amount
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 185
             X: =115
@@ -826,7 +826,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Payment Type - Temp'.Value
+            Text: =ThisItem.'Approval Status'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
@@ -845,7 +845,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Date - Temp'
+            Text: =ThisItem.Date
             VerticalAlign: =VerticalAlign.Top
             Width: =Subtitle1.Width
             X: =Title1.X
@@ -861,7 +861,8 @@
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: |-
-                =Set(CurrentItemUploadID, ThisItem.ID);
+                =Collect(tempExpenses, 'temp expense list'.AllItems);
+                Set(CurrentItemUploadID, LookUp(tempExpenses, ID = ThisItem.ID, ID));
                 Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
             PaddingBottom: =16
             PaddingLeft: =16
@@ -1104,6 +1105,7 @@
             =Collect(TempItems, (Filter('Expense Data','User - Temp' = User().Email)));
             ForAll(TempItems, Remove('Expense Data', ThisRecord));
             Clear(TempItems);
+            Clear(tempExpenses);
             Navigate('Admin Expense Item View', ScreenTransition.Fade);
         Text: ="CONFIRM"
         Visible: =deleteConfirm

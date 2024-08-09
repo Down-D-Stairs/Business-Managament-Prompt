@@ -101,7 +101,7 @@
                     DataSource: ='Expense Data'
                     DefaultMode: =If(EditMode, FormMode.Edit, FormMode.View)
                     FillPortions: =0.8
-                    Item: =LookUp('Expense Data', ID = CurrentItemID)
+                    Item: =LookUp(MainExpenses, ID = CurrentItemID)
                     LayoutMinHeight: =250
                     LayoutMinWidth: =400
                     ZIndex: =1
@@ -861,6 +861,43 @@
                     Visible: =is_admin
                     ZIndex: =1
 
+                    User_DataCard3 As typedDataCard.fluentV9TextualViewCard:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="User"
+                        Default: =ThisItem.User
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,User)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =70
+                        Required: =false
+                        Width: =526
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey18 As Text:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width - 48
+                            Wrap: =false
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue17 As 'Text input'":
+                            DisplayMode: =DisplayMode.View
+                            Height: =32
+                            Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey18.Y + DataCardKey18.Height + 4
+                            ZIndex: =2
+
                     ApprovalStatus_DataCard12 As typedDataCard.fluentV9ComboBoxEditCard:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Solid
@@ -874,7 +911,7 @@
                         Update: =DataCardValue105.Selected
                         Width: =525
                         X: =0
-                        Y: =0
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey106 As Text:
@@ -945,7 +982,7 @@
                         Update: =DataCardValue106.Value
                         Width: =525
                         X: =0
-                        Y: =1
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey107 As Text:
@@ -1066,7 +1103,9 @@
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
-        OnSelect: =Navigate('Admin Expense Item View', ScreenTransition.Fade)
+        OnSelect: |-
+            =Clear(MainExpenses);
+            Navigate('Admin Expense Item View', ScreenTransition.Fade)
         Text: ="Back"
         Width: =96
         X: =40
@@ -1082,30 +1121,13 @@
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
-            =// Find the next item with an ID greater than CurrentItemID
-            Set(
-                NextItem,
-                First(
-                    SortByColumns(
-                        Filter(
-                            SortedData,
-                            ID > CurrentItemID
-                        ),
-                        "Amount",
-                        If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
-                        )
-                    )
-                )
-            );
-            
-            // Update CurrentItemID or notify if no next item exists
-            If(
-                !IsBlank(NextItem),
-                Set(CurrentItemID, NextItem.ID),
-                Notify("No further entries", NotificationType.Information)
+            =If(
+                !IsBlank(LookUp(MainExpenses, ID > CurrentItemID, ID)),
+                Set(
+                    CurrentItemID,
+                    LookUp(MainExpenses, ID > CurrentItemID, ID)
+                ),
+                Notify("No next item available", NotificationType.Error)
             )
         Text: ="Next Expense"
         Width: =158
@@ -1122,30 +1144,13 @@
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
-            =// Find the previous item with an ID less than CurrentItemID
-            Set(
-                PreviousItem,
-                First(
-                    SortByColumns(
-                        Filter(
-                            SortedData,
-                            ID < CurrentItemID
-                        ),
-                        "Amount",
-                        If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Descending, // For previous item, reverse the sort order
-                            SortOrder.Ascending
-                        )
-                    )
-                )
-            );
-            
-            // Update CurrentItemID or notify if no previous item exists
-            If(
-                !IsBlank(PreviousItem),
-                Set(CurrentItemID, PreviousItem.ID),
-                Notify("No previous entries", NotificationType.Information)
+            =If(
+                !IsBlank(Last(Filter(MainExpenses, ID < CurrentItemID))),
+                Set(
+                    CurrentItemID,
+                    Last(Filter(MainExpenses, ID < CurrentItemID)).ID
+                ),
+                Notify("No previous item available", NotificationType.Error)
             )
         Text: ="Previous Expense"
         Width: =176
