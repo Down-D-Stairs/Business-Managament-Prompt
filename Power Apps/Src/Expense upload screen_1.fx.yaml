@@ -954,7 +954,7 @@
             If(
                 Form1_1.Valid,
                 ForAll(
-                    SelectedItemsCollection,
+                    DATA,
                     Patch(
                         'Expense Data',
                         LookUp(
