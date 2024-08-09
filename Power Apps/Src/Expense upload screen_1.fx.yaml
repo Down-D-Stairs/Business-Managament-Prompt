@@ -941,7 +941,7 @@
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = ThisRecord.ID
+                            ID = 'temp expense list'.AllItemsCount
                         ),
                         {
                             'Date - Temp': Blank(),
