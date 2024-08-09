@@ -4,6 +4,32 @@ App As appinfo:
         =If(!IsBlank(LookUp(Admin_List, Title = User().Email)), Set(is_admin, true), Set(is_admin, false));
         Refresh('Expense Data');
         Set(Name,User().Email);
+        
+        // Update variables when a dropdown value changes
+        Set(
+            FilteredData,
+            Filter(
+                'Expense Data',
+                ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
+                (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
+                (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
+                (StartsWith(User, TextInput1.Text)) &&
+                ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
+            )
+        );
+        
+        Set(
+            SortedData,
+            SortByColumns(
+                FilteredData,
+                "Amount",
+                If(
+                    Dropdown1.Selected.Value = "Ascending",
+                    SortOrder.Ascending,
+                    SortOrder.Descending
+                )
+            )
+        );
     StartScreen: =
     Theme: =PowerAppsTheme
 
