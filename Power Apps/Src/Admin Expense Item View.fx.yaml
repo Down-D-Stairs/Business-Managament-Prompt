@@ -498,7 +498,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =App.Theme.Font
-            HintText: ="Search..."
+            HintText: ="Search For Employee..."
             HoverBorderColor: =App.Theme.Colors.Darker40
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
