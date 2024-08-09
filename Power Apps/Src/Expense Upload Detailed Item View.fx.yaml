@@ -857,25 +857,30 @@
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
-            =// Find the next item with an ID greater than CurrentItemID
+            =// Find the previous item with an ID less than CurrentItemID
             Set(
-                NextItem,
+                PreviousItem,
                 First(
                     SortByColumns(
                         Filter(
-                            'Expense Data',
-                            ID > CurrentItemUploadID
+                            SortedData,
+                            ID < CurrentItemUploadID
                         ),
-                        "ID"
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Descending, // For previous item, reverse the sort order
+                            SortOrder.Ascending
+                        )
                     )
                 )
             );
             
-            // Update CurrentItemID or notify if no next item exists
+            // Update CurrentItemID or notify if no previous item exists
             If(
-                !IsBlank(NextItem),
-                Set(CurrentItemUploadID, NextItem.ID),
-                Notify("No further entries", NotificationType.Information)
+                !IsBlank(PreviousItem),
+                Set(CurrentItemID, PreviousItem.ID),
+                Notify("No previous entries", NotificationType.Information)
             )
         Text: ="Next Expense"
         Width: =158
@@ -892,25 +897,30 @@
         Icon: ="ArrowLeft"
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
-            =// Find the next item with an ID greater than CurrentItemID
+            =// Find the previous item with an ID less than CurrentItemID
             Set(
-                NextItem,
+                PreviousItem,
                 First(
                     SortByColumns(
                         Filter(
-                            'Expense Data',
+                            SortedData,
                             ID < CurrentItemUploadID
                         ),
-                        "ID"
+                        "Amount",
+                        If(
+                            Dropdown1.Selected.Value = "Ascending",
+                            SortOrder.Descending, // For previous item, reverse the sort order
+                            SortOrder.Ascending
+                        )
                     )
                 )
             );
             
-            // Update CurrentItemID or notify if no next item exists
+            // Update CurrentItemID or notify if no previous item exists
             If(
-                !IsBlank(NextItem),
-                Set(CurrentItemUploadID, NextItem.ID),
-                Notify("No Previous entries", NotificationType.Information)
+                !IsBlank(PreviousItem),
+                Set(CurrentItemID, PreviousItem.ID),
+                Notify("No previous entries", NotificationType.Information)
             )
         Text: ="Previous Expense"
         Width: =176
