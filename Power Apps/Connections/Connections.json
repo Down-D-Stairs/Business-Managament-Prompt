@@ -39,28 +39,6 @@
     "dependents": [],
     "id": "040c9515-b3db-4c85-87e9-d58d7b8f3454"
   },
-  "34905179-f451-4fb0-9632-25fc52dcd73d": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {
-      "https://recurringdecimalllc.sharepoint.com/sites/PowerAppLists": {
-        "dataSources": {
-          "Add New Expense Temp": {
-            "tableName": "d15c49f9-5e2a-4ddd-aa21-efc0007742f8"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "Add New Expense Temp"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "34905179-f451-4fb0-9632-25fc52dcd73d"
-  },
   "57133be4-d3da-4cb0-a157-44398d5b9a61": {
     "connectionRef": {
       "displayName": "Logic flows",
