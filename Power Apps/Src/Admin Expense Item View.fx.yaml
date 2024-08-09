@@ -243,7 +243,7 @@
                         Tooltip: ="View item details"
                         Visible: =!SelectMode2
                         Width: =50
-                        X: =Parent.TemplateWidth - Self.Width - 12
+                        X: =787
                         Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                         ZIndex: =5
 
@@ -529,6 +529,7 @@
                     )
                 );
             Size: =13
+            Visible: =is_admin
             Width: =246
             ZIndex: =5
 
@@ -597,7 +598,7 @@
                 Reset(DatePickerEnd);
                 Reset(TextInput1);
                 Reset(ComboBox2);
-            Text: ="Clear All"
+            Text: ="Clear Al"
             Width: =96
             X: =776
             Y: =120
