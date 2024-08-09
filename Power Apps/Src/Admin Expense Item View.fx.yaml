@@ -198,7 +198,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.'Approval Status'.Value
+                        Text: =ThisItem.'Approve/Deny'
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_1.Width
                         X: =Title2_1.X
