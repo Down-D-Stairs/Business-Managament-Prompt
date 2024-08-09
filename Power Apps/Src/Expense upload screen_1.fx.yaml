@@ -954,12 +954,12 @@
             If(
                 Form1_1.Valid,
                 ForAll(
-                    SelectedItemsCollection,
+                    SelectedItemsCollection; DATA,
                     Patch(
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = ThisRecord.ID
+                             ID = 'temp expense list'.Selected.ID
                         ),
                         {
                             'Date - Temp': Blank(),
