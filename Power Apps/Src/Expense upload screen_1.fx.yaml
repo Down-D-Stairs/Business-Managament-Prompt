@@ -941,7 +941,7 @@
                         'Expense Data',
                         LookUp(
                             'Expense Data',
-                            ID = 'temp expense list'.Selected.ID
+                            ID = 'temp expense list'.AllItemsCount
                         ),
                         {
                             'Date - Temp': Blank(),
@@ -967,6 +967,21 @@
                     "All Necessary Fields Need To Be Filled Out",
                     NotificationType.Error
                 )
+            );
+            Patch(
+                'Expense Data',
+                Defaults('Expense Data'),
+                {
+                    'Date - Temp': Blank(),
+                    'Receipt Upload - Temp': Blank(),
+                    'Payment Type - Temp': Blank(),
+                    'Amount - Temp': Blank(),
+                    'Expense Type - Temp': Blank(),
+                    'Vendor Name - Temp': Blank(),
+                    'SubExpense - Temp': Blank(),
+                    'Comments - Temp': Blank(),
+                    'User - Temp': Blank()
+                }
             );
             ResetForm(Form1_1);
         Text: ="Submit Expense(s"
