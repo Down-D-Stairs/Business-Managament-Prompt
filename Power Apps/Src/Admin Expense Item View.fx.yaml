@@ -139,7 +139,7 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =564
-                    Items: =If(is_admin,SortedData,Filter('SortedData',User = User().Email))
+                    Items: =If(is_admin,SortedData,Filter(SortedData,User = User().Email))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -199,7 +199,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.'Approve/Deny'
+                        Text: =ThisItem.'Approval Status'.Value
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_1.Width
                         X: =Title2_1.X
@@ -271,7 +271,7 @@
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         Height: =39
-                        Label: =ThisItem.'Approval Status'.Value
+                        Label: =ThisItem.'Modified By'.Claims
                         OnCheck: =Collect(SelectedItems2, ThisItem)
                         OnSelect: =Select(Parent)
                         OnUncheck: =Remove(SelectedItems2, ThisItem)
@@ -598,7 +598,7 @@
                 Reset(DatePickerEnd);
                 Reset(TextInput1);
                 Reset(ComboBox2);
-            Text: ="Clear Al"
+            Text: ="Clear All"
             Width: =96
             X: =776
             Y: =120
