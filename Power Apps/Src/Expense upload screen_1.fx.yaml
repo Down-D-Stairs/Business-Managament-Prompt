@@ -933,17 +933,11 @@
                     'User - Temp'
                 )
             );
-            ClearCollect(
-                ItemID,
-                ForAll(
-                    'temp expense list'.AllItems,
-                    ThisRecord.ID
-                )
-            );
+            
             If(
                 Form1_1.Valid,
                 ForAll(
-                    ItemID,
+                    DATA,
                     Patch(
                         'Expense Data',
                         LookUp(
