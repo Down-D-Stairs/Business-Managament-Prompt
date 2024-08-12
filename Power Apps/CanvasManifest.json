@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -120,7 +120,7 @@
     "ManualOfflineProfileId": "",
     "Name": "My Expense Manager",
     "OriginatingVersion": "1.342",
-    "ParserErrorCount": 0,
+    "ParserErrorCount": 2,
     "ShowStatusBar": false
   },
   "PublishInfo": {

@@ -5901,8 +5901,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)",
           "InvariantPropertyName": "Image",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -5968,7 +5968,7 @@
         {
           "Category": "Data",
           "PropertyName": "Image",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
