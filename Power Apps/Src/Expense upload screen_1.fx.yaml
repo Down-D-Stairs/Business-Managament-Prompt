@@ -4,7 +4,7 @@
     OnVisible: |
         =UpdateContext({SelectMode: false});
         UpdateContext({deleteConfirm: false});
-        UpdateContext({hideGallery: false});
+        UpdateContext({confirmEntry: false});
         Refresh('Expense Data');
 
     ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
@@ -774,7 +774,6 @@
         OnSelect: =
         TemplatePadding: =0
         TemplateSize: =116
-        Visible: =!hideGallery
         Width: =508
         X: =816
         Y: =105
@@ -919,7 +918,7 @@
         Height: =44
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
+        OnSelect: |+
             =ClearCollect(
                 DATA,
                 ShowColumns(
@@ -937,41 +936,98 @@
             );
             
             If(
-                Form1_1.Valid,
-                ForAll(
+                IsEmpty(DATA) &&
+                IsBlank(Image1.Image) &&
+                IsBlank(DataCardValue2.Selected.Value) &&
+                IsBlank(DataCardValue4.Selected.Value) &&
+                (DataCardValue5.Value = "") &&
+                IsBlank(DataCardValue3.SelectedDate) &&
+                IsBlank(Value(DataCardValue6.Value))  &&
+                (DataCardValue7.Value = "") &&
+                (DataCardValue8.Value = ""),
+            
+                Notify("No Expenses to be Submitted",NotificationType.Warning),
+                //Notify("WRONG", NotificationType.Error)
+            
+                If(
+                    IsBlank(Image1.Image) &&
+                    IsBlank(DataCardValue2.Selected.Value) &&
+                    IsBlank(DataCardValue4.Selected.Value) &&
+                    (DataCardValue5.Value = "") &&
+                    IsBlank(DataCardValue3.SelectedDate) &&
+                    IsBlank(Value(DataCardValue6.Value))  &&
+                    (DataCardValue7.Value = "") &&
+                    (DataCardValue8.Value = ""),
+            
+                    ForAll(
                     DATA,
-                    Patch(
-                        'Expense Data',
-                        LookUp(
+                        Patch(
                             'Expense Data',
-                             ID = 'temp expense list'.Selected.ID
-                        ),
-                        {
-                            'Date - Temp': Blank(),
-                            'Receipt Upload - Temp': Blank(),
-                            'Payment Type - Temp': Blank(),
-                            'Amount - Temp': Blank(),
-                            'Expense Type - Temp': Blank(),
-                            'Vendor Name - Temp': Blank(),
-                            'SubExpense - Temp': Blank(),
-                            'Comments - Temp': Blank(),
-                            'User - Temp': Blank()
-                        }
-                    )
-                );
-                SubmitForm(Form1_1);
-                Notify(
-                    "Expenses Have been Successfully Submitted",
-                    NotificationType.Success
-                );
-                Refresh('Expense Data');
-                ,
-                Notify(
-                    "All Necessary Fields Need To Be Filled Out",
-                    NotificationType.Error
+                            LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
+                            {
+                                'Date - Temp': Blank(),
+                                'Receipt Upload - Temp': Blank(),
+                                'Payment Type - Temp': Blank(),
+                                'Amount - Temp': Blank(),
+                                'Expense Type - Temp': Blank(),
+                                'Vendor Name - Temp': Blank(),
+                                'SubExpense - Temp': Blank(),
+                                'Comments - Temp': Blank(),
+                                'User - Temp': Blank()
+                            }
+                        )
+                    );
+                    Notify(
+                            "Expenses Have been Successfully Submitted",
+                            NotificationType.Success
+                        );
+                    Refresh('Expense Data'),
+            
+                    If(
+                        Form1_1.Valid,
+                        ForAll(
+                            DATA,
+                            Patch(
+                                'Expense Data',
+                                LookUp(
+                                    'Expense Data',
+                                    ID = 'temp expense list'.Selected.ID
+                                ),
+                                {
+                                    'Date - Temp': Blank(),
+                                    'Receipt Upload - Temp': Blank(),
+                                    'Payment Type - Temp': Blank(),
+                                    'Amount - Temp': Blank(),
+                                    'Expense Type - Temp': Blank(),
+                                    'Vendor Name - Temp': Blank(),
+                                    'SubExpense - Temp': Blank(),
+                                    'Comments - Temp': Blank(),
+                                    'User - Temp': Blank()
+                                }
+                            )
+                        );
+                        SubmitForm(Form1_1);
+                        Notify(
+                            "Expenses Have been Successfully Submitted",
+                            NotificationType.Success
+                        );
+                        ResetForm(Form1_1);
+                        Refresh('Expense Data'),
+                        
+                        Notify(
+                            "All Necessary Fields Need To Be Filled Out",
+                            NotificationType.Error
+                        )
+                    );
                 )
+                
             );
-            ResetForm(Form1_1);
+            
+            
+            
         Text: ="Submit Expense(s"
         Width: =132
         X: =1182
@@ -986,53 +1042,67 @@
         Height: =44
         Icon: ="Add"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |+
-            =
-            
-            
-            If(
-                Form1_1.Valid,
-                Patch(
-                'Expense Data',
-                Defaults('Expense Data'),
-                {
-                    'Receipt Upload': Image1.Image,
-                    'Receipt Upload - Temp': Image1.Image,
-                    
-                    Date: DataCardValue3.SelectedDate,
-                    'Date - Temp': DataCardValue3.SelectedDate,
-            
-                    Amount: Value(DataCardValue6.Value),
-                    'Amount - Temp': Value(DataCardValue6.Value),
-                    
-                    Comments: DataCardValue7.Value,
-                    'Comments - Temp': DataCardValue7.Value,
-            
-                    SubExpense: DataCardValue8.Value,
-                    'SubExpense - Temp': DataCardValue8.Value,
-                    
-                    'Expense Type': DataCardValue4.Selected,
-                    'Expense Type - Temp': DataCardValue4.Selected,
-            
-                    'Vendor Name': DataCardValue5.Value,
-                    'Vendor Name - Temp': DataCardValue5.Value, 
-                    
-                    'Payment Type': DataCardValue2.Selected,
-                    'Payment Type - Temp': DataCardValue2.Selected,
-                    
-                    User: DataCardValue1.Value,
-                    'User - Temp': DataCardValue1.Value
-                }
-            );
-            
-                ResetForm(Form1_1),
-                Notify(
-                    "Please fill in all required fields.",
-                    NotificationType.Error
+        OnSelect: |
+            =// Check if a match is found
+            Set(
+                MatchFound,
+                !IsEmpty(
+                    Filter(
+                        'Expense Data',
+                        Amount = Value(DataCardValue6.Value),
+                        Date = DataCardValue3.SelectedDate,
+                        'Vendor Name' = DataCardValue5.Value
+                    )
                 )
             );
             
+            // If a match is found, show a warning and do not submit the form
+            If(
+                MatchFound,
+                Notify("A record with these details already exists. Please check your entries.", NotificationType.Warning);
+                UpdateContext({confirmEntry: true}),
+                // If no match is found, submit the form
+                If(
+                    Form1_1.Valid,
+                    Patch(
+                        'Expense Data',
+                        Defaults('Expense Data'),
+                        {
+                            'Receipt Upload': Image1.Image,
+                            'Receipt Upload - Temp': Image1.Image,
+                            
+                            Date: DataCardValue3.SelectedDate,
+                            'Date - Temp': DataCardValue3.SelectedDate,
             
+                            Amount: Value(DataCardValue6.Value),
+                            'Amount - Temp': Value(DataCardValue6.Value),
+                            
+                            Comments: DataCardValue7.Value,
+                            'Comments - Temp': DataCardValue7.Value,
+            
+                            SubExpense: DataCardValue8.Value,
+                            'SubExpense - Temp': DataCardValue8.Value,
+                            
+                            'Expense Type': DataCardValue4.Selected,
+                            'Expense Type - Temp': DataCardValue4.Selected,
+            
+                            'Vendor Name': DataCardValue5.Value,
+                            'Vendor Name - Temp': DataCardValue5.Value, 
+                            
+                            'Payment Type': DataCardValue2.Selected,
+                            'Payment Type - Temp': DataCardValue2.Selected,
+                            
+                            User: DataCardValue1.Value,
+                            'User - Temp': DataCardValue1.Value
+                        }
+                    );
+                    ResetForm(Form1_1),
+                    Notify(
+                        "Please fill in all required fields.",
+                        NotificationType.Error
+                    )
+                )
+            );
         Text: ="Add New Expense"
         Width: =142
         X: =54
@@ -1109,6 +1179,7 @@
             ForAll(TempItems, Remove('Expense Data', ThisRecord));
             Clear(TempItems);
             Clear(tempExpenses);
+            ResetForm(Form1_1);
             Navigate('Admin Expense Item View', ScreenTransition.Fade);
         Text: ="CONFIRM"
         Visible: =deleteConfirm
@@ -1148,4 +1219,65 @@
         X: =1228
         Y: =40
         ZIndex: =9
+
+    ButtonCanvas20 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =44
+        OnSelect: |-
+            =Patch(
+                        'Expense Data',
+                        Defaults('Expense Data'),
+                        {
+                            'Receipt Upload': Image1.Image,
+                            'Receipt Upload - Temp': Image1.Image,
+                            
+                            Date: DataCardValue3.SelectedDate,
+                            'Date - Temp': DataCardValue3.SelectedDate,
+            
+                            Amount: Value(DataCardValue6.Value),
+                            'Amount - Temp': Value(DataCardValue6.Value),
+                            
+                            Comments: DataCardValue7.Value,
+                            'Comments - Temp': DataCardValue7.Value,
+            
+                            SubExpense: DataCardValue8.Value,
+                            'SubExpense - Temp': DataCardValue8.Value,
+                            
+                            'Expense Type': DataCardValue4.Selected,
+                            'Expense Type - Temp': DataCardValue4.Selected,
+            
+                            'Vendor Name': DataCardValue5.Value,
+                            'Vendor Name - Temp': DataCardValue5.Value, 
+                            
+                            'Payment Type': DataCardValue2.Selected,
+                            'Payment Type - Temp': DataCardValue2.Selected,
+                            
+                            User: DataCardValue1.Value,
+                            'User - Temp': DataCardValue1.Value
+                        }
+                    );
+                    
+            ResetForm(Form1_1);
+            UpdateContext({confirmEntry: false});
+        Text: ="CONFIRM ENTRY"
+        Visible: =confirmEntry
+        Width: =140
+        X: =552
+        Y: =579
+        ZIndex: =10
+
+    ButtonCanvas21 As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =44
+        OnSelect: |-
+            =ResetForm(Form1_1);
+            UpdateContext({confirmEntry: false});
+        Text: ="Cancel"
+        Visible: =confirmEntry
+        Width: =84
+        X: =710
+        Y: =579
+        ZIndex: =11
 
