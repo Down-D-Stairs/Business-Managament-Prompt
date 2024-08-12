@@ -194,9 +194,13 @@
                         OnSelect: |+
                             =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(InvoiceDate, FlowResults.invoice_date);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(AmountTotal, FlowResults.amount_total);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(VendorName, FlowResults.vendor_name);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(InvoiceTotal, FlowResults.invoice_total);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
