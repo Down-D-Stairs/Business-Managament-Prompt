@@ -178,7 +178,8 @@
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
                         Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                        Image: |
+                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media);
                         Tooltip: =Parent.DisplayName
                         Width: =AddPicture1.Width
                         X: =AddPicture1.X
@@ -193,9 +194,13 @@
                         OnSelect: |+
                             =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(InvoiceDate, FlowResults.invoice_date);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(AmountTotal, FlowResults.amount_total);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(VendorName, FlowResults.vendor_name);
+                            Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(InvoiceTotal, FlowResults.invoice_total);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             

@@ -642,14 +642,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BasePaletteColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BasePaletteColor",
         "BorderColor",
         "FontColor"
       ],
@@ -761,14 +754,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BasePaletteColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BasePaletteColor",
         "FontColor",
         "BorderColor",
         "Visible"
@@ -1649,7 +1635,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas7_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9170,14 +9156,7 @@
         "Width",
         "Height",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "!hideGallery",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "Visible"
       ],
       "GalleryTemplateChildName": "galleryTemplate6",
       "HasDynamicProperties": false,
@@ -9207,7 +9186,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
