@@ -937,7 +937,8 @@
                     'SubExpense - Temp',
                     'Comments - Temp',
                     'User - Temp'
-                )
+                ),
+                ShowColumns('temp expense list'.AllItems, ID)
             );
             Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             If(
@@ -991,13 +992,10 @@
                     If(
                         Form1_1.Valid,
                         ForAll(
-                            WOMP,
+                            DATA,
                             Patch(
                                 'Expense Data',
-                                LookUp(
-                                'Expense Data',
-                                ID = 'temp expense list'.Selected.ID
-                                ),
+                                
                                 {
                                     'Date - Temp': Blank(),
                                     'Receipt Upload - Temp': Blank(),
