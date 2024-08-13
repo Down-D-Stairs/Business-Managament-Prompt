@@ -936,7 +936,8 @@
                     'Vendor Name - Temp',
                     'SubExpense - Temp',
                     'Comments - Temp',
-                    'User - Temp'
+                    'User - Temp',
+                    ID
                 )
             );
             Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
