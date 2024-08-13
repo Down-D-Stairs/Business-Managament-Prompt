@@ -969,7 +969,10 @@
                     DATA,
                         Patch(
                             'Expense Data',
-                            
+                            LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
@@ -995,7 +998,10 @@
                             DATA,
                             Patch(
                                 'Expense Data',
-                                
+                                LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                                 {
                                     'Date - Temp': Blank(),
                                     'Receipt Upload - Temp': Blank(),
