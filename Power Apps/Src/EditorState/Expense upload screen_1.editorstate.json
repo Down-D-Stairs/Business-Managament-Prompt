@@ -1407,7 +1407,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas20",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1529,7 +1529,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas21",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1659,7 +1659,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas7_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
