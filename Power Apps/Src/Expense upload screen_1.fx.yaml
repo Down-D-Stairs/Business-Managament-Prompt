@@ -939,7 +939,7 @@
                     'User - Temp'
                 )
             );
-            Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
+            ClearCollect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -965,7 +965,7 @@
                     (DataCardValue8.Value = ""),
             
                     ForAll(
-                    'temp expense list'.AllItems,
+                    WOMP,
                         Patch(
                             'Expense Data',
                             Defaults('Expense Data'),
@@ -992,7 +992,7 @@
                     If(
                         Form1_1.Valid,
                         ForAll(
-                            'temp expense list'.AllItems,
+                            WOMP,
                             Patch(
                                 'Expense Data',
                                 Defaults('Expense Data'),
