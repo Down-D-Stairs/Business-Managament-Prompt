@@ -927,7 +927,7 @@
             =ClearCollect(
                 DATA,
                 ShowColumns(
-                    'Expense Data',
+                    'temp expense list'.AllItems,
                     'Date - Temp',
                     'Receipt Upload - Temp',
                     'Payment Type - Temp',
@@ -969,10 +969,7 @@
                     DATA,
                         Patch(
                             'Expense Data',
-                            LookUp(
-                                'Expense Data',
-                                ID = 'temp expense list'.Selected.ID
-                            ),
+                            Defaults('Expense Data'),
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
