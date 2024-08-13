@@ -1127,10 +1127,10 @@
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
             =If(
-                !IsBlank(LookUp(MainExpenses, ID < CurrentItemID, ID)),
+                !IsBlank(LookUp(MainExpenses, ID > CurrentItemID, ID)),
                 Set(
                     CurrentItemID,
-                    LookUp(MainExpenses, ID < CurrentItemID, ID)
+                    LookUp(MainExpenses, ID > CurrentItemID, ID)
                 ),
                 Notify("No next item available", NotificationType.Error)
             )
@@ -1150,10 +1150,10 @@
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
             =If(
-                !IsBlank(LookUp(MainExpenses, ID > CurrentItemID, ID)),
+                !IsBlank(LookUp(MainExpenses, ID < CurrentItemID, ID)),
                 Set(
                     CurrentItemID,
-                    LookUp(MainExpenses, ID > CurrentItemID, ID)
+                    LookUp(MainExpenses, ID < CurrentItemID, ID)
                 ),
                 Notify("No Previous Available", NotificationType.Error)
             )

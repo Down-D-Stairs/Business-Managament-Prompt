@@ -22,11 +22,11 @@ App As appinfo:
             SortedData,
             SortByColumns(
                 FilteredData,
-                "Amount",
+                "ID",
                 If(
-                    Dropdown1.Selected.Value = "Ascending",
-                    SortOrder.Ascending,
-                    SortOrder.Descending
+                    Dropdown1.Selected.Value = "Descending",
+                    SortOrder.Descending,
+                    SortOrder.Ascending
                 )
             )
         );

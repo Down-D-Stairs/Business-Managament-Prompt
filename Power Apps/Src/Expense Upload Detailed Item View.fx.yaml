@@ -52,8 +52,7 @@
             Form1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='Expense Data'
-                Item: |
-                    =LookUp(tempExpenses, ID = CurrentItemUploadID)
+                Item: =CurrentItemUploadID
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
@@ -840,7 +839,6 @@
                     'User - Temp': DataCardValue1.Value
                 }
             );
-            Clear(tempExpenses);
             Notify("Record updated successfully", NotificationType.Success);
             Navigate('Expense upload screen_1')
         Text: ="Back"
@@ -848,50 +846,4 @@
         X: =40
         Y: =40
         ZIndex: =2
-
-    ButtonCanvas3_2 As Button:
-        BasePaletteColor: =
-        BorderColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =32
-        Icon: ="ArrowRight"
-        Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
-            =If(
-                !IsBlank(LookUp(tempExpenses, ID > CurrentItemUploadID, ID)),
-                Set(
-                    CurrentItemUploadID,
-                    LookUp(tempExpenses, ID > CurrentItemUploadID, ID)
-                ),
-                Notify("No next item available", NotificationType.Error)
-            )
-        Text: ="Next Expense"
-        Width: =158
-        X: =1149
-        Y: =40
-        ZIndex: =3
-
-    ButtonCanvas3_3 As Button:
-        BasePaletteColor: =
-        BorderColor: =
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =32
-        Icon: ="ArrowLeft"
-        Layout: ='ButtonCanvas.Layout'.IconBefore
-        OnSelect: |
-            =If(
-                !IsBlank(Last(Filter(tempExpenses, ID < CurrentItemUploadID))),
-                Set(
-                    CurrentItemUploadID,
-                    Last(Filter(tempExpenses, ID < CurrentItemUploadID)).ID
-                ),
-                Notify("No previous item available", NotificationType.Error)
-            )
-        Text: ="Previous Expense"
-        Width: =176
-        X: =949
-        Y: =40
-        ZIndex: =4
 

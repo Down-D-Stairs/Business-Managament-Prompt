@@ -642,7 +642,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BasePaletteColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BasePaletteColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "FontColor"
       ],
@@ -6792,7 +6799,14 @@
         "PressedBorderColor",
         "HoverBorderColor",
         "FocusedBorderColor",
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Collect(tempExpenses, 'temp expense list'.AllItems);\nSet(CurrentItemUploadID, LookUp(tempExpenses, ID = ThisItem.ID, ID));\nNavigate('Expense Upload Detailed Item View', ScreenTransition.Fade)",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
@@ -6977,7 +6991,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultIconStyle",

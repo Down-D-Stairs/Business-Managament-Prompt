@@ -865,8 +865,7 @@
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: |-
-                =Collect(tempExpenses, 'temp expense list'.AllItems);
-                Set(CurrentItemUploadID, LookUp(tempExpenses, ID = ThisItem.ID, ID));
+                =Set(CurrentItemUploadID, ThisItem);
                 Navigate('Expense Upload Detailed Item View', ScreenTransition.Fade)
             PaddingBottom: =16
             PaddingLeft: =16
@@ -1131,7 +1130,7 @@
         OnSelect: |-
             =UpdateContext({cancelMode: true});
             UpdateContext({SelectMode: true})
-        Text: ="Edit Expense(s)"
+        Text: ="Edit Expense(s"
         Width: =162
         X: =816
         Y: =40
@@ -1173,7 +1172,6 @@
             =Collect(TempItems, (Filter('Expense Data','User - Temp' = User().Email)));
             ForAll(TempItems, Remove('Expense Data', ThisRecord));
             Clear(TempItems);
-            Clear(tempExpenses);
             ResetForm(Form1_1);
             Navigate('Admin Expense Item View', ScreenTransition.Fade);
         Text: ="CONFIRM"
