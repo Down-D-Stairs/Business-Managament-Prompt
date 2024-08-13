@@ -273,7 +273,7 @@
                         FontColor: =
                         Height: =39
                         Label: =ThisItem.'Modified By'.Claims
-                        OnCheck: =Collect(SelectedItems2, ThisItem)
+                        OnCheck: =Collect(SelectedItems2, ThisItem);
                         OnSelect: =Select(Parent)
                         OnUncheck: =Remove(SelectedItems2, ThisItem)
                         Visible: =SelectMode2
@@ -343,11 +343,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -386,11 +386,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -425,11 +425,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -447,6 +447,7 @@
             ChevronDisabledFill: =RGBA(244, 244, 244, 1)
             ChevronHoverBackground: =App.Theme.Colors.Darker10
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Default: ="0"
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -473,11 +474,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -521,11 +522,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -570,11 +571,11 @@
                     SortedData,
                     SortByColumns(
                         FilteredData,
-                        "Amount",
+                        "ID",
                         If(
-                            Dropdown1.Selected.Value = "Ascending",
-                            SortOrder.Ascending,
-                            SortOrder.Descending
+                            Dropdown1.Selected.Value = "Descending",
+                            SortOrder.Descending,
+                            SortOrder.Ascending
                         )
                     )
                 );
@@ -678,6 +679,7 @@
         OnSelect: |-
             =If(
                 CountRows(SelectedItems2) > 0,
+            
                 ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
                 Clear(SelectedItems2);
                 UpdateContext({ SelectMode2: false });
