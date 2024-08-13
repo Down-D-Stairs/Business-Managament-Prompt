@@ -924,11 +924,12 @@
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |
-            =ClearCollect(
+            =// Create a collection from 'Expense Data' with necessary fields
+            ClearCollect(
                 DATA,
                 ShowColumns(
                     'Expense Data',
-                    'ID', // Ensure you include the ID field for updates
+                    'ID', // Ensure ID is included for updates
                     'Date - Temp',
                     'Receipt Upload - Temp',
                     'Payment Type - Temp',
@@ -941,6 +942,7 @@
                 )
             );
             
+            // Check if the collection is empty and perform the appropriate action
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -951,7 +953,7 @@
                 IsBlank(Value(DataCardValue6.Value)) &&
                 (DataCardValue7.Value = "") &&
                 (DataCardValue8.Value = ""),
-                
+            
                 Notify("No Expenses to be Submitted", NotificationType.Warning),
             
                 If(
@@ -963,14 +965,15 @@
                     IsBlank(Value(DataCardValue6.Value)) &&
                     (DataCardValue7.Value = "") &&
                     (DataCardValue8.Value = ""),
-                    
+            
+                    // Iterate through the collection and patch each record to blank values
                     ForAll(
                         DATA,
                         Patch(
-                            'Expense Data',
+                            'Expense Data', // Data source to update
                             LookUp(
                                 'Expense Data',
-                                ID = ThisRecord.ID // Use ID to find and update records
+                                ID = DATA[@ID] // Correctly reference ID from DATA
                             ),
                             {
                                 'Date - Temp': Blank(),
@@ -993,10 +996,10 @@
                         ForAll(
                             DATA,
                             Patch(
-                                'Expense Data',
+                                'Expense Data', // Data source to update
                                 LookUp(
                                     'Expense Data',
-                                    ID = ThisRecord.ID // Use ID to find and update records
+                                    ID = DATA[@ID] // Correctly reference ID from DATA
                                 ),
                                 {
                                     'Date - Temp': Blank(),
