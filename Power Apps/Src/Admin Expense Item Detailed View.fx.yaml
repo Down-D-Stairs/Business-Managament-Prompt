@@ -2,8 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =Set(EditMode, false);
-        // Define the filter conditions
+        =// Update variables when a dropdown value changes
         Set(
             FilteredData,
             Filter(
@@ -11,21 +10,20 @@
                 ('Expense Type'.Value = ComboBox1.Selected.Value || IsBlank(ComboBox1.Selected.Value)) &&
                 (Date >= DatePickerStart.SelectedDate || IsBlank(DatePickerStart.SelectedDate)) &&
                 (Date <= DatePickerEnd.SelectedDate || IsBlank(DatePickerEnd.SelectedDate)) &&
-                (StartsWith('Vendor Name', TextInput1.Text)) &&
+                (StartsWith(User, TextInput1.Text)) &&
                 ('Approval Status'.Value = ComboBox2.Selected.Value || IsBlank(ComboBox2.Selected.Value))
             )
         );
         
-        // Define the sort order
         Set(
             SortedData,
             SortByColumns(
                 FilteredData,
-                "Amount",
+                "ID",
                 If(
-                    Dropdown1.Selected.Value = "Ascending",
-                    SortOrder.Ascending,
-                    SortOrder.Descending
+                    Dropdown1.Selected.Value = "Descending",
+                    SortOrder.Descending,
+                    SortOrder.Ascending
                 )
             )
         );
@@ -1127,12 +1125,12 @@
         Height: =32
         Icon: ="ArrowRight"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |
+        OnSelect: |-
             =If(
-                !IsBlank(LookUp(MainExpenses, ID > CurrentItemID, ID)),
+                !IsBlank(LookUp(MainExpenses, ID < CurrentItemID, ID)),
                 Set(
                     CurrentItemID,
-                    LookUp(MainExpenses, ID > CurrentItemID, ID)
+                    LookUp(MainExpenses, ID < CurrentItemID, ID)
                 ),
                 Notify("No next item available", NotificationType.Error)
             )
@@ -1152,12 +1150,12 @@
         Layout: ='ButtonCanvas.Layout'.IconBefore
         OnSelect: |
             =If(
-                !IsBlank(Last(Filter(MainExpenses, ID < CurrentItemID))),
+                !IsBlank(LookUp(MainExpenses, ID > CurrentItemID, ID)),
                 Set(
                     CurrentItemID,
-                    Last(Filter(MainExpenses, ID < CurrentItemID)).ID
+                    LookUp(MainExpenses, ID > CurrentItemID, ID)
                 ),
-                Notify("No previous item available", NotificationType.Error)
+                Notify("No Previous Available", NotificationType.Error)
             )
         Text: ="Previous Expense"
         Width: =176
