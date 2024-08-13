@@ -939,7 +939,6 @@
                     'User - Temp'
                 )
             );
-            Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             
             If(
                 IsEmpty(DATA) &&
