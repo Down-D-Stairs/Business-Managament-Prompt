@@ -965,13 +965,11 @@
                     (DataCardValue8.Value = ""),
             
                     ForAll(
-                    DATA,
+                    'temp expense list'.AllItems,
                         Patch(
                             'Expense Data',
-                            LookUp(
-                                'Expense Data',
-                                ID = 'temp expense list'.Selected.ID
-                            ),
+                            Defaults('Expense Data'),
+                            
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
@@ -994,13 +992,10 @@
                     If(
                         Form1_1.Valid,
                         ForAll(
-                            DATA,
+                            'temp expense list'.AllItems,
                             Patch(
                                 'Expense Data',
-                                LookUp(
-                                'Expense Data',
-                                ID = 'temp expense list'.Selected.ID
-                            ),
+                                Defaults('Expense Data'),
                                 {
                                     'Date - Temp': Blank(),
                                     'Receipt Upload - Temp': Blank(),
