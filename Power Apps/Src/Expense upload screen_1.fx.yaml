@@ -939,7 +939,7 @@
                     'User - Temp'
                 )
             );
-            
+            Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -968,7 +968,7 @@
                     DATA,
                         Patch(
                             'Expense Data',
-                            ThisRecord,
+                            
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
@@ -987,16 +987,16 @@
                             NotificationType.Success
                         );
                     Refresh('Expense Data'),
-            
+                
                     If(
                         Form1_1.Valid,
                         ForAll(
-                            DATA,
+                            WOMP,
                             Patch(
                                 'Expense Data',
                                 LookUp(
-                                    'Expense Data',
-                                    ID = 'temp expense list'.Selected.ID
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
                                 ),
                                 {
                                     'Date - Temp': Blank(),
