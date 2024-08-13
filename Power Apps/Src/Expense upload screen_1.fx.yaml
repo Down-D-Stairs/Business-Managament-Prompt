@@ -193,15 +193,15 @@
                         Height: =200
                         OnSelect: |+
                             =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
-                            Set(FlowResults, TestingStupidStuff.Run(AddPicture1.Media));
+                            Set(FlowResults, TestingReceipts.Run(AddPicture1.Media));
                             Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
-                            Set(InvoiceDate, FlowResults.invoice_date);
+                            Set(InvoiceDate, FlowResults.date1);
                             Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
-                            Set(AmountTotal, FlowResults.amount_total);
+                            Set(AmountTotal, FlowResults.totaldue);
                             Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
-                            Set(VendorName, FlowResults.vendor_name);
+                            Set(VendorName, FlowResults.name);
                             Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
-                            Set(InvoiceTotal, FlowResults.invoice_total);
+                            Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
                         Width: =Parent.Width - 60

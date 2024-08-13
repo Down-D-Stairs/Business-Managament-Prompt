@@ -39,6 +39,50 @@
     "dependents": [],
     "id": "040c9515-b3db-4c85-87e9-d58d7b8f3454"
   },
+  "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "f2389af0-e352-45e9-906b-7eabcc952ad4": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "workflowDisplayName": {
+          "value": "TestingReceipts"
+        },
+        "workflowEntityId": {
+          "value": "dbacfe15-3658-ef11-a316-6045bdd4a07f"
+        },
+        "workflowName": {
+          "value": "382f9bf0-3f90-b9df-b708-94331f05f5ac"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "f2389af0-e352-45e9-906b-7eabcc952ad4"
+        },
+        "workflowDisplayName": {
+          "value": "TestingReceipts"
+        },
+        "workflowEntityId": {
+          "value": "dbacfe15-3658-ef11-a316-6045bdd4a07f"
+        },
+        "workflowName": {
+          "value": "382f9bf0-3f90-b9df-b708-94331f05f5ac"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "TestingReceipts"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "f2389af0-e352-45e9-906b-7eabcc952ad4"
+    },
+    "dependents": [],
+    "id": "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002"
+  },
   "57133be4-d3da-4cb0-a157-44398d5b9a61": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -357,5 +401,19 @@
     "dependencies": {},
     "dependents": [],
     "id": "e1ca99f5-5849-415d-a670-a26d99f16f71"
+  },
+  "f2389af0-e352-45e9-906b-7eabcc952ad4": {
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002"
+    ],
+    "id": "f2389af0-e352-45e9-906b-7eabcc952ad4"
   }
 }
