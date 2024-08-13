@@ -14,6 +14,206 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Image2_1.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Image2_1.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".'Receipt Upload'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Image2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Receipt Upload"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1.Label"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1.Label",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".'Modified By'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Label",
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Modified By"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1.Label"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1.Label",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 22,
+                  "snippet": {
+                    "text": ".Claims"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Label",
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.CheckboxCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 18,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".'Approval Status'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Approval Status"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Admin Expense Item View",
+                "type": "'Admin Expense Item View'.ScreenContainer5.BottomContainer3.MainContainer4.'Admin Expense View'.Subtitle2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Expense upload screen_1'.'temp expense list'.Image2.Image"
                 }
               ],
