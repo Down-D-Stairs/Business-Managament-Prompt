@@ -936,11 +936,11 @@
                     'Vendor Name - Temp',
                     'SubExpense - Temp',
                     'Comments - Temp',
-                    'User - Temp',
-                    ID
+                    'User - Temp'
                 )
             );
             Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
+            
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -969,7 +969,10 @@
                     DATA,
                         Patch(
                             'Expense Data',
-                            Defaults('Expense Data'),
+                            LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
@@ -995,7 +998,10 @@
                             DATA,
                             Patch(
                                 'Expense Data',
-                                Defaults('Expense Data'),
+                                LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                                 {
                                     'Date - Temp': Blank(),
                                     'Receipt Upload - Temp': Blank(),
