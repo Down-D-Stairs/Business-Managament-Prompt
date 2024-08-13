@@ -923,11 +923,13 @@
         Height: =44
         Icon: ="Checkmark"
         Layout: ='ButtonCanvas.Layout'.IconAfter
-        OnSelect: |+
-            =ClearCollect(
+        OnSelect: |
+            =// Create a collection from 'Expense Data' with necessary fields
+            ClearCollect(
                 DATA,
                 ShowColumns(
                     'Expense Data',
+                    ID, // Ensure ID is included for updates
                     'Date - Temp',
                     'Receipt Upload - Temp',
                     'Payment Type - Temp',
@@ -940,6 +942,7 @@
                 )
             );
             
+            // Check if the collection is empty and perform the appropriate action
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -947,11 +950,11 @@
                 IsBlank(DataCardValue4.Selected.Value) &&
                 (DataCardValue5.Value = "") &&
                 IsBlank(DataCardValue3.SelectedDate) &&
-                IsBlank(Value(DataCardValue6.Value))  &&
+                IsBlank(Value(DataCardValue6.Value)) &&
                 (DataCardValue7.Value = "") &&
                 (DataCardValue8.Value = ""),
             
-                Notify("No Expenses to be Submitted",NotificationType.Warning),
+                Notify("No Expenses to be Submitted", NotificationType.Warning),
             
                 If(
                     IsBlank(Image1.Image) &&
@@ -959,17 +962,18 @@
                     IsBlank(DataCardValue4.Selected.Value) &&
                     (DataCardValue5.Value = "") &&
                     IsBlank(DataCardValue3.SelectedDate) &&
-                    IsBlank(Value(DataCardValue6.Value))  &&
+                    IsBlank(Value(DataCardValue6.Value)) &&
                     (DataCardValue7.Value = "") &&
                     (DataCardValue8.Value = ""),
             
+                    // Iterate through the collection and patch each record to blank values
                     ForAll(
-                    DATA,
+                        DATA,
                         Patch(
-                            'Expense Data',
+                            'Expense Data', // Data source to update
                             LookUp(
                                 'Expense Data',
-                                ID = 'temp expense list'.Selected.ID
+                                ID = DATA[@ID] // Correctly reference ID from DATA
                             ),
                             {
                                 'Date - Temp': Blank(),
@@ -984,21 +988,18 @@
                             }
                         )
                     );
-                    Notify(
-                            "Expenses Have been Successfully Submitted",
-                            NotificationType.Success
-                        );
+                    Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
                     Refresh('Expense Data'),
-            
+                    
                     If(
                         Form1_1.Valid,
                         ForAll(
                             DATA,
                             Patch(
-                                'Expense Data',
+                                'Expense Data', // Data source to update
                                 LookUp(
                                     'Expense Data',
-                                    ID = 'temp expense list'.Selected.ID
+                                    ID = DATA[@ID] // Correctly reference ID from DATA
                                 ),
                                 {
                                     'Date - Temp': Blank(),
@@ -1014,24 +1015,14 @@
                             )
                         );
                         SubmitForm(Form1_1);
-                        Notify(
-                            "Expenses Have been Successfully Submitted",
-                            NotificationType.Success
-                        );
+                        Notify("Expenses Have been Successfully Submitted", NotificationType.Success);
                         ResetForm(Form1_1);
                         Refresh('Expense Data'),
                         
-                        Notify(
-                            "All Necessary Fields Need To Be Filled Out",
-                            NotificationType.Error
-                        )
-                    );
+                        Notify("All Necessary Fields Need To Be Filled Out", NotificationType.Error)
+                    )
                 )
-                
             );
-            
-            
-            
         Text: ="Submit Expense(s"
         Width: =132
         X: =1182
