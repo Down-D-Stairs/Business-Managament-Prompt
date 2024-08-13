@@ -939,7 +939,7 @@
                     'User - Temp'
                 )
             );
-            ClearCollect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
+            Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             If(
                 IsEmpty(DATA) &&
                 IsBlank(Image1.Image) &&
@@ -965,11 +965,13 @@
                     (DataCardValue8.Value = ""),
             
                     ForAll(
-                    WOMP,
+                    DATA,
                         Patch(
                             'Expense Data',
-                            Defaults('Expense Data'),
-                            
+                            LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                             {
                                 'Date - Temp': Blank(),
                                 'Receipt Upload - Temp': Blank(),
@@ -992,10 +994,13 @@
                     If(
                         Form1_1.Valid,
                         ForAll(
-                            WOMP,
+                            DATA,
                             Patch(
                                 'Expense Data',
-                                Defaults('Expense Data'),
+                                LookUp(
+                                'Expense Data',
+                                ID = 'temp expense list'.Selected.ID
+                            ),
                                 {
                                     'Date - Temp': Blank(),
                                     'Receipt Upload - Temp': Blank(),
