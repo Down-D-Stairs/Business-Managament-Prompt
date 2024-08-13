@@ -34,6 +34,7 @@
       "ExpenseType": "Expense Type",
       "ExpenseType#Id": "Expense Type Id",
       "ID": "ID",
+      "Image": "Image",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title",

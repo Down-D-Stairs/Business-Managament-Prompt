@@ -1227,7 +1227,9 @@
 
     ButtonCanvas20 As Button:
         BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =44
         OnSelect: |-
             =Patch(
@@ -1274,7 +1276,9 @@
 
     ButtonCanvas21 As Button:
         BasePaletteColor: =
+        BorderColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =44
         OnSelect: |-
             =ResetForm(Form1_1);
