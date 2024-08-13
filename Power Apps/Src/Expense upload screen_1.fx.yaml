@@ -927,7 +927,7 @@
             =ClearCollect(
                 DATA,
                 ShowColumns(
-                    'temp expense list'.AllItems,
+                    'Expense Data',
                     'Date - Temp',
                     'Receipt Upload - Temp',
                     'Payment Type - Temp',
