@@ -937,8 +937,7 @@
                     'SubExpense - Temp',
                     'Comments - Temp',
                     'User - Temp'
-                ),
-                ShowColumns('temp expense list'.AllItems, ID)
+                )
             );
             Collect(WOMP,ShowColumns('temp expense list'.AllItems, ID));
             If(
