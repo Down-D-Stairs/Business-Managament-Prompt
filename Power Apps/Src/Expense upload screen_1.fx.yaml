@@ -179,7 +179,7 @@
                         DisplayMode: =Parent.DisplayMode
                         Height: =AddPicture1.Height
                         Image: |
-                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media);
+                            =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
                         Tooltip: =Parent.DisplayName
                         Width: =AddPicture1.Width
                         X: =AddPicture1.X
