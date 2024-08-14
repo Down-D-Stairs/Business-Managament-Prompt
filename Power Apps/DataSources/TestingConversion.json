@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "68006862-60ab-4d1b-93a8-de9bddad82c8",
+    "Name": "TestingConversion",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "bb8764df-755a-ef11-bfe2-00224826d20c"
+  }
+]

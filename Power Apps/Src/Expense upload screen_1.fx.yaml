@@ -204,7 +204,7 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
-                            TestingPDFtoJPG.Run();
+                            TestingConversion.Run(AddPicture1.Media);
                             
                             
                             

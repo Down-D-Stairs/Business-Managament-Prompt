@@ -1,4 +1,43 @@
 {
+  "0219635d-5d4d-42df-8536-4d5d9e409045": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "TestingConversion"
+        },
+        "workflowEntityId": {
+          "value": "bb8764df-755a-ef11-bfe2-00224826d20c"
+        },
+        "workflowName": {
+          "value": "a7b0fa84-30c1-be7a-3e44-b19ff89d7530"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "TestingConversion"
+        },
+        "workflowEntityId": {
+          "value": "bb8764df-755a-ef11-bfe2-00224826d20c"
+        },
+        "workflowName": {
+          "value": "a7b0fa84-30c1-be7a-3e44-b19ff89d7530"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "TestingConversion"
+    ],
+    "dependencies": {
+      "shared_cloudmersiveimagepr": "f8d03547-97dd-4455-aa68-656dea6fb187",
+      "shared_sharepointonline": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
+    },
+    "dependents": [],
+    "id": "0219635d-5d4d-42df-8536-4d5d9e409045"
+  },
   "040c9515-b3db-4c85-87e9-d58d7b8f3454": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -45,6 +84,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "508dd7c3-c869-4fb8-9bc6-3a8d576e483e": {
+          "value": "shared_sharepointonline"
+        },
+        "f8d03547-97dd-4455-aa68-656dea6fb187": {
+          "value": "shared_cloudmersiveimagepr"
+        },
         "workflowDisplayName": {
           "value": "PDFtoJPG"
         },
@@ -56,6 +101,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_cloudmersiveimagepr": {
+          "value": "f8d03547-97dd-4455-aa68-656dea6fb187"
+        },
+        "shared_sharepointonline": {
+          "value": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
+        },
         "workflowDisplayName": {
           "value": "PDFtoJPG"
         },
@@ -133,7 +184,8 @@
     "dependencies": {},
     "dependents": [
       "db2a4780-88f1-4042-b21b-94a40e82100f",
-      "05e8be22-0ded-4383-8811-7fb379ea592d"
+      "05e8be22-0ded-4383-8811-7fb379ea592d",
+      "0219635d-5d4d-42df-8536-4d5d9e409045"
     ],
     "id": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
   },
@@ -536,7 +588,8 @@
     "dependencies": {},
     "dependents": [
       "db2a4780-88f1-4042-b21b-94a40e82100f",
-      "05e8be22-0ded-4383-8811-7fb379ea592d"
+      "05e8be22-0ded-4383-8811-7fb379ea592d",
+      "0219635d-5d4d-42df-8536-4d5d9e409045"
     ],
     "id": "f8d03547-97dd-4455-aa68-656dea6fb187"
   },
