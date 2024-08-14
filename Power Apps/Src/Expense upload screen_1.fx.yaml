@@ -205,7 +205,7 @@
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
                             PDFtoJPG.Run(
-                                AddPicture1.Media
+                                Image1.Image
                             )
                             
                             
