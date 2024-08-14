@@ -204,6 +204,14 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
+                            // Collect image data
+                            Collect(
+                                ImageCollection,
+                                {
+                                    Name: "UploadedImage.jpg",
+                                    ContentBytes: AddPicture1.Media
+                                }
+                            );
                             
                             
                             
