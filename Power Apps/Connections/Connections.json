@@ -39,6 +39,45 @@
     "dependents": [],
     "id": "040c9515-b3db-4c85-87e9-d58d7b8f3454"
   },
+  "05e8be22-0ded-4383-8811-7fb379ea592d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "PDFtoJPG"
+        },
+        "workflowEntityId": {
+          "value": "c1f9e904-ca58-ef11-bfe2-6045bdd4a07f"
+        },
+        "workflowName": {
+          "value": "3bb156d2-2d28-107e-3943-9fd155731dfe"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "PDFtoJPG"
+        },
+        "workflowEntityId": {
+          "value": "c1f9e904-ca58-ef11-bfe2-6045bdd4a07f"
+        },
+        "workflowName": {
+          "value": "3bb156d2-2d28-107e-3943-9fd155731dfe"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PDFtoJPG"
+    ],
+    "dependencies": {
+      "shared_cloudmersiveimagepr": "f8d03547-97dd-4455-aa68-656dea6fb187",
+      "shared_sharepointonline": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
+    },
+    "dependents": [],
+    "id": "05e8be22-0ded-4383-8811-7fb379ea592d"
+  },
   "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -82,6 +121,20 @@
     },
     "dependents": [],
     "id": "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002"
+  },
+  "508dd7c3-c869-4fb8-9bc6-3a8d576e483e": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "05e8be22-0ded-4383-8811-7fb379ea592d"
+    ],
+    "id": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
   },
   "57133be4-d3da-4cb0-a157-44398d5b9a61": {
     "connectionRef": {
@@ -415,6 +468,20 @@
       "1cfe3b7f-25e1-42e0-9cf7-5ae1dd370002"
     ],
     "id": "f2389af0-e352-45e9-906b-7eabcc952ad4"
+  },
+  "f8d03547-97dd-4455-aa68-656dea6fb187": {
+    "connectionRef": {
+      "displayName": "Cloudmersive Image Processing",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/version-mismatches-special-train/1.0.1670.3520/cloudmersiveimagepr/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_cloudmersiveimagepr"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "05e8be22-0ded-4383-8811-7fb379ea592d"
+    ],
+    "id": "f8d03547-97dd-4455-aa68-656dea6fb187"
   },
   "fb379730-60c1-47e0-8af3-38544c75ae04": {
     "connectionRef": {

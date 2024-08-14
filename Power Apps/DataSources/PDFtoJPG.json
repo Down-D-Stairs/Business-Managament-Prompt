@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "b0617ac2-3985-4402-8d31-117ce43a2983",
+    "Name": "PDFtoJPG",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "c1f9e904-ca58-ef11-bfe2-6045bdd4a07f"
+  }
+]

@@ -204,6 +204,8 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
+                            Set(ConvertedItem, PDFtoJPG.Run(AddPicture1.Media));
+                            
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
@@ -237,6 +239,15 @@
                         X: =0
                         Y: =DataCardKey10.Y
                         ZIndex: =5
+
+                    Image3 As image:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Image: =ConvertedItem.converted
+                        X: =591
+                        Y: =44
+                        ZIndex: =6
 
                 "'Payment Type_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                     BorderColor: =App.Theme.Colors.Darker40
