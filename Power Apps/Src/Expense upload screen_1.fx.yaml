@@ -1283,12 +1283,3 @@
         Y: =579
         ZIndex: =11
 
-    ButtonCanvas22 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: =TestingConversion.Run(AddPicture1.Media);
-        Width: =96
-        X: =740
-        Y: =591
-        ZIndex: =12
-
