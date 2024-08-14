@@ -12,8 +12,10 @@
         <property name="file" typeRef="ManualTriggerInput_file_def" />
       </object>
       <string name="ResponseActionOutput_fileidentifier_def" />
+      <base64Binary name="ResponseActionOutput_testingfile_def" />
       <object name="ResponseActionOutput">
         <property name="fileidentifier" type="string" />
+        <property name="testingfile" typeRef="ResponseActionOutput_testingfile_def" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
