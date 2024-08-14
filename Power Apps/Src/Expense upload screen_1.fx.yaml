@@ -204,9 +204,8 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning",NotificationType.Success);
                             
-                            PDFtoJPG.Run(
-                                Image1.Image
-                            )
+                            
+                            
                             
                             
                             
