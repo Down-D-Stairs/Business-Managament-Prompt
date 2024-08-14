@@ -202,7 +202,7 @@
                             Set(VendorName, FlowResults.name);
                             Notify("Receipt is Being Scanned, Please Wait....",NotificationType.Warning);
                             Set(InvoiceTotal, FlowResults.amountdue);
-                            Notify("Receipt is Finished Scanning",NotificationType.Success);
+                            Notify("Receipt is Finished Scanning...Please Double-Check all Fields",NotificationType.Success);
                             
                             
                             
