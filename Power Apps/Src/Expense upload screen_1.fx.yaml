@@ -1286,7 +1286,7 @@
     ButtonCanvas22 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        OnSelect: =TestingConversion.Run(Image1.Image);
+        OnSelect: =TestingConversion.Run(AddPicture1.Media);
         Width: =96
         X: =740
         Y: =591
