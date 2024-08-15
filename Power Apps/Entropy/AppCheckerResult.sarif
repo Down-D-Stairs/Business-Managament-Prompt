@@ -1664,36 +1664,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.Attachments_DataCard1.DataCardValue16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.Attachments_DataCard1.DataCardValue16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Expense upload screen_1",
-                "type": "'Expense upload screen_1'.ScreenContainer1_1.MainContainer1_1.Form1_1.Attachments_DataCard1.DataCardValue16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.InvoiceTotal"
                 }
               ],
