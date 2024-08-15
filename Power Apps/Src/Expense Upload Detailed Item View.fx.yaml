@@ -154,7 +154,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue18.Attachments
+                    Update: =DataCardValue16.Attachments
                     Width: =667
                     X: =0
                     Y: =4
