@@ -154,7 +154,7 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue16.Attachments
+                    Update: =DataCardValue18.Attachments
                     Width: =667
                     X: =0
                     Y: =4
@@ -928,9 +928,8 @@
                     'Payment Type - Temp': DataCardValue9.Selected,
                     
                     User: DataCardValue1.Value,
-                    'User - Temp': DataCardValue1.Value,
+                    'User - Temp': DataCardValue1.Value
             
-                    Attachments: DataCardValue18
                 }
             );
             Notify("Record updated successfully", NotificationType.Success);

@@ -1186,13 +1186,12 @@
                             'Payment Type - Temp': DataCardValue2.Selected,
                             
                             User: DataCardValue1.Value,
-                            'User - Temp': DataCardValue1.Value,
-            
-                            Attachments: DataCardValue16
+                            'User - Temp': DataCardValue1.Value
             
                            
                         }
                     );
+                    SubmitForm(Form1_1);
                     ResetForm(Form1_1),
                     Notify(
                         "Please fill in all required fields.",

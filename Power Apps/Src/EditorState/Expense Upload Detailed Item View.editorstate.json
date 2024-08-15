@@ -401,8 +401,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DataCardValue18.Attachments",
+          "AutoRuleBindingEnabled": true,
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Update",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
