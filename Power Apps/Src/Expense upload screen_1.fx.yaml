@@ -1186,9 +1186,9 @@
                             'Payment Type - Temp': DataCardValue2.Selected,
                             
                             User: DataCardValue1.Value,
-                            'User - Temp': DataCardValue1.Value,
+                            'User - Temp': DataCardValue1.Value
             
-                            Attachments: DataCardValue16
+                            
             
                            
                         }
