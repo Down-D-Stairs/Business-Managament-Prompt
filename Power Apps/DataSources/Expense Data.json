@@ -51,6 +51,8 @@
       "PaymentType#Id": "Payment Type Id",
       "PaymentType_x002d_Temp": "Payment Type - Temp",
       "PaymentType_x002d_Temp#Id": "Payment Type - Temp Id",
+      "PDFFile": "PDF File",
+      "PDFFile_x002d_Temp": "PDF File - Temp",
       "ReceiptUpload": "Receipt Upload",
       "ReceiptUpload_x002d_Temp": "Receipt Upload - Temp",
       "SubExpense": "SubExpense",
