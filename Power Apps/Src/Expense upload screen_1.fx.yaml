@@ -65,6 +65,98 @@
                 UseFluentV9Cards: =true
                 ZIndex: =1
 
+                Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'{Attachments}')
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue16.Attachments
+                    Width: =800
+                    X: =0
+                    Y: =9
+                    ZIndex: =1
+
+                    DataCardKey17 As label:
+                        AutoHeight: =true
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =34
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue16 As attachments:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        IsInDataCard: =true
+                        ItemColor: =RGBA(255, 255, 255, 1)
+                        ItemFill: =App.Theme.Colors.Primary
+                        ItemHoverColor: =RGBA(0, 0, 0, 1)
+                        ItemHoverFill: =App.Theme.Colors.Lighter70
+                        Items: =Parent.Default
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =App.Theme.Colors.Darker30
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage17 As label:
+                        AutoHeight: =true
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue16.Y + DataCardValue16.Height
+                        ZIndex: =3
+
+                    StarVisible17 As label:
+                        Align: =Align.Center
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =DataCardKey17.Height
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey17.Y
+                        ZIndex: =4
+
                 User_DataCard1 As typedDataCard.fluentV9TextualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
@@ -1092,7 +1184,9 @@
                             'Payment Type - Temp': DataCardValue2.Selected,
                             
                             User: DataCardValue1.Value,
-                            'User - Temp': DataCardValue1.Value
+                            'User - Temp': DataCardValue1.Value,
+            
+                            Attachments: DataCardValue16
                         }
                     );
                     ResetForm(Form1_1),
