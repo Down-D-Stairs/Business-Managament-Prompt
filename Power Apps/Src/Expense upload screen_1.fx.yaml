@@ -205,6 +205,8 @@
                             Notify("Receipt is Finished Scanning...Please Double-Check all Fields",NotificationType.Success);
                             
                             
+                            UpdateImage.Run(AddPicture1.Media);
+                            
                             
                         Width: =Parent.Width - 60
                         X: =30
