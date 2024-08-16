@@ -2,9 +2,9 @@
   <doc title="UpdateImage" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <string name="ManualTriggerInput_Updatefile_FileContent_def" />
+      <string name="ManualTriggerInput_Createfile_FileContent_def" />
       <object name="ManualTriggerInput">
-        <property name="Updatefile_FileContent" type="string" />
+        <property name="Createfile_FileContent" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -18,7 +18,7 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="Updatefile_FileContent" path="/Updatefile_FileContent" type="xs:string" required="true" />
+            <param style="plain" name="Createfile_FileContent" path="/Createfile_FileContent" type="xs:string" required="true" />
           </representation>
         </request>
       </method>
