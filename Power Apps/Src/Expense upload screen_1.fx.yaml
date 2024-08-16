@@ -207,6 +207,7 @@
                             UpdateImage.Run(AddPicture1.Media);
                             
                             
+                            
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
