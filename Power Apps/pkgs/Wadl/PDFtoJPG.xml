@@ -2,22 +2,10 @@
   <doc title="PDFtoJPG" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <string name="ManualTriggerInput_file_def_name_def" />
-      <base64Binary name="ManualTriggerInput_file_def_contentBytes_def" />
-      <object name="ManualTriggerInput_file_def">
-        <property name="name" type="string" />
-        <property name="contentBytes" typeRef="ManualTriggerInput_file_def_contentBytes_def" />
-      </object>
+      <string name="ManualTriggerInput_Updatefile_FileContent_def" />
       <object name="ManualTriggerInput">
-        <property name="file" typeRef="ManualTriggerInput_file_def" />
+        <property name="Updatefile_FileContent" type="string" />
       </object>
-      <string name="ResponseActionOutput_fileidentifier_def" />
-      <base64Binary name="ResponseActionOutput_testingfile_def" />
-      <object name="ResponseActionOutput">
-        <property name="fileidentifier" type="string" />
-        <property name="testingfile" typeRef="ResponseActionOutput_testingfile_def" />
-      </object>
-      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/logicflows">
@@ -30,14 +18,9 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="file" path="/file" type="service:ManualTriggerInput_file_def">
-              <doc title="File Content1" />
-            </param>
+            <param style="plain" name="Updatefile_FileContent" path="/Updatefile_FileContent" type="xs:string" required="true" />
           </representation>
         </request>
-        <response>
-          <representation mediaType="application/json" element="service:ResponseActionOutput" />
-        </response>
       </method>
     </resource>
   </resources>
