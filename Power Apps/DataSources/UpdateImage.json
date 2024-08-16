@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "2dbf3bb9-64ed-484f-b832-69d2ce6c3776",
+    "Name": "UpdateImage",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "3a8d6031-e85b-ef11-bfe2-0022483198ef"
+  }
+]

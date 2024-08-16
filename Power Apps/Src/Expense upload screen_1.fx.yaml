@@ -204,9 +204,7 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning...Please Double-Check all Fields",NotificationType.Success);
                             
-                            PDFtoJPG.Run(
-                                AddPicture1.Media // Pass the image content
-                            );
+                            UpdateImage.Run(AddPicture1.Media);
                             
                             
                         Width: =Parent.Width - 60
