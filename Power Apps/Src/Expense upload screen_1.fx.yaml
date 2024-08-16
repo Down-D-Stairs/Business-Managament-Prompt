@@ -206,7 +206,7 @@
                             
                             
                             
-                        Text: ="Tap or click to add a picture (JPG,PNG,PDF Are Supported, But PDF Will Not Save To The Database"
+                        Text: ="Tap or click to add a picture (JPG,PNG,PDF Are Supported, But PDF Will Not Save To The Database)"
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
