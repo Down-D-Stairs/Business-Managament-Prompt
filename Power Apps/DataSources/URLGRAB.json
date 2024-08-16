@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "59b8fd01-bf17-4c8e-b80e-79b6facfe6a7",
+    "Name": "URLGRAB",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "7b0ebd9f-685b-ef11-bfe2-0022483198ef"
+  }
+]

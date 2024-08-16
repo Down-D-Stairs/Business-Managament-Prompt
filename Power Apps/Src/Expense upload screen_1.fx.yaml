@@ -69,7 +69,7 @@
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="URL"
-                    Default: =If(IsBlank(AddPicture1.Media), ThisItem.URL,AddPicture1.Media)
+                    Default: =If(IsBlank(AddPicture1.Media), ThisItem.URL,imageUrl.fileurl)
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,URL)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -82,7 +82,10 @@
                     ZIndex: =1
 
                     DataCardKey21 As Text:
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =22
                         Text: =Parent.DisplayName
                         Weight: ='TextCanvas.Weight'.Semibold
@@ -94,7 +97,11 @@
 
                     "DataCardValue19 As 'Text input'":
                         AccessibleLabel: =Parent.DisplayName
+                        BasePaletteColor: =
+                        BorderColor: =
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =
+                        FontColor: =
                         Height: =32
                         Mode: ='TextInputCanvas.Mode'.SingleLine
                         Required: =Parent.Required
@@ -106,7 +113,10 @@
                         ZIndex: =2
 
                     ErrorMessage20 As Text:
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =30
                         Text: =Parent.Error
                         Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
@@ -118,7 +128,10 @@
 
                     StarVisible20 As Text:
                         Align: ='TextCanvas.Align'.Center
+                        BorderColor: =
                         DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =
                         Height: =20
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -253,7 +266,7 @@
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =200
-                        OnSelect: |+
+                        OnSelect: |-
                             =Notify("Receipt is Being Scanned, Please Wait",NotificationType.Warning);
                             Set(FlowResults, TestingReceipts.Run(AddPicture1.Media));
                             Notify("Receipt is Being Scanned, Please Wait.",NotificationType.Warning);
@@ -266,6 +279,11 @@
                             Set(InvoiceTotal, FlowResults.amountdue);
                             Notify("Receipt is Finished Scanning...Please Double-Check all Fields",NotificationType.Success);
                             
+                            // Call the Power Automate flow and pass the image data
+                            Set(
+                                imageUrl,
+                                URLGRAB.Run(Image1.Image)
+                            )
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardKey10.Y + DataCardKey10.Height + 5
