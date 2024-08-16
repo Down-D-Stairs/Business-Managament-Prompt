@@ -1283,12 +1283,3 @@
         Y: =579
         ZIndex: =11
 
-    ButtonCanvas22 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: =Launch(imageUrl.fileurl)
-        Width: =96
-        X: =614
-        Y: =623
-        ZIndex: =12
-
