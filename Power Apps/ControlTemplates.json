@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_CheckboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Checkbox",
-    "Version": "0.0.24"
+    "Version": "0.0.26"
   },
   "combobox": {
     "CustomGroupControlTemplateName": "",
@@ -98,7 +98,7 @@
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Combobox",
-    "Version": "0.0.39"
+    "Version": "0.0.40"
   },
   "Date picker": {
     "CustomGroupControlTemplateName": "",
@@ -113,7 +113,7 @@
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Date picker",
-    "Version": "0.0.32"
+    "Version": "0.0.33"
   },
   "datepicker": {
     "CustomGroupControlTemplateName": "",
@@ -353,7 +353,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.39"
+    "Version": "0.0.40"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
@@ -368,7 +368,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.41"
+    "Version": "0.0.44"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",
