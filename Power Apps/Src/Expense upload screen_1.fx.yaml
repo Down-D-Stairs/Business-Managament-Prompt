@@ -247,7 +247,7 @@
                     DataField: ="{Attachments}"
                     Default: =ThisItem.Attachments
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'{Attachments}')
+                    DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Attachments)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false

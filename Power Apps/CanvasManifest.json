@@ -88,7 +88,6 @@
       "rtlsupport": false,
       "showclassicthemes": false,
       "smartemaildatacard": true,
-      "sqlstoredprocedureenabled": true,
       "supportcolumnnamesasidentifiers": true,
       "tabledoesntwraprecords": true,
       "usedisplaynamemetadata": true,
@@ -102,7 +101,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 25,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
