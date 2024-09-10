@@ -683,7 +683,10 @@
                 ForAll(SelectedItems2,
                 Patch(
                 'Add New Expense Temp', 
-                Defaults('Add New Expense Temp'), 
+                LookUp(
+                    'Add New Expense Temp',
+                    ID = 'Add New Expense Temp'[@ID] // Correctly reference ID from DATA
+                ), 
                 {
                     User: 'Admin Expense View'.Selected.User,
                     Amount: 'Admin Expense View'.Selected.Amount,
