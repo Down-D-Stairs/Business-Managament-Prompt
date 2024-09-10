@@ -685,10 +685,10 @@
                 'Add New Expense Temp', 
                 Defaults('Add New Expense Temp'), 
                 {
-                    User: 'Admin Expense View'.Selected.User,
-                    Amount: 'Admin Expense View'.Selected.Amount,
-                    'Vendor Name': 'Admin Expense View'.Selected.'Vendor Name',
-                    Date: 'Admin Expense View'.Selected.Date  
+                    User: ThisRecord.User,
+                    Amount: ThisRecord.Amount,
+                    'Vendor Name': ThisRecord.'Vendor Name',
+                    Date: ThisRecord.Date  
                 }
                 ));
             
