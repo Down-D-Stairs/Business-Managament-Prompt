@@ -680,10 +680,6 @@
             =If(
                 CountRows(SelectedItems2) > 0,
             
-                ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
-                Clear(SelectedItems2);
-                UpdateContext({ SelectMode2: false });
-                Notify("Items successfully deleted", NotificationType.Success);
                 ForAll(SelectedItems2,
                 Patch(
                 'Add New Expense Temp', 
@@ -693,6 +689,12 @@
                      
                 }
                 ));
+            
+                ForAll(SelectedItems2, Remove('Expense Data', ThisRecord));
+                Clear(SelectedItems2);
+                UpdateContext({ SelectMode2: false });
+                Notify("Items successfully deleted", NotificationType.Success);
+                
                 Refresh('Expense Data'),
             
                 Notify("No items selected for deletion. Please select items to delete.", NotificationType.Error)
