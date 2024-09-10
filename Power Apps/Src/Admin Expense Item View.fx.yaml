@@ -680,7 +680,7 @@
             =If(
                 CountRows(SelectedItems2) > 0,
             
-                ForAll(SelectedItems2,
+                ForAll(Filter('Admin Expense View'.AllItems,[@CheckboxCanvas1].Checked = true),
                 Patch(
                 'Add New Expense Temp', 
                 Defaults('Add New Expense Temp'), 
