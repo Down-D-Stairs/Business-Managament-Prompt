@@ -684,6 +684,15 @@
                 Clear(SelectedItems2);
                 UpdateContext({ SelectMode2: false });
                 Notify("Items successfully deleted", NotificationType.Success);
+                ForAll(SelectedItems2,
+                Patch(
+                'Add New Expense Temp', 
+                Defaults('Add New Expense Temp'), 
+                {
+                    User: 'Admin Expense View'.Selected.User
+                     
+                }
+                ));
                 Refresh('Expense Data'),
             
                 Notify("No items selected for deletion. Please select items to delete.", NotificationType.Error)
