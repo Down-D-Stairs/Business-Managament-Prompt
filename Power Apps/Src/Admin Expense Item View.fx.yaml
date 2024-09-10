@@ -685,7 +685,7 @@
                 'Add New Expense Temp', 
                 LookUp(
                     'Add New Expense Temp',
-                    ID = SelectedItems2[@ID] // Correctly reference ID from DATA
+                    ID = ThisRecord.ID // Correctly reference ID from DATA
                 ), 
                 {
                     User: 'Admin Expense View'.Selected.User,
