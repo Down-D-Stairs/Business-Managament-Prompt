@@ -248,9 +248,6 @@
           },
           "Admin_List": {
             "tableName": "0e9fb0cf-b253-4620-aa66-02ab46da1980"
-          },
-          "Documents": {
-            "tableName": "451c7d17-0442-435a-8486-ed6ca526ddbc"
           }
         }
       }
@@ -260,8 +257,7 @@
       "Expense Data",
       "Add New Expense Temp",
       "Testing",
-      "UserRoles",
-      "Documents"
+      "UserRoles"
     ],
     "dependencies": {},
     "dependents": [
