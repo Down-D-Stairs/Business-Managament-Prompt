@@ -12,7 +12,7 @@
   "Properties": {
     "AppCopilotSchemaName": "",
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "",
+    "AppDescription": "An application for uploading any expenses under the company",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
@@ -37,7 +37,6 @@
       "dynamicschema": false,
       "enableappembeddingux": false,
       "enablecanvasappruntimecopilot": true,
-      "enablechatbotfeature": false,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
       "enablecopilotanswercontrol": true,
@@ -101,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 21,
+    "BindingErrorCount": 26,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",

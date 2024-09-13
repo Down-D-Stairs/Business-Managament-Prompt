@@ -98,7 +98,7 @@
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Combobox",
-    "Version": "0.0.40"
+    "Version": "0.0.41"
   },
   "Date picker": {
     "CustomGroupControlTemplateName": "",
@@ -353,7 +353,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.40"
+    "Version": "0.0.42"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
