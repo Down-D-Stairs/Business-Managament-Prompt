@@ -144,7 +144,6 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "db2a4780-88f1-4042-b21b-94a40e82100f",
       "0219635d-5d4d-42df-8536-4d5d9e409045",
       "5bee96ea-ad6f-46a4-8ff0-cbe51b35d831"
     ],
@@ -407,57 +406,6 @@
     "dependents": [],
     "id": "c4d5d2d0-1f55-4bd5-97ec-902e57b52742"
   },
-  "db2a4780-88f1-4042-b21b-94a40e82100f": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "508dd7c3-c869-4fb8-9bc6-3a8d576e483e": {
-          "value": "shared_sharepointonline"
-        },
-        "f8d03547-97dd-4455-aa68-656dea6fb187": {
-          "value": "shared_cloudmersiveimagepr"
-        },
-        "workflowDisplayName": {
-          "value": "TestingPDFtoJPG"
-        },
-        "workflowEntityId": {
-          "value": "77a9270d-cf58-ef11-bfe2-6045bdd4a07f"
-        },
-        "workflowName": {
-          "value": "1c576d58-aa49-ffbd-aa2b-c0c1239e56f3"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_cloudmersiveimagepr": {
-          "value": "f8d03547-97dd-4455-aa68-656dea6fb187"
-        },
-        "shared_sharepointonline": {
-          "value": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
-        },
-        "workflowDisplayName": {
-          "value": "TestingPDFtoJPG"
-        },
-        "workflowEntityId": {
-          "value": "77a9270d-cf58-ef11-bfe2-6045bdd4a07f"
-        },
-        "workflowName": {
-          "value": "1c576d58-aa49-ffbd-aa2b-c0c1239e56f3"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "TestingPDFtoJPG"
-    ],
-    "dependencies": {
-      "shared_cloudmersiveimagepr": "f8d03547-97dd-4455-aa68-656dea6fb187",
-      "shared_sharepointonline": "508dd7c3-c869-4fb8-9bc6-3a8d576e483e"
-    },
-    "dependents": [],
-    "id": "db2a4780-88f1-4042-b21b-94a40e82100f"
-  },
   "de91faf6-ca14-4c4f-9417-ab685d106bdd": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -512,7 +460,6 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "db2a4780-88f1-4042-b21b-94a40e82100f",
       "0219635d-5d4d-42df-8536-4d5d9e409045"
     ],
     "id": "f8d03547-97dd-4455-aa68-656dea6fb187"
