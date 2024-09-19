@@ -1334,11 +1334,8 @@
         Icon: ="ArrowClockwise"
         Layout: ='ButtonCanvas.Layout'.IconAfter
         OnSelect: |-
-            =If(Form4.Valid,
-            SubmitForm(Form4);
-            Notify("Record updated successfully", NotificationType.Success);,
-            ResetForm(Form4);
-            Notify("Fill Out All Fields", NotificationType.Error))
+            =SubmitForm(Form4);
+            Notify("Record updated successfully", NotificationType.Success);
         Text: ="Update Entry"
         Visible: =is_admin
         Width: =232
@@ -1362,9 +1359,9 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="PaidBackDate"
-            Default: =ThisItem.'Paid Back Date'
+            Default: =Today()
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaidBackDate)
+            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Paid Back Date')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -1426,7 +1423,7 @@
             DataField: ="PaidStatus"
             Default: =ThisItem.'Paid Status'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaidStatus)
+            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Paid Status')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -1452,7 +1449,7 @@
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
-                Items: =Choices([@'Expense Data'].PaidStatus)
+                Items: =Choices([@'Expense Data'].'Paid Status')
                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                 Width: =Parent.Width - 48
                 X: =24
