@@ -26,6 +26,7 @@
       "AdministrativeComments": "Administrative Comments",
       "Amount": "Amount",
       "Amount_x002d_Temp": "Amount - Temp",
+      "Approval_x002f_DeniedDate": "Approval/Denied Date",
       "ApprovalStatus": "Approval Status",
       "ApprovalStatus#Id": "Approval Status Id",
       "Approve_x002f_Deny": "Approve/Deny",

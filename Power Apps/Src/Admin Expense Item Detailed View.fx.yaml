@@ -859,6 +859,69 @@
                     Visible: =is_admin
                     ZIndex: =1
 
+                    "'Approval/Denied Date_DataCard1' As typedDataCard.fluentV9DateEditCard":
+                        BorderColor: =App.Theme.Colors.Darker40
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Approval_x002f_DeniedDate"
+                        Default: =Today()
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Approval_x002f_DeniedDate)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =70
+                        Required: =false
+                        Update: =DataCardValue18.SelectedDate
+                        Visible: =is_admin
+                        Width: =526
+                        X: =0
+                        Y: =2
+                        ZIndex: =1
+
+                        DataCardKey20 As Text:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width - 48
+                            Wrap: =false
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue18 As 'Date picker'":
+                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                            DisplayMode: =Parent.DisplayMode
+                            EndDate: =Date(Year(Today())+100, 12, 31)
+                            Height: =32
+                            SelectedDate: =Parent.Default
+                            StartDate: =Date(1900, 1, 1)
+                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey20.Y + DataCardKey20.Height + 4
+                            ZIndex: =2
+
+                        ErrorMessage18 As Text:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =30
+                            Text: =Parent.Error
+                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =DataCardValue18.Y + DataCardValue18.Height
+                            ZIndex: =3
+
+                        StarVisible18 As Text:
+                            Align: ='TextCanvas.Align'.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =30
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            X: =0
+                            Y: =DataCardKey20.Y
+                            ZIndex: =4
+
                     User_DataCard3 As typedDataCard.fluentV9TextualViewCard:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Solid
@@ -987,7 +1050,7 @@
                         Update: =DataCardValue106.Value
                         Width: =525
                         X: =0
-                        Y: =2
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey107 As Text:
@@ -1177,6 +1240,68 @@
         X: =822
         Y: =108
         ZIndex: =8
+
+        "'Approval/Denied Date_DataCard4' As typedDataCard.fluentV9DateEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Approval_x002f_DeniedDate"
+            Default: =ThisItem.'Approval/Denied Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,Approval_x002f_DeniedDate)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue21.SelectedDate
+            Width: =800
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey23 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue21 As 'Date picker'":
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                DisplayMode: =Parent.DisplayMode
+                EndDate: =Date(Year(Today())+100, 12, 31)
+                Height: =32
+                SelectedDate: =Parent.Default
+                StartDate: =Date(1900, 1, 1)
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey23.Y + DataCardKey23.Height + 4
+                ZIndex: =2
+
+            ErrorMessage21 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible21 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey23.Y
+                ZIndex: =4
 
         ApprovalStatus_DataCard12_1 As typedDataCard.fluentV9ComboBoxEditCard:
             BorderColor: =App.Theme.Colors.Darker40
