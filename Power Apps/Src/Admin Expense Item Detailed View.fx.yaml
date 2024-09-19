@@ -1359,7 +1359,7 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="PaidBackDate"
-            Default: =Today()
+            Default: =ThisItem.'Paid Back Date'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,'Paid Back Date')
             Fill: =RGBA(0, 0, 0, 0)
