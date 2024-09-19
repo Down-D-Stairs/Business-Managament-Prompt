@@ -1324,3 +1324,160 @@
                 Y: =DataCardKey107_1.Y
                 ZIndex: =4
 
+    ButtonCanvas4_1 As Button:
+        Align: =Align.Center
+        BasePaletteColor: =
+        BorderColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =30
+        Icon: ="ArrowClockwise"
+        Layout: ='ButtonCanvas.Layout'.IconAfter
+        OnSelect: |-
+            =If(Form4.Valid,
+            SubmitForm(Form4);
+            Notify("Record updated successfully", NotificationType.Success);,
+            ResetForm(Form4);
+            Notify("Fill Out All Fields", NotificationType.Error))
+        Text: ="Update Entry"
+        Visible: =is_admin
+        Width: =232
+        X: =967
+        Y: =676
+        ZIndex: =12
+
+    Form4 As form.PowerApps_CoreControls_Form:
+        BorderColor: =App.Theme.Colors.Darker40
+        DataSource: ='Expense Data'
+        Height: =157
+        Item: =LookUp('Expense Data', ID = CurrentItemID)
+        UseFluentV9Cards: =true
+        Visible: =is_admin
+        Width: =412
+        X: =879
+        Y: =495
+        ZIndex: =13
+
+        "'Paid Back Date_DataCard1' As typedDataCard.fluentV9DateEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PaidBackDate"
+            Default: =ThisItem.'Paid Back Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaidBackDate)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue49.SelectedDate
+            Width: =400
+            X: =1
+            Y: =400
+            ZIndex: =1
+
+            DataCardKey51 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue49 As 'Date picker'":
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                DisplayMode: =Parent.DisplayMode
+                EndDate: =Date(Year(Today())+100, 12, 31)
+                Height: =32
+                SelectedDate: =Parent.Default
+                StartDate: =Date(1900, 1, 1)
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey51.Y + DataCardKey51.Height + 4
+                ZIndex: =2
+
+            ErrorMessage50 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue49.Y + DataCardValue49.Height
+                ZIndex: =3
+
+            StarVisible50 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey51.Y
+                ZIndex: =4
+
+        "'Paid Status_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PaidStatus"
+            Default: =ThisItem.'Paid Status'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Expense Data'],DataSourceInfo.DisplayName,PaidStatus)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue48.Selected
+            Width: =400
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey50 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue48 As Combobox.pcfdataset:
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Items: =Choices([@'Expense Data'].PaidStatus)
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey50.Y + DataCardKey50.Height + 4
+                ZIndex: =2
+
+            ErrorMessage49 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue48.Y + DataCardValue48.Height
+                ZIndex: =3
+
+            StarVisible49 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =20
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey50.Y
+                ZIndex: =4
+

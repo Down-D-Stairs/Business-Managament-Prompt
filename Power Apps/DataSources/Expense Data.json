@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2024-07-05T16:35:49.5930000Z",
+      "LastChangedTimeString": "2024-08-23T15:08:14.8170000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -47,6 +47,9 @@
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
+      "PaidBackDate": "Paid Back Date",
+      "PaidStatus": "Paid Status",
+      "PaidStatus#Id": "Paid Status Id",
       "PaymentType": "Payment Type",
       "PaymentType#Id": "Payment Type Id",
       "PaymentType_x002d_Temp": "Payment Type - Temp",
