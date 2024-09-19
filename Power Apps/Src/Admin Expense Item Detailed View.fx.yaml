@@ -914,7 +914,7 @@
                         Height: =70
                         Required: =false
                         Update: =DataCardValue18.SelectedDate
-                        Visible: =is_admin
+                        Visible: =true
                         Width: =526
                         X: =0
                         Y: =2
